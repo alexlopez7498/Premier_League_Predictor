@@ -190,9 +190,20 @@ print(f"   Arsenal Win:    {arsenal_win:.2%}")
 print(f"   Draw:           {draw_prob:.2%}")
 print(f"   Tottenham Win:  {tottenham_win:.2%}")
 
-# Score prediction
-arsenal_score = round((arsenal_latest['gf_rolling'] * 0.7 + tottenham_latest['ga_rolling'] * 0.3) * 1.05)
-tottenham_score = round((tottenham_latest['gf_rolling'] * 0.7 + arsenal_latest['ga_rolling'] * 0.3) * 0.95)
+# Score prediction - adjusted based on win probabilities
+base_arsenal = (arsenal_latest['gf_rolling'] * 0.7 + tottenham_latest['ga_rolling'] * 0.3) * 1.05
+base_tottenham = (tottenham_latest['gf_rolling'] * 0.7 + arsenal_latest['ga_rolling'] * 0.3) * 0.95
+
+# Adjust scores based on who's more likely to win
+if arsenal_win > tottenham_win + 0.15:  # Arsenal strongly favored
+    arsenal_score = max(1, round(base_arsenal + 0.3))
+    tottenham_score = max(0, round(base_tottenham - 0.2))
+elif tottenham_win > arsenal_win + 0.15:  # Tottenham strongly favored
+    arsenal_score = max(0, round(base_arsenal - 0.2))
+    tottenham_score = max(1, round(base_tottenham + 0.3))
+else:  # Close match - could be draw
+    arsenal_score = round(base_arsenal)
+    tottenham_score = round(base_tottenham)
 
 print(f"\n PREDICTED SCORE: Arsenal {arsenal_score} - {tottenham_score} Tottenham")
 
