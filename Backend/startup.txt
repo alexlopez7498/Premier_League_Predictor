@@ -1,0 +1,8 @@
+Some installs before running (make sure you're in the backend directory)
+- pip install python-dotenv 
+- pip install psycopg2-binary
+- pip install fastapi sqlalc
+- pip install uvicorn   
+- pip install "fastapi[standard]"
+
+to run fastapi backend - fastapi dev main.py or (preferred) python -m uvicorn main:app --reload
