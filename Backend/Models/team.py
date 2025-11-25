@@ -24,4 +24,6 @@ class Team(Base):
     attendence = Column(Integer, default=0)
     topScorer = Column(String, default="")
     goalkeeper = Column(String, default="")
+
+    matches = relationship("Match", back_populates="team")
     players = relationship("Player", back_populates="team")
