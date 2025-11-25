@@ -28,6 +28,13 @@ class MatchBase(BaseModel):
     referee: str
     team_name: str
 
+# API call get request to get all matches
+async def readAllMatches (db:Session):
+    matches = db.query(Match).all()
+    if matches is None:
+        raise HTTPException(status_code=404, detail="No matches found")
+    return matches
+
 # API call post request to add a match to the database
 async def create_match(match: MatchBase, db: Session):
     dbMatch = Match(

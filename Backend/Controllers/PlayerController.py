@@ -52,7 +52,7 @@ async def readAllPlayers(db: Session):
 async def realPlayersPerTeam(db :Session):
     teams = db.query(Team).all()
     if teams is None:
-        raise HTTPException(status_code=404, detail="No teams found")
+        raise HTTPException(status_code=404, detail="No players for this team found")
     team_players = {}
     for team in teams:
         players = db.query(Player).filter(Player.team_name == team.name).all()
