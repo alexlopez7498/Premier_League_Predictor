@@ -6,6 +6,7 @@ from Models.team import Base
 from database import engine, get_db
 from sqlalchemy.orm import Session
 from Controllers.TeamController import read_teams, create_team, TeamBase
+from Controllers.PlayerController import readAllPlayers, readPlayersPerTeam, create_player, PlayerBase
 
 #starts the FastAPI app
 app = FastAPI()
@@ -27,3 +28,19 @@ def get_all_teams(db: Session = Depends(get_db)):
 @app.post("/teams/")
 async def add_team(team: TeamBase, db: Session = Depends(get_db)):
     return await create_team(team, db)
+
+#API call get request to get all players from the database
+@app.get("/players/")
+async def getAllPlayers(db: Session = Depends(get_db)):
+    return readAllPlayers(db)
+
+#API call get request to get all players from a specific team
+@app.get("/players/team/{team_name}")
+async def getPlayersPerTeam(team_name: str, db: Session = Depends(get_db)):
+    return await readPlayersPerTeam(team_name, db)
+
+#API call post request to add a player to the database
+@app.post("/players/")
+async def addPlayer(player: PlayerBase, db: Session = Depends(get_db)):
+    return await create_player(player,db)
+

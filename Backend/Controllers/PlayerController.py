@@ -49,15 +49,11 @@ async def readAllPlayers(db: Session):
     return players
 
 # API call get request to get all players from a specific team
-async def realPlayersPerTeam(db :Session):
-    teams = db.query(Team).all()
-    if teams is None:
-        raise HTTPException(status_code=404, detail="No players for this team found")
-    teamPlayers = {}
-    for team in teams:
-        players = db.query(Player).filter(Player.team_name == team.name).all()
-        teamPlayers[team.name] = players
-    return teamPlayers
+async def readPlayersPerTeam(team_name: str, db: Session):
+    players = db.query(Player).filter(Player.team_name == team_name).all()
+    if not players:
+        raise HTTPException(status_code=404, detail=f"No players found for team: {team_name}")
+    return players
 
 # API call post request to add a player to the database
 async def create_player(player: PlayerBase, db: Session):
