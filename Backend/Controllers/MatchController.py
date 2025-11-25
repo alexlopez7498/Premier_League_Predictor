@@ -35,6 +35,17 @@ async def readAllMatches (db:Session):
         raise HTTPException(status_code=404, detail="No matches found")
     return matches
 
+# API call get request to get all matches for a team
+async def readMatchesPerTeam(db:Session):
+    teams = db.query(Team).all()
+    if teams is None:
+        raise HTTPException(status_code=404, detail="Unable to rectreive teams")
+    teamMatches = {}
+    for team in teams:
+        matches = db.query(Player).filter(Player.team_name == team.name).all()
+        teamMatches[team.name] = matches
+    return teamMatches
+
 # API call post request to add a match to the database
 async def create_match(match: MatchBase, db: Session):
     dbMatch = Match(

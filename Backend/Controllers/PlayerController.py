@@ -53,11 +53,11 @@ async def realPlayersPerTeam(db :Session):
     teams = db.query(Team).all()
     if teams is None:
         raise HTTPException(status_code=404, detail="No players for this team found")
-    team_players = {}
+    teamPlayers = {}
     for team in teams:
         players = db.query(Player).filter(Player.team_name == team.name).all()
-        team_players[team.name] = players
-    return team_players
+        teamPlayers[team.name] = players
+    return teamPlayers
 
 # API call post request to add a player to the database
 async def create_player(player: PlayerBase, db: Session):
