@@ -42,7 +42,7 @@ class PlayerBase(BaseModel):
     team_name: str
 
 # API call get request to get all players in the premier league
-async def readAllPlayers(db: Session):
+def readAllPlayers(db: Session):
     players = db.query(Player).all()
     if players is None:
         raise HTTPException(status_code=404, detail="No players found")

@@ -10,7 +10,7 @@ class Match(Base):
     date = Column(String, index=True)
     time = Column(String, index=True)
     round = Column(String, index=True)
-    day = Column(Integer, index=True)
+    day = Column(String, index=True)
     venue = Column(String, index=True)
     result = Column(String, index=True)
     gf = Column(Integer, default=0)

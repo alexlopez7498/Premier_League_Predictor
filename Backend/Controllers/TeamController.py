@@ -6,7 +6,6 @@ from sqlalchemy.orm import Session
 
 class TeamBase(BaseModel):
     name: str
-    city: str
     rank: int
     matchesPlayed: int = 0
     wins: int = 0
