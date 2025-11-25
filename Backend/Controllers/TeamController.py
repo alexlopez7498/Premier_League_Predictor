@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 class TeamBase(BaseModel):
     name: str
     city: str
-    position: int
+    rank: int
 
 # API call get request to get all teams in the database
 def read_teams(db: Session):
@@ -18,7 +18,7 @@ def read_teams(db: Session):
 
 # API call post request to add a team to the database
 async def create_team(team: TeamBase, db: Session):
-    dbTeam = Team(name=team.name, city=team.city, position=team.position)
+    dbTeam = Team(name=team.name, city=team.city, rank=team.rank)
     db.add(dbTeam)
     db.commit()
     db.refresh(dbTeam)
