@@ -9,7 +9,7 @@ class Player(Base):
     name = Column(String, index=True)
     nation = Column(String, index=True)
     position = Column(String, index=True)
-    age = Column(Integer)
+    age = Column(Float)
     matchesPlayed = Column(Integer, default=0)
     starts = Column(Integer, default=0)
     minutes = Column(Integer, default=0)
@@ -40,6 +40,5 @@ class Player(Base):
     expectedNonPenaltyGoalsPer90 = Column(Float, default=0.00)
     expectedNonPenaltyGoalsAndAssistsPer90 = Column(Float, default=0.00)
 
-    team_name = Column(String, ForeignKey("team.name"))
-    
+    team_name = Column(String,ForeignKey("team.name", ondelete="CASCADE"),nullable=False)
     team = relationship("Team", back_populates="players")

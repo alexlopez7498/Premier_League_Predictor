@@ -33,7 +33,19 @@ try:
     # Parse with BeautifulSoup
     html = driver.page_source
     soup = BeautifulSoup(html, 'lxml')
-    
+
+    # table to have all names standardized
+    TEAM_NAME_MAP = {
+    "Brighton and Hove Albion": "Brighton",
+    "Brighton & Hove Albion": "Brighton",
+    "Tottenham Hotspur": "Tottenham",
+    "Wolverhampton Wanderers": "Wolves",
+    "Manchester United": "Manchester Utd",
+    "Newcastle United": "Newcastle Utd",
+    "West Ham United": "West Ham",
+    "Nottingham Forest": "Nott'ham Forest"
+    }
+
     tables = soup.find_all('table', class_='stats_table')
     if not tables:
         print("No tables found")
@@ -49,6 +61,8 @@ try:
     
     for i, team_url in enumerate(team_urls, 1):
         team_name = team_url.split("/")[-1].replace("-Stats", "").replace("-", " ")
+        team_name = TEAM_NAME_MAP.get(team_name, team_name)
+        
         print(f"Scraping {i}/{len(team_urls)}: {team_name}")
         
         # Scrape team stats
@@ -71,21 +85,29 @@ try:
             if isinstance(team_data.columns, pd.MultiIndex):
                 team_data.columns = team_data.columns.droplevel()
             
-            team_data["Team"] = team_name
-            all_teams.append(team_data)
-            print(f"  ✓ Successfully scraped stats for {team_name}")
+            # Filter out rows where Player column is blank or contains header-like values
+            player_col = team_data.columns[0]  # First column should be Player
+            team_data = team_data[team_data[player_col].notna()]  # Remove NaN values
+            team_data = team_data[team_data[player_col] != player_col]  # Remove header rows
+            team_data = team_data[team_data[player_col].astype(str).str.strip() != '']  # Remove empty strings
+            
+            # Only add if there are valid player rows remaining
+            if len(team_data) > 0:
+                team_data["Team"] = team_name
+                all_teams.append(team_data)
+                print(f"Successfully scraped stats for {team_name} - {len(team_data)} players")
+            else:
+                print(f"No valid player data found for {team_name}")
             
         except Exception as e:
-            print(f"  ✗ Error scraping stats for {team_name}: {e}")
+            print(f"Error scraping stats for {team_name}: {e}")
         
         # Scrape team schedule
         try:
             # Extract squad ID from the team URL
-            # URL format: https://fbref.com/en/squads/{squad_id}/Arsenal-Stats
             squad_id = team_url.split("/squads/")[1].split("/")[0]
             
             # Construct schedule URL
-            # Format: https://fbref.com/en/squads/{squad_id}/2025-2026/matchlogs/c9/schedule/{Team-Name}-Scores-and-Fixtures-Premier-League
             team_name_formatted = team_name.replace(" ", "-")
             schedule_url = f"https://fbref.com/en/squads/{squad_id}/2025-2026/matchlogs/c9/schedule/{team_name_formatted}-Scores-and-Fixtures-Premier-League"
             
@@ -103,6 +125,7 @@ try:
                 # Usually the first table contains the schedule
                 schedule_table = schedule_tables[0]
                 schedule_data = pd.read_html(str(schedule_table))[0]
+                schedule_data = schedule_data[schedule_data[schedule_data.columns[0]] != schedule_data.columns[0]]
                 
                 # Handle multi-level columns
                 if isinstance(schedule_data.columns, pd.MultiIndex):
@@ -122,18 +145,26 @@ try:
     # Save stats data
     if all_teams:
         stat_df = pd.concat(all_teams, ignore_index=True)
+        
+        # Final cleanup: remove any rows where Player column is blank, NaN, or contains "Playing Time" etc.
+        player_col = stat_df.columns[0]
+        stat_df = stat_df[stat_df[player_col].notna()]
+        stat_df = stat_df[stat_df[player_col].astype(str).str.strip() != '']
+        stat_df = stat_df[~stat_df[player_col].astype(str).str.contains('Playing Time|Performance|Expected|Progression|Per 90 Minutes', na=False)]
+        
         stat_df.to_csv("WebScraper/stats.csv", index=False)
-        print(f"\n✓ Successfully saved stats for {len(all_teams)} teams to stats.csv")
+        print(f"\nSuccessfully saved stats for {len(all_teams)} teams to stats.csv")
+        print(f"Total players: {len(stat_df)}")
     else:
-        print("\n✗ No stats data was scraped")
+        print("\nNo stats data was scraped")
     
     # Save schedule data
     if all_schedules:
         schedule_df = pd.concat(all_schedules, ignore_index=True)
         schedule_df.to_csv("WebScraper/schedules_2025_2026.csv", index=False)
-        print(f"✓ Successfully saved schedules for {len(all_schedules)} teams to schedules_2025_2026.csv")
+        print(f"Successfully saved schedules for {len(all_schedules)} teams to schedules_2025_2026.csv")
     else:
-        print("✗ No schedule data was scraped")
+        print("No schedule data was scraped")
 
 finally:
     driver.quit()
