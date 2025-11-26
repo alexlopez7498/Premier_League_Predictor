@@ -56,7 +56,7 @@ async def readPlayersPerTeam(team_name: str, db: Session):
     return players
 
 # API call post request to add a player to the database
-async def create_player(player: PlayerBase, db: Session):
+async def createPlayer(player: PlayerBase, db: Session):
     dbPlayer = Player(
         name=player.name,
         nation=player.nation,

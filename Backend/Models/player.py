@@ -40,6 +40,5 @@ class Player(Base):
     expectedNonPenaltyGoalsPer90 = Column(Float, default=0.00)
     expectedNonPenaltyGoalsAndAssistsPer90 = Column(Float, default=0.00)
 
-    team_name = Column(String, ForeignKey("team.name"))
-    
+    team_name = Column(String,ForeignKey("team.name", ondelete="CASCADE"),nullable=False)
     team = relationship("Team", back_populates="players")

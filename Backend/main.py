@@ -5,9 +5,9 @@ from typing import List, Annotated
 from Models.team import Base
 from database import engine, get_db
 from sqlalchemy.orm import Session
-from Controllers.TeamController import read_teams, create_team, TeamBase
-from Controllers.PlayerController import readAllPlayers, readPlayersPerTeam, create_player, PlayerBase
-from Controllers.MatchController import readAllMatches, readMatchesPerTeam, create_match, MatchBase
+from Controllers.TeamController import importLeagueTable, readTeams, createTeam, TeamBase
+from Controllers.PlayerController import readAllPlayers, readPlayersPerTeam, createPlayer, PlayerBase
+from Controllers.MatchController import importMatches, readAllMatches, readMatchesPerTeam, createMatch, MatchBase
 
 #starts the FastAPI app
 app = FastAPI()
@@ -20,15 +20,19 @@ Base.metadata.create_all(bind=engine)
 def read_root():
     return {"Hello": "World"}
 
+
+
 #API call get request to get all teams in the database
 @app.get("/teams/")
-def get_all_teams(db: Session = Depends(get_db)):
-    return read_teams(db)
+def getAllTeams(db: Session = Depends(get_db)):
+    return readTeams(db)
 
 #API call post request to add a team to the database
-@app.post("/teams/")
-async def add_team(team: TeamBase, db: Session = Depends(get_db)):
-    return await create_team(team, db)
+@app.post("/teams/import")
+async def importTeams(db: Session = Depends(get_db)):
+    return await importLeagueTable("../WebScraper/table.csv", db)
+
+
 
 #API call get request to get all players from the database
 @app.get("/players/")
@@ -43,13 +47,17 @@ async def getPlayersPerTeam(team_name: str, db: Session = Depends(get_db)):
 #API call post request to add a player to the database
 @app.post("/players/")
 async def addPlayer(player: PlayerBase, db: Session = Depends(get_db)):
-    return await create_player(player,db)
+    return await createPlayer(player,db)
 
 
-#API call get request to get all players from the database
+#API call get request to get all matches in the database
 @app.get("/matches/")
 async def getAllMatches(db: Session = Depends(get_db)):
     return readAllMatches(db)
+
+@app.post("/matches/import")
+async def importAllMatches(db: Session = Depends(get_db)):
+    return await importMatches("../WebScraper/schedules_2025_2026.csv", db)
 
 #API call get request to get all players from a specific team
 @app.get("/matches/team/{team_name}")
@@ -59,6 +67,6 @@ async def getMatchesPerTeam(team_name: str, db: Session = Depends(get_db)):
 #API call post request to add a player to the database
 @app.post("/matches/")
 async def addMatch(match: MatchBase, db: Session = Depends(get_db)):
-    return await create_match(match,db)
+    return await createMatch(match,db)
 
 

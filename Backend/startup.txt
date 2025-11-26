@@ -8,3 +8,6 @@ Some installs before running (make sure you're in the backend directory)
 to run fastapi backend - fastapi dev main.py or (preferred) python -m uvicorn main:app --reload
 
 visit http://127.0.0.1:8000/docs#/ to look into about api calls
+
+
+cron job for running python scripts per week for new data
