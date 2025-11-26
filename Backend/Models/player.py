@@ -9,7 +9,7 @@ class Player(Base):
     name = Column(String, index=True)
     nation = Column(String, index=True)
     position = Column(String, index=True)
-    age = Column(Integer)
+    age = Column(Float)
     matchesPlayed = Column(Integer, default=0)
     starts = Column(Integer, default=0)
     minutes = Column(Integer, default=0)

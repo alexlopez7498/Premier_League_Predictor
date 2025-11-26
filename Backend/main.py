@@ -6,7 +6,7 @@ from Models.team import Base
 from database import engine, get_db
 from sqlalchemy.orm import Session
 from Controllers.TeamController import importLeagueTable, readTeams, createTeam, TeamBase
-from Controllers.PlayerController import readAllPlayers, readPlayersPerTeam, createPlayer, PlayerBase
+from Controllers.PlayerController import importPlayers, readAllPlayers, readPlayersPerTeam, createPlayer, PlayerBase
 from Controllers.MatchController import importMatches, readAllMatches, readMatchesPerTeam, createMatch, MatchBase
 
 #starts the FastAPI app
@@ -49,6 +49,15 @@ async def getPlayersPerTeam(team_name: str, db: Session = Depends(get_db)):
 async def addPlayer(player: PlayerBase, db: Session = Depends(get_db)):
     return await createPlayer(player,db)
 
+#API call post request to import players from a CSV file
+@app.post("/players/import")
+async def importAllPlayers(db: Session = Depends(get_db)):
+    return await importPlayers("../WebScraper/stats.csv", db)
+
+#API call get request to get all players from a specific team
+@app.get("/players/{team_name}")
+async def getPlayersPerTeam(team_name: str, db: Session = Depends(get_db)):
+    return await readPlayersPerTeam(team_name, db)
 
 #API call get request to get all matches in the database
 @app.get("/matches/")
