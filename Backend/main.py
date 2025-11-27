@@ -11,6 +11,7 @@ from Controllers.MatchController import importMatches, readAllMatches, readMatch
 from Routes.PlayerRoutes import router as playerRouter
 from Routes.TeamRoutes import router as teamRouter
 from Routes.MatchRoutes import router as matchRouter
+from Routes.Prediction import router as predictionRouter
 
 #starts the FastAPI app
 app = FastAPI()
@@ -18,6 +19,8 @@ app = FastAPI()
 app.include_router(playerRouter)
 app.include_router(teamRouter)
 app.include_router(matchRouter)
+app.include_router(predictionRouter)
+
 #creates all tables and schemas in postgres database
 Base.metadata.create_all(bind=engine)
 
