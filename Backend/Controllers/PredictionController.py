@@ -21,13 +21,17 @@ class PredictionBase(BaseModel):
     accuracy: float
     precision: float
 
-def readAllPredictions(db:Session):
+async def readAllPredictions(db:Session):
     predictions = db.query(Prediction).all()
     if predictions is None:
         raise HTTPException(status_code=404,detail="No predictions found")
     return predictions
 
-
+async def readPredictionPerTeam(teamName:str, db:Session):
+    predictions = db.query(Prediction).filter(Prediction.home_team == teamName).all()
+    if predictions is None:
+        raise HTTPException(status_code=404, detail='No predictions found')
+    return predictions
 
 def load2025Schedule():
 
