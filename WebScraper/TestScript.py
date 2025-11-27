@@ -9,7 +9,7 @@ parent_dir = os.path.dirname(script_dir)
 matches_path = os.path.join(parent_dir, "MachineLearning", "matches.csv")
 matches = pd.read_csv(matches_path, index_col=0)
 
-print("ARSENAL VS TOTTENHAM MATCH PREDICTOR")
+print("team1 VS team2 MATCH PREDICTOR")
 print("Using Random Forest Model")
 
 matches["date"] = pd.to_datetime(matches["date"])
@@ -25,6 +25,7 @@ def rolling_averages(group, cols, new_cols):
     rolling_stats = group[cols].rolling(3, closed='left').mean()
     group[new_cols] = rolling_stats
     group = group.dropna(subset=new_cols)
+    print("hi")
     return group
 
 cols = ["gf", "ga", "sh", "sot", "dist", "fk", "pk", "pkatt"]
@@ -216,3 +217,6 @@ elif draw_prob > arsenal_win and draw_prob > tottenham_win:
     print(f"DRAW LIKELY (Probability: {draw_prob:.1%})")
 else:
     print(f"CLOSE MATCH")
+
+print(arsenal_match)
+print(tottenham_match)

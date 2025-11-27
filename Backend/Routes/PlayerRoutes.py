@@ -1,13 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
-from pydantic import BaseModel
-from typing import Union
-from typing import List, Annotated
 from Models.team import Base
 from database import engine, get_db
 from sqlalchemy.orm import Session
-from Controllers.TeamController import importLeagueTable, readTeams, createTeam, TeamBase
 from Controllers.PlayerController import importPlayers, readAllPlayers, readPlayersPerTeam, createPlayer, PlayerBase
-from Controllers.MatchController import importMatches, readAllMatches, readMatchesPerTeam, createMatch, MatchBase
 
 router = APIRouter()
 
