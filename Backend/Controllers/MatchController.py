@@ -6,6 +6,7 @@ from Models.match import Match
 from database import get_db
 from sqlalchemy.orm import Session
 import pandas as pd
+from datetime import datetime, timedelta
 
 class MatchBase(BaseModel):
     date: str
@@ -39,6 +40,29 @@ async def readMatchesPerTeam(team_name: str, db:Session):
     matches = db.query(Match).filter(Match.team_name == team_name).all()
     if not matches:
         raise HTTPException(status_code=404, detail=f"No matches found for team: {team_name}")
+    return matches
+
+# API call get request to get all matches for a specific week
+async def getMatchesPerWeek(weekNumber: int, db:Session):
+    matches = db.query(Match).filter(Match.round == f"Matchweek {weekNumber}", Match.venue == "Home").all()
+    if matches is None:
+        raise HTTPException(status_code=404, detail="No Matches found this week")
+    return matches
+
+# API call get request to get matches for current week
+async def matchesCurrentWeek(db: Session):
+    today = datetime.now().date()  
+
+    # Calculate start of current week (Monday)
+    startOfWeek = today - timedelta(days=today.weekday())
+    
+    # Calculate end of current week (Sunday)
+    endOfWeek = startOfWeek + timedelta(days=6)
+    
+    # Query matches within the current week
+    matches = db.query(Match).filter(Match.date >= str(startOfWeek), Match.date <= str(endOfWeek), Match.venue == "Home", Match.result == "nan").all()
+    if not matches:
+        raise HTTPException(status_code=404, detail="No matches found for current week")
     return matches
 
 # Import league table from CSV and insert into database

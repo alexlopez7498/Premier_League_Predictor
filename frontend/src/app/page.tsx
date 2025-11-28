@@ -1,68 +1,239 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { useState } from "react";
+import Navbar from "@/components/Navbar";
+
+interface Match {
+  date: string;
+  time: string;
+  team_name: string;
+  opponent: string;
+  result: string;
+  gf: number;
+  ga: number;
+}
+
+// Team logo mapping
+const getTeamLogoUrl = (teamName: string): string => {
+  const teamLogos: Record<string, string> = {
+    "Manchester City": "https://resources.premierleague.com/premierleague25/badges-alt/43.svg",
+    "Liverpool": "https://resources.premierleague.com/premierleague25/badges-alt/14.svg",
+    "Arsenal": "https://resources.premierleague.com/premierleague25/badges-alt/3.svg",
+    "Chelsea": "https://resources.premierleague.com/premierleague25/badges-alt/8.svg",
+    "Manchester Utd": "https://resources.premierleague.com/premierleague25/badges-alt/1.svg",
+    "Tottenham": "https://resources.premierleague.com/premierleague25/badges-alt/6.svg",
+    "Brighton": "https://resources.premierleague.com/premierleague25/badges-alt/36.svg",
+    "Aston Villa": "https://resources.premierleague.com/premierleague25/badges-alt/7.svg",
+    "Newcastle Utd": "https://resources.premierleague.com/premierleague25/badges-alt/4.svg",
+    "West Ham": "https://resources.premierleague.com/premierleague25/badges-alt/21.svg",
+    "Wolves": "https://resources.premierleague.com/premierleague25/badges-alt/39.svg",
+    "Nott'ham Forest": "https://resources.premierleague.com/premierleague25/badges-alt/17.svg",
+    "Crystal Palace": "https://resources.premierleague.com/premierleague25/badges-alt/31.svg",
+    "Fulham": "https://resources.premierleague.com/premierleague25/badges-alt/54.svg",
+    "Everton": "https://resources.premierleague.com/premierleague25/badges-alt/11.svg",
+    "Bournemouth": "https://resources.premierleague.com/premierleague25/badges-alt/91.svg",
+    "Leeds United": "https://resources.premierleague.com/premierleague25/badges-alt/2.svg",
+    "Brentford": "https://resources.premierleague.com/premierleague25/badges-alt/94.svg",
+    "Burnley": "https://resources.premierleague.com/premierleague25/badges-alt/90.svg",
+    "Sunderland": "https://resources.premierleague.com/premierleague25/badges-alt/56.svg"
+  };
+  return teamLogos[teamName] || "";
+};
 
 export default function Home() {
 
-  
+  const [matches, setMatches] = useState<Match[]>([]);
+  const [activeTab, setActiveTab] = useState("home");
+
+  const sortMatchesByTime = (matchesToSort: Match[]): Match[] => {
+    return [...matchesToSort].sort((a, b) => {
+      // Parse date strings (YYYY-MM-DD format)
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      
+      // If dates are different, sort by date first
+      if (dateA !== dateB) {
+        return dateA - dateB;
+      }
+      
+      // If dates are the same, sort by time
+      const timeA = a.time ? parseInt(a.time.replace(':', '')) : 0;
+      const timeB = b.time ? parseInt(b.time.replace(':', '')) : 0;
+      return timeA - timeB;
+    });
+  };
+
+  const fetchMatchForCurrentWeek = async () => {
+    try 
+    {
+      // Get response from the API from the backend
+      const response = await fetch('http://127.0.0.1:8000/matches/current-week',{
+        method: 'GET',
+        credentials: 'include',
+      });
+      // Check to see if the response returns data
+      if (response.ok)
+      {
+        const data = await response.json();
+        console.log('Fetched reports:', data);
+        const sortedMatches = sortMatchesByTime(data);
+        setMatches(sortedMatches);
+      }
+      else 
+      {
+        console.error('Failed to fetch reports:', response.status, await response.text());
+      }
+    } 
+    catch (error) {
+      console.error('Error fetching reports:', error);
+    }
+  }
+
+  useEffect(() => {
+    fetchMatchForCurrentWeek();
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-900 dark:to-gray-800">
+      {/* Navigation Bar */}
+      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+            Premier League
+            <span className="text-blue-600"> Predictor</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Predict match outcomes, analyze team performance, and track player statistics with our advanced AI-powered prediction engine.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Upcoming Matches */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            Upcoming Featured Matches
+          </h2>
+          <div className="space-y-8">
+            {matches && matches.length > 0 ? (
+              (() => {
+                // Group matches by date
+                const groupedByDate: Record<string, Match[]> = {};
+                matches.forEach(match => {
+                  if (!groupedByDate[match.date]) {
+                    groupedByDate[match.date] = [];
+                  }
+                  groupedByDate[match.date].push(match);
+                });
+
+                // Sort dates and render
+                return Object.entries(groupedByDate)
+                  .sort(([dateA], [dateB]) => new Date(dateA).getTime() - new Date(dateB).getTime())
+                  .map(([date, dayMatches]) => {
+                    const [year, month, day] = date.split('-').map(Number);
+                    const dateObj = new Date(Date.UTC(year, month - 1, day));
+                    const dayName = dateObj.toLocaleDateString('en-US', { weekday: 'long', timeZone: 'UTC' });
+                    const formattedDate = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+                    
+                    return (
+                      <div key={date} className="border-l-4 border-blue-600 pl-4">
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                          {dayName}, {formattedDate}
+                        </h3>
+                        <div className="space-y-3">
+                          {dayMatches.map((match, index) => (
+                            <div key={index} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg gap-4">
+                              <div className="flex items-center space-x-4 flex-1">
+                                <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                                  {getTeamLogoUrl(match.team_name) && (
+                                    <Image 
+                                      src={getTeamLogoUrl(match.team_name)} 
+                                      alt={match.team_name} 
+                                      width={40} 
+                                      height={40}
+                                      className="object-contain w-auto h-auto max-w-full max-h-full"
+                                    />
+                                  )}
+                                  {!getTeamLogoUrl(match.team_name) && (
+                                    <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                                  )}
+                                </div>
+                                <div className="text-right w-32 flex-shrink-0">
+                                  <p className="font-semibold text-gray-900 dark:text-white text-sm">{match.team_name}</p>
+                                </div>
+                              </div>
+                              <div className="text-center flex-1">
+                                <p className="text-xs text-gray-500 dark:text-gray-400">{match.time}</p>
+                                <p className="font-medium text-gray-900 dark:text-white">VS</p>
+                              </div>
+                              <div className="flex items-center space-x-4 flex-1 justify-end">
+                                <div className="text-left w-32 flex-shrink-0">
+                                  <p className="font-semibold text-gray-900 dark:text-white text-sm">{match.opponent}</p>
+                                </div>
+                                <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                                  {getTeamLogoUrl(match.opponent) && (
+                                    <Image 
+                                      src={getTeamLogoUrl(match.opponent)} 
+                                      alt={match.opponent} 
+                                      width={40} 
+                                      height={40}
+                                      className="object-contain w-auto h-auto max-w-full max-h-full"
+                                    />
+                                  )}
+                                  {!getTeamLogoUrl(match.opponent) && (
+                                    <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  });
+              })()
+            ) : (
+              <p className="text-center text-gray-500 dark:text-gray-400">No matches found for this week</p>
+            )}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors mb-4">
+            Start Predicting Now
+          </button>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-12">
+        <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center mb-4 md:mb-0">
+              <span className="text-lg font-bold text-gray-900 dark:text-white">
+              </span>
+            </div>
+            <div className="flex space-x-6">
+              <a href="#" className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#" className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a href="#" className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                <i className="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div className="mt-4 text-center md:text-left">
+            <p className="text-gray-500 dark:text-gray-400">
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
