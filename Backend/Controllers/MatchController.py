@@ -60,7 +60,7 @@ async def matchesCurrentWeek(db: Session):
     endOfWeek = startOfWeek + timedelta(days=6)
     
     # Query matches within the current week
-    matches = db.query(Match).filter(Match.date >= str(startOfWeek), Match.date <= str(endOfWeek), Match.venue == "Home").all()
+    matches = db.query(Match).filter(Match.date >= str(startOfWeek), Match.date <= str(endOfWeek), Match.venue == "Home", Match.result == "nan").all()
     if not matches:
         raise HTTPException(status_code=404, detail="No matches found for current week")
     return matches
