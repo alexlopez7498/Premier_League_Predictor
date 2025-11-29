@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { getTeamLogoUrl } from "@/utils/teamLogos";
 
 interface Match {
   date: string;
@@ -14,37 +16,10 @@ interface Match {
   ga: number;
 }
 
-// Team logo mapping
-const getTeamLogoUrl = (teamName: string): string => {
-  const teamLogos: Record<string, string> = {
-    "Manchester City": "https://resources.premierleague.com/premierleague25/badges-alt/43.svg",
-    "Liverpool": "https://resources.premierleague.com/premierleague25/badges-alt/14.svg",
-    "Arsenal": "https://resources.premierleague.com/premierleague25/badges-alt/3.svg",
-    "Chelsea": "https://resources.premierleague.com/premierleague25/badges-alt/8.svg",
-    "Manchester Utd": "https://resources.premierleague.com/premierleague25/badges-alt/1.svg",
-    "Tottenham": "https://resources.premierleague.com/premierleague25/badges-alt/6.svg",
-    "Brighton": "https://resources.premierleague.com/premierleague25/badges-alt/36.svg",
-    "Aston Villa": "https://resources.premierleague.com/premierleague25/badges-alt/7.svg",
-    "Newcastle Utd": "https://resources.premierleague.com/premierleague25/badges-alt/4.svg",
-    "West Ham": "https://resources.premierleague.com/premierleague25/badges-alt/21.svg",
-    "Wolves": "https://resources.premierleague.com/premierleague25/badges-alt/39.svg",
-    "Nott'ham Forest": "https://resources.premierleague.com/premierleague25/badges-alt/17.svg",
-    "Crystal Palace": "https://resources.premierleague.com/premierleague25/badges-alt/31.svg",
-    "Fulham": "https://resources.premierleague.com/premierleague25/badges-alt/54.svg",
-    "Everton": "https://resources.premierleague.com/premierleague25/badges-alt/11.svg",
-    "Bournemouth": "https://resources.premierleague.com/premierleague25/badges-alt/91.svg",
-    "Leeds United": "https://resources.premierleague.com/premierleague25/badges-alt/2.svg",
-    "Brentford": "https://resources.premierleague.com/premierleague25/badges-alt/94.svg",
-    "Burnley": "https://resources.premierleague.com/premierleague25/badges-alt/90.svg",
-    "Sunderland": "https://resources.premierleague.com/premierleague25/badges-alt/56.svg"
-  };
-  return teamLogos[teamName] || "";
-};
 
 export default function Home() {
 
   const [matches, setMatches] = useState<Match[]>([]);
-  const [activeTab, setActiveTab] = useState("home");
 
   const sortMatchesByTime = (matchesToSort: Match[]): Match[] => {
     return [...matchesToSort].sort((a, b) => {
@@ -97,7 +72,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-900 dark:to-gray-800">
       {/* Navigation Bar */}
-      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Navbar />
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
@@ -209,31 +184,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-12">
-        <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center mb-4 md:mb-0">
-              <span className="text-lg font-bold text-gray-900 dark:text-white">
-              </span>
-            </div>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a href="#" className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
-                <i className="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
-          <div className="mt-4 text-center md:text-left">
-            <p className="text-gray-500 dark:text-gray-400">
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
