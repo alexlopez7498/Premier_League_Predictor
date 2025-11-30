@@ -15,7 +15,7 @@ chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
 
-# Initialize the driver
+# create the driver
 driver = webdriver.Chrome(options=chrome_options)
 
 try:
@@ -36,7 +36,7 @@ try:
     tables = soup.find_all('table', class_='stats_table')
     
     if not tables:
-        print("❌ No tables found on the page")
+        print(" No tables found on the page")
         exit()
     
     # Get the first table (league standings)
@@ -55,10 +55,10 @@ try:
     
     # Save to CSV
     table_df.to_csv("WebScraper/table.csv", index=False)
-    print(f"\n✅ Successfully saved to WebScraper/table.csv")
+    print(f"\n Successfully saved to WebScraper/table.csv")
 
 except Exception as e:
-    print(f"❌ Error occurred: {e}")
+    print(f" Error occurred: {e}")
 
 finally:
     driver.quit()
