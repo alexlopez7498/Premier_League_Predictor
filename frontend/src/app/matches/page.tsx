@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getTeamLogoUrl } from "@/utils/teamLogos";
@@ -226,10 +227,14 @@ export default function MatchesPage() {
                       </h3>
                       <div className="space-y-3">
                         {dayMatches.map((match, index) => (
-                          <div 
-                            key={match.match_id || index} 
-                            className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg gap-4 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                          <Link
+                            key={match.match_id || index}
+                            href={`/matches/${match.match_id}`}
+                            className="block"
                           >
+                            <div 
+                              className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg gap-4 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors cursor-pointer"
+                            >
                             <div className="flex items-center space-x-4 flex-1">
                               <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
                                 {getTeamLogoUrl(match.team_name) ? (
@@ -294,6 +299,7 @@ export default function MatchesPage() {
                               </div>
                             </div>
                           </div>
+                          </Link>
                         ))}
                       </div>
                     </div>

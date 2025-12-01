@@ -35,6 +35,13 @@ def readAllMatches (db:Session):
         raise HTTPException(status_code=404, detail="No matches found")
     return matches
 
+# API call get request to get a single match by match_id
+def readMatchById(match_id: int, db: Session):
+    match = db.query(Match).filter(Match.match_id == match_id).first()
+    if not match:
+        raise HTTPException(status_code=404, detail=f"Match with id {match_id} not found")
+    return match
+
 # API call get request to get all matches for a team
 async def readMatchesPerTeam(team_name: str, db:Session):
     matches = db.query(Match).filter(Match.team_name == team_name).all()

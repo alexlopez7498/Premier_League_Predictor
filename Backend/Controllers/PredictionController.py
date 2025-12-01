@@ -21,18 +21,21 @@ class PredictionBase(BaseModel):
     accuracy: float
     precision: float
 
+#API call get request to get all predictions
 async def readAllPredictions(db:Session):
     predictions = db.query(Prediction).all()
     if predictions is None:
         raise HTTPException(status_code=404,detail="No predictions found")
     return predictions
 
+#API call get request to get all predictions for a specific team
 async def readPredictionPerTeam(teamName:str, db:Session):
     predictions = db.query(Prediction).filter(Prediction.home_team == teamName).all()
     if predictions is None:
         raise HTTPException(status_code=404, detail='No predictions found')
     return predictions
 
+#function to load the 2025-2026 schedule
 def load2025Schedule():
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -65,7 +68,7 @@ def load2025Schedule():
     
     return completed
 
-
+#API call post request to predict the outcome of a match
 async def predictMatchOutcome(match: MatchBase, db: Session):
     try:
 

@@ -7,7 +7,7 @@ from database import engine, get_db
 from sqlalchemy.orm import Session
 from Controllers.TeamController import importLeagueTable, readTeams, createTeam, TeamBase
 from Controllers.PlayerController import importPlayers, readAllPlayers, readPlayersPerTeam, createPlayer, PlayerBase
-from Controllers.MatchController import getMatchesPerWeek, matchesCurrentWeek, importMatches, readAllMatches, readMatchesPerTeam, createMatch, MatchBase
+from Controllers.MatchController import getMatchesPerWeek, matchesCurrentWeek, importMatches, readAllMatches, readMatchesPerTeam, readMatchById, createMatch, MatchBase
 
 router = APIRouter()
 
@@ -39,3 +39,8 @@ async def getMatchesCurrentWeek(db:Session = Depends(get_db)):
 @router.get("/matches/Matchweek/{weekNumber}",tags=["matches"])
 async def getCallMatchesPerWeek(weekNumber:int, db:Session = Depends(get_db)):
     return await getMatchesPerWeek(weekNumber,db)
+
+#API call get request to get a single match by match_id
+@router.get("/matches/{match_id}", tags=["matches"])
+async def getMatchById(match_id: int, db: Session = Depends(get_db)):
+    return readMatchById(match_id, db)
