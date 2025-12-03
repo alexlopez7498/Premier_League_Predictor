@@ -9,7 +9,7 @@ router = APIRouter()
 
 #API call post request to create a prediction of a match
 @router.post("/predict/", tags=["predictions"])
-async def predict_match(match: MatchBase, db: Session = Depends(get_db)):
+async def predictMatch(match: MatchBase, db: Session = Depends(get_db)):
     return await predictMatchOutcome(match, db)
 
 #API call get request to get all entries of predictions
