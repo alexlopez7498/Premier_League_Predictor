@@ -17,7 +17,7 @@ SELECTED_MODEL = "rf_rolling"  # ← Change this to switch models
 
 # Available models:
 # - "rf_basic"              → Basic Random Forest (60% accuracy)
-# - "rf_rolling"            → RF + Rolling Features (68% accuracy) ⭐ BEST
+# - "rf_rolling"            → RF + Rolling Features (68% accuracy) BEST
 # - "logistic_regression"   → Logistic Regression (62% accuracy)
 # - "svm"                   → Support Vector Machine (62% accuracy)
 # - "xgboost"               → XGBoost (64% accuracy)
@@ -65,62 +65,84 @@ _cached_model_name = None
 
 # Function for loading trained models so we can test different models with the predictor website
 def load_trained_model():
-    """Load the pre-trained Random Forest model (loads once, cached)"""
+    """Load the pre-trained model based on SELECTED_MODEL (loads once, cached)"""
     global _cached_model, _cached_predictors, _cached_metrics, _cached_model_name
     
-    # Return cached model if already loaded
+    # Check if we need to reload (model changed)
     if _cached_model is not None and _cached_model_name == SELECTED_MODEL:
-        print(f"♻️  Using cached model: {MODEL_INFO[SELECTED_MODEL]['name']}")
-        return _cached_model, _cached_predictors, _cached_metrics
+        # Return the specific model's metrics, not the full dictionary
+        if SELECTED_MODEL not in _cached_metrics:
+            raise KeyError(f"Model '{SELECTED_MODEL}' not found in cached metrics. Available: {list(_cached_metrics.keys())}")
+        
+        model_metrics = _cached_metrics[SELECTED_MODEL]
+        
+        # Validate metrics structure
+        if 'accuracy' not in model_metrics or 'precision' not in model_metrics:
+            raise KeyError(f"Cached metrics for '{SELECTED_MODEL}' missing required keys. Found: {list(model_metrics.keys())}")
+        
+        return _cached_model, _cached_predictors, model_metrics
+    
+    # Clear cache if model changed
+    if _cached_model_name != SELECTED_MODEL:
+        _cached_model = None
+        _cached_predictors = None
+        _cached_metrics = None
     
     try:
-           # Get model info from configuration
+        # Validate selected model
         if SELECTED_MODEL not in MODEL_INFO:
-            raise ValueError(f"Unknown model: {SELECTED_MODEL}. Available: {list(MODEL_INFO.keys())}")
-
-        model_info = MODEL_INFO[SELECTED_MODEL]
-
+            raise ValueError(f"Invalid model '{SELECTED_MODEL}'. Available: {list(MODEL_INFO.keys())}")
+        
+        model_config = MODEL_INFO[SELECTED_MODEL]
+        
         # Get path to saved models
         script_dir = os.path.dirname(os.path.abspath(__file__))
         parent_dir = os.path.dirname(script_dir)
         models_dir = os.path.join(parent_dir, "../MachineLearning/models")
         
-        # Build paths using the selected model
-        model_path = os.path.join(models_dir, model_info['file'])  
-        predictors_path = os.path.join(models_dir, f"{model_info['predictors_key']}.pkl")  
+        # Load model based on SELECTED_MODEL
+        model_path = os.path.join(models_dir, model_config["file"])
+        
+        # Determine predictors file based on model config
+        if model_config["uses_rolling"]:
+            predictors_path = os.path.join(models_dir, "rolling_predictors.pkl")
+        else:
+            predictors_path = os.path.join(models_dir, "basic_predictors.pkl")
+        
         metrics_path = os.path.join(models_dir, "all_metrics.pkl")
         
-        print(f"📂 Loading model: {model_info['name']}")
+        print(f" Loading model: {model_config['name']}")
         print(f"   File: {model_path}")
         
-        # Load model files
         _cached_model = joblib.load(model_path)
         _cached_predictors = joblib.load(predictors_path)
         _cached_metrics = joblib.load(metrics_path)
         _cached_model_name = SELECTED_MODEL
         
-        # Get metrics for the selected model
-        if SELECTED_MODEL in _cached_metrics:
-            metrics = _cached_metrics[SELECTED_MODEL]
-            acc = metrics['accuracy']
-            prec = metrics['precision']
-        else:
-            acc = 0.0
-            prec = 0.0
-            print("⚠️  Metrics not found for this model")
+        # Get metrics for this model
+        if SELECTED_MODEL not in _cached_metrics:
+            raise KeyError(f"Model '{SELECTED_MODEL}' not found in metrics file. Available: {list(_cached_metrics.keys())}")
         
-        print(f"✅ Model loaded successfully!")
-        print(f"   Accuracy: {acc:.4f} ({acc*100:.2f}%)")
-        print(f"   Precision: {prec:.4f} ({prec*100:.2f}%)")
+        metrics = _cached_metrics[SELECTED_MODEL]
+        
+        # Validate metrics structure
+        if 'accuracy' not in metrics or 'precision' not in metrics:
+            raise KeyError(f"Metrics for '{SELECTED_MODEL}' missing required keys. Found: {list(metrics.keys())}")
+        
+        acc = metrics['accuracy']
+        prec = metrics['precision']
+        
+        print(f" Model loaded successfully!")
+        print(f"   Accuracy: {acc:.4f}, Precision: {prec:.4f}")
         
         return _cached_model, _cached_predictors, metrics
         
     except FileNotFoundError as e:
-        print(f"❌ Model file not found: {e}")
-        print("⚠️  Falling back to training new model...")
+        print(f" Model file not found: {e}")
+        print(" Falling back to training new model...")
         return None, None, None
     except Exception as e:
-        print(f"❌ Error loading model: {e}")
+        print(f" Error loading model: {e}")
         return None, None, None
 
 
@@ -212,28 +234,11 @@ async def predictMatchOutcome(match: MatchBase, db: Session):
         cols = ["gf", "ga", "sh", "sot", "dist", "fk", "pk", "pkatt"]
         new_cols = [f"{c}_rolling" for c in cols]
 
-        # Calculate rolling averages for 2020-2022 data
+        # Calculate rolling averages for 2020-2022 data (only needed for fallback training)
         matches_rolling = matches.groupby("team").apply(lambda x: rolling_averages(x, cols, new_cols))
         matches_rolling = matches_rolling.droplevel('team')
         matches_rolling.index = range(matches_rolling.shape[0])
 
-
-        # Leaving this code in bc i dont want to delete it, but below it is
-        # new code that SHOULD work much faster and loads the model selected at top of file
-        ######### REPLACE FROM HERE ##############
-        # Train Random Forest model
-        rf = RandomForestClassifier(n_estimators=100, min_samples_split=10, random_state=1)
-        
-        train = matches_rolling[matches_rolling["date"] < '2022-01-01']
-        test = matches_rolling[matches_rolling["date"] >= '2022-01-01']
-        predictors = ["h/a", "opp", "hour", "day"] + new_cols
-        
-        rf.fit(train[predictors], train["target"])
-        
-        preds = rf.predict(test[predictors])
-        acc = accuracy_score(test["target"], preds)
-        precision = precision_score(test["target"], preds)
-        ######### TO HERE ##############
         # Load pre-trained model (MUCH FASTER!)
         rf, predictors, metrics = load_trained_model()
         
