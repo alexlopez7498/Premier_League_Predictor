@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -22,7 +22,7 @@ interface Match {
   team_name: string;
 }
 
-export default function MatchesPage() {
+function MatchesContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [matches, setMatches] = useState<Match[]>([]);
@@ -346,6 +346,14 @@ export default function MatchesPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function MatchesPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <MatchesContent />
+    </Suspense>
   );
 }
 
