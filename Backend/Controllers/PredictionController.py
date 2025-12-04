@@ -2,12 +2,111 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import pandas as pd
 import os
+import joblib
 from sqlalchemy.orm import Session
 from Models.prediction import Prediction
 from Controllers.MatchController import MatchBase
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score
 from datetime import datetime
+
+# ============================================
+# MODEL CONFIGURATION - CHANGE THIS TO SWITCH MODELS
+# ============================================
+SELECTED_MODEL = "rf_rolling"  # ← Change this to switch models
+
+# Available models:
+# - "rf_basic"              → Basic Random Forest (60% accuracy)
+# - "rf_rolling"            → RF + Rolling Features (68% accuracy) ⭐ BEST
+# - "logistic_regression"   → Logistic Regression (62% accuracy)
+# - "svm"                   → Support Vector Machine (62% accuracy)
+# - "xgboost"               → XGBoost (64% accuracy)
+# ============================================
+
+# Model metadata
+MODEL_INFO = {
+    "rf_basic": {
+        "name": "Basic Random Forest",
+        "file": "rf_basic.pkl",
+        "predictors_key": "basic_predictors",
+        "uses_rolling": False
+    },
+    "rf_rolling": {
+        "name": "Random Forest with Rolling Features",
+        "file": "rf_rolling.pkl",
+        "predictors_key": "rolling_predictors",
+        "uses_rolling": True
+    },
+    "logistic_regression": {
+        "name": "Logistic Regression",
+        "file": "logistic_regression.pkl",
+        "predictors_key": "rolling_predictors",
+        "uses_rolling": True
+    },
+    "svm": {
+        "name": "Support Vector Machine",
+        "file": "svm.pkl",
+        "predictors_key": "rolling_predictors",
+        "uses_rolling": True
+    },
+    "xgboost": {
+        "name": "XGBoost",
+        "file": "xgboost.pkl",
+        "predictors_key": "rolling_predictors",
+        "uses_rolling": True
+    }
+}
+
+# Global cache for model
+_cached_model = None
+_cached_predictors = None
+_cached_metrics = None
+_cached_model_name = None
+
+# Function for loading trained models so we can test different models with the predictor website
+def load_trained_model():
+    """Load the pre-trained Random Forest model (loads once, cached)"""
+    global _cached_model, _cached_predictors, _cached_metrics
+    
+    # Return cached model if already loaded
+    if _cached_model is not None:
+        return _cached_model, _cached_predictors, _cached_metrics
+    
+    try:
+        # Get path to saved models
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        parent_dir = os.path.dirname(script_dir)
+        models_dir = os.path.join(parent_dir, "../MachineLearning/models")
+        
+        # Load the best model (RF + Rolling Features)
+        model_path = os.path.join(models_dir, "rf_rolling.pkl")
+        predictors_path = os.path.join(models_dir, "rolling_predictors.pkl")
+        metrics_path = os.path.join(models_dir, "all_metrics.pkl")
+        
+        print(f"📂 Loading model from: {model_path}")
+        
+        _cached_model = joblib.load(model_path)
+        _cached_predictors = joblib.load(predictors_path)
+        _cached_metrics = joblib.load(metrics_path)
+        
+        # Get metrics for this model
+        metrics = _cached_metrics['rf_rolling']
+        acc = metrics['accuracy']
+        prec = metrics['precision']
+        
+        print(f"✅ Model loaded successfully!")
+        print(f"   Accuracy: {acc:.4f}, Precision: {prec:.4f}")
+        
+        return _cached_model, _cached_predictors, metrics
+        
+    except FileNotFoundError as e:
+        print(f"❌ Model file not found: {e}")
+        print("⚠️  Falling back to training new model...")
+        return None, None, None
+    except Exception as e:
+        print(f"❌ Error loading model: {e}")
+        return None, None, None
+
 
 class PredictionBase(BaseModel):
     home_team: str
@@ -102,6 +201,10 @@ async def predictMatchOutcome(match: MatchBase, db: Session):
         matches_rolling = matches_rolling.droplevel('team')
         matches_rolling.index = range(matches_rolling.shape[0])
 
+
+        # Leaving this code in bc i dont want to delete it, but below it is
+        # new code that SHOULD work much faster and loads the model selected at top of file
+        ######### REPLACE FROM HERE ##############
         # Train Random Forest model
         rf = RandomForestClassifier(n_estimators=100, min_samples_split=10, random_state=1)
         
@@ -114,6 +217,30 @@ async def predictMatchOutcome(match: MatchBase, db: Session):
         preds = rf.predict(test[predictors])
         acc = accuracy_score(test["target"], preds)
         precision = precision_score(test["target"], preds)
+        ######### TO HERE ##############
+        # Load pre-trained model (MUCH FASTER!)
+        rf, predictors, metrics = load_trained_model()
+        
+        if rf is None:
+            # Fallback: train new model if saved model not found
+            print("⚠️  Training new model (saved model not available)...")
+            rf = RandomForestClassifier(n_estimators=100, min_samples_split=10, random_state=42)
+            
+            train = matches_rolling[matches_rolling["date"] < '2022-01-01']
+            test = matches_rolling[matches_rolling["date"] >= '2022-01-01']
+            predictors = ["h/a", "opp", "hour", "day"] + new_cols
+            
+            rf.fit(train[predictors], train["target"])
+            
+            preds = rf.predict(test[predictors])
+            acc = accuracy_score(test["target"], preds)
+            precision = precision_score(test["target"], preds)
+        else:
+            # Use metrics from loaded model
+            acc = metrics['accuracy']
+            precision = metrics['precision']
+
+        ####################### END OF EDITS #####################
         
         # Load 2025 season data
         completed_2025 = load2025Schedule()

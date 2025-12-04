@@ -1,91 +1,199 @@
-# PL Predictor using scikit-learn to predict from the matches.csv stat sheet containing data from all matches from 2022-2020
+"""
+PL Predictor - Model Comparison Script
+Tests all saved models from ML_models.ipynb
+"""
 import pandas as pd 
-from sklearn.metrics import precision_score
-from sklearn.metrics import accuracy_score
-from sklearn.ensemble import RandomForestClassifier #importing machine learning for non linear data
+import numpy as np
+from sklearn.metrics import precision_score, accuracy_score, classification_report, confusion_matrix
+from sklearn.ensemble import RandomForestClassifier
+import joblib
 import os
+
+print("="*70)
+print("PREMIER LEAGUE MATCH PREDICTOR - MODEL COMPARISON")
+print("="*70)
+
+# Setup paths
 script_dir = os.path.dirname(os.path.abspath(__file__))
-matches = pd.read_csv(os.path.join(script_dir, "matches.csv"), index_col = 0)
+models_dir = os.path.join(script_dir, "models")
 
-#converting all objects to int or float to be processed by the machine learning software
+# Load the data
+print("\n📊 Loading data...")
+matches = pd.read_csv(os.path.join(script_dir, "matches.csv"), index_col=0)
+
+# Preprocess data
 matches["date"] = pd.to_datetime(matches["date"])
-matches["h/a"] = matches["venue"].astype("category").cat.codes # converting venue to a home (1) or away (0) number
-matches["opp"] = matches["opponent"].astype("category").cat.codes # converting opponents to a number
-matches["hour"] = matches["time"].str.replace(":.+", "", regex=True).astype("int") # converting hours to number in case a team plays better at a certain time
-matches["day"] = matches["date"].dt.dayofweek # converting day of week of game to a number
-matches["target"] = (matches["result"] == "W").astype("int") # setting a win to the value 1
+matches["h/a"] = matches["venue"].astype("category").cat.codes
+matches["opp"] = matches["opponent"].astype("category").cat.codes
+matches["hour"] = matches["time"].str.replace(":.+", "", regex=True).astype("int")
+matches["day"] = matches["date"].dt.dayofweek
+matches["target"] = (matches["result"] == "W").astype("int")
 
-rf = RandomForestClassifier(n_estimators = 100, min_samples_split=10, random_state=1)
-train = matches[matches["date"] < '2022-01-01'] 
-test = matches[matches["date"] > '2022-01-01']
-predictors = ["h/a", "opp", "hour", "day"]
-rf.fit(train[predictors], train["target"])
-RandomForestClassifier(min_samples_split = 10, n_estimators = 100, random_state = 1)
-preds = rf.predict(test[predictors]) #making prediction
-
-acc = accuracy_score(test["target"], preds) # testing accuracy
-acc
-combined = pd.DataFrame(dict(actual=test["target"], prediction=preds))
-pd.crosstab(index=combined["actual"], columns=combined["prediction"])
-
-precision_score(test["target"], preds)
-
-grouped_matches = matches.groupby("team") 
-group = grouped_matches.get_group("Manchester United").sort_values("date")
- 
-def rolling_averages(group, cols, new_cols): ## function to take into consideration form of a team
-    group = group.sort_values("date") ## sorting games by date 
+# Rolling averages function
+def rolling_averages(group, cols, new_cols):
+    group = group.sort_values("date")
     rolling_stats = group[cols].rolling(3, closed='left').mean()
     group[new_cols] = rolling_stats
-    group = group.dropna(subset=new_cols) ##droping missing values and replacing with empty
-    return group 
+    group = group.dropna(subset=new_cols)
+    return group
 
-cols = ["gf", "ga", "sh", "sot", "dist", "fk", "pk", "pkatt"] 
-new_cols = [f"{c}_rolling" for c in cols] # creating new columns with rolling average values 
-
-rolling_averages(group, cols, new_cols) # calling function and generating average of last 3 games
+# Calculate rolling averages
+cols = ["gf", "ga", "sh", "sot", "dist", "fk", "pk", "pkatt"]
+new_cols = [f"{c}_rolling" for c in cols]
 
 matches_rolling = matches.groupby("team").apply(lambda x: rolling_averages(x, cols, new_cols))
-matches_rolling = matches_rolling.droplevel('team') # dropping extra index level
+matches_rolling = matches_rolling.droplevel('team')
+matches_rolling.index = range(matches_rolling.shape[0])
 
-matches_rolling.index = range(matches_rolling.shape[0]) # adding new index
-matches_rolling
-def make_predictions(data, predictors): # making the predictions
-    train = data[data["date"] < '2022-01-01'] 
-    test = data[data["date"] > '2022-01-01']
-    rf.fit(train[predictors], train["target"])
-    preds = rf.predict(test[predictors]) #making prediction
-    combined = pd.DataFrame(dict(actual=test["target"], prediction=preds), index=test.index)
-    precision = precision_score(test["target"], preds)
-    return combined, precision # returning the values for the prediction
+# Split data
+train = matches_rolling[matches_rolling["date"] < '2022-01-01']
+test = matches_rolling[matches_rolling["date"] > '2022-01-01']
 
-combined, precision = make_predictions(matches_rolling, predictors + new_cols)
+basic_predictors = ["h/a", "opp", "hour", "day"]
+rolling_predictors = basic_predictors + new_cols
 
-precision
+print(f"✅ Data loaded: {len(train)} train, {len(test)} test samples")
 
-combined 
+# Check if models exist
+if os.path.exists(models_dir):
+    print(f"\n🤖 Loading saved models from: {models_dir}\n")
+    
+    try:
+        # Load all models
+        rf_basic = joblib.load(f'{models_dir}/rf_basic.pkl')
+        rf_rolling = joblib.load(f'{models_dir}/rf_rolling.pkl')
+        lr = joblib.load(f'{models_dir}/logistic_regression.pkl')
+        svm_model = joblib.load(f'{models_dir}/svm.pkl')
+        xgb = joblib.load(f'{models_dir}/xgboost.pkl')
+        all_metrics = joblib.load(f'{models_dir}/all_metrics.pkl')
+        
+        print("✅ All models loaded successfully!")
+        print(f"📅 Models saved at: {all_metrics['saved_at']}")
+        
+        # Test each model
+        print("\n" + "="*70)
+        print("MODEL PERFORMANCE ON TEST SET")
+        print("="*70)
+        
+        results = []
+        
+        # 1. Basic Random Forest
+        print("\n1️⃣  BASIC RANDOM FOREST")
+        print("-" * 70)
+        preds_basic = rf_basic.predict(test[basic_predictors])
+        acc_basic = accuracy_score(test["target"], preds_basic)
+        prec_basic = precision_score(test["target"], preds_basic)
+        print(f"Accuracy:  {acc_basic:.4f} ({acc_basic*100:.2f}%)")
+        print(f"Precision: {prec_basic:.4f} ({prec_basic*100:.2f}%)")
+        results.append(("Basic RF", acc_basic, prec_basic))
+        
+        # 2. Random Forest + Rolling Features
+        print("\n2️⃣  RANDOM FOREST + ROLLING FEATURES ⭐")
+        print("-" * 70)
+        preds_rolling = rf_rolling.predict(test[rolling_predictors])
+        acc_rolling = accuracy_score(test["target"], preds_rolling)
+        prec_rolling = precision_score(test["target"], preds_rolling)
+        print(f"Accuracy:  {acc_rolling:.4f} ({acc_rolling*100:.2f}%)")
+        print(f"Precision: {prec_rolling:.4f} ({prec_rolling*100:.2f}%)")
+        results.append(("RF + Rolling", acc_rolling, prec_rolling))
+        
+        # 3. Logistic Regression
+        print("\n3️⃣  LOGISTIC REGRESSION")
+        print("-" * 70)
+        preds_lr = lr.predict(test[rolling_predictors])
+        acc_lr = accuracy_score(test["target"], preds_lr)
+        prec_lr = precision_score(test["target"], preds_lr)
+        print(f"Accuracy:  {acc_lr:.4f} ({acc_lr*100:.2f}%)")
+        print(f"Precision: {prec_lr:.4f} ({prec_lr*100:.2f}%)")
+        results.append(("Logistic Reg", acc_lr, prec_lr))
+        
+        # 4. SVM
+        print("\n4️⃣  SUPPORT VECTOR MACHINE")
+        print("-" * 70)
+        preds_svm = svm_model.predict(test[rolling_predictors])
+        acc_svm = accuracy_score(test["target"], preds_svm)
+        prec_svm = precision_score(test["target"], preds_svm, zero_division=0)
+        print(f"Accuracy:  {acc_svm:.4f} ({acc_svm*100:.2f}%)")
+        print(f"Precision: {prec_svm:.4f} ({prec_svm*100:.2f}%)")
+        results.append(("SVM", acc_svm, prec_svm))
+        
+        # 5. XGBoost
+        print("\n5️⃣  XGBOOST")
+        print("-" * 70)
+        preds_xgb = xgb.predict(test[rolling_predictors])
+        acc_xgb = accuracy_score(test["target"], preds_xgb)
+        prec_xgb = precision_score(test["target"], preds_xgb)
+        print(f"Accuracy:  {acc_xgb:.4f} ({acc_xgb*100:.2f}%)")
+        print(f"Precision: {prec_xgb:.4f} ({prec_xgb*100:.2f}%)")
+        results.append(("XGBoost", acc_xgb, prec_xgb))
+        
+        # Summary
+        print("\n" + "="*70)
+        print("📊 FINAL RANKING")
+        print("="*70)
+        
+        results_df = pd.DataFrame(results, columns=['Model', 'Accuracy', 'Precision'])
+        results_df = results_df.sort_values('Accuracy', ascending=False)
+        results_df['Rank'] = range(1, len(results_df) + 1)
+        
+        print(results_df.to_string(index=False))
+        
+        # Best model details
+        best_model = results_df.iloc[0]
+        print("\n" + "="*70)
+        print(f"🏆 WINNER: {best_model['Model']}")
+        print("="*70)
+        print(f"✅ Test Accuracy:  {best_model['Accuracy']:.4f} ({best_model['Accuracy']*100:.2f}%)")
+        print(f"✅ Test Precision: {best_model['Precision']:.4f} ({best_model['Precision']*100:.2f}%)")
+        
+        # Sample predictions with best model
+        print("\n" + "="*70)
+        print("🔮 SAMPLE PREDICTIONS (Best Model)")
+        print("="*70)
+        
+        combined = pd.DataFrame({
+            'actual': test["target"], 
+            'prediction': preds_rolling  # Using best model
+        }, index=test.index)
+        
+        combined = combined.merge(
+            matches_rolling[["date", "team", "opponent", "result"]], 
+            left_index=True, 
+            right_index=True
+        )
+        
+        print("\nFirst 10 predictions:")
+        print(combined[['team', 'opponent', 'result', 'actual', 'prediction']].head(10))
+        
+        # Accuracy breakdown
+        correct = (combined['actual'] == combined['prediction']).sum()
+        total = len(combined)
+        print(f"\n✅ Correct predictions: {correct}/{total} ({correct/total*100:.2f}%)")
+        
+        # Feature importance (for best RF model)
+        print("\n" + "="*70)
+        print("📊 FEATURE IMPORTANCE (Random Forest + Rolling)")
+        print("="*70)
+        
+        feature_imp = pd.DataFrame({
+            'Feature': rolling_predictors,
+            'Importance': rf_rolling.feature_importances_
+        }).sort_values('Importance', ascending=False)
+        
+        print(feature_imp.head(10).to_string(index=False))
+        
+    except Exception as e:
+        print(f"❌ Error loading models: {e}")
+        print("\nPlease run ML_models.ipynb first to train and save the models!")
 
-combined = combined.merge(matches_rolling[["date", "team", "opponent", "result"]], left_index = True, right_index = True)
-combined
+else:
+    print(f"\n❌ Models directory not found: {models_dir}")
+    print("\n📝 To create models:")
+    print("   1. Open ML_models.ipynb")
+    print("   2. Run all cells")
+    print("   3. Add the model saving cell at the end")
+    print("   4. Run this script again")
 
-class MissingDict(dict): # creating a class that inherits from the dictionary class
-    __missing__ = lambda self, key: key # in case a team name is missing
-
-map_values = {
-    "Brighton and Hove Albion": "Brighton",
-    "Manchester United": "Manchester Utd",
-    "Tottenham Hotspur": "Tottenham", 
-    "West Ham United": "West Ham", 
-    "Wolverhampton Wanderers": "Wolves"
-}
-mapping = MissingDict(**map_values)
-mapping["West Ham United"]
-
-combined["new_team"] = combined["team"].map(mapping)
-combined
-
-merged = combined.merge(combined, left_on=["date", "new_team"], right_on=["date", "opponent"]) # finding both the home and away team predictions and merging them 
-merged
-
-print(precision) # displaying the predictions for both teams
-print(acc)
+print("\n" + "="*70)
+print("Script completed!")
+print("="*70)
