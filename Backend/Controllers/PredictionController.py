@@ -66,36 +66,52 @@ _cached_model_name = None
 # Function for loading trained models so we can test different models with the predictor website
 def load_trained_model():
     """Load the pre-trained Random Forest model (loads once, cached)"""
-    global _cached_model, _cached_predictors, _cached_metrics
+    global _cached_model, _cached_predictors, _cached_metrics, _cached_model_name
     
     # Return cached model if already loaded
-    if _cached_model is not None:
+    if _cached_model is not None and _cached_model_name == SELECTED_MODEL:
+        print(f"♻️  Using cached model: {MODEL_INFO[SELECTED_MODEL]['name']}")
         return _cached_model, _cached_predictors, _cached_metrics
     
     try:
+           # Get model info from configuration
+        if SELECTED_MODEL not in MODEL_INFO:
+            raise ValueError(f"Unknown model: {SELECTED_MODEL}. Available: {list(MODEL_INFO.keys())}")
+
+        model_info = MODEL_INFO[SELECTED_MODEL]
+
         # Get path to saved models
         script_dir = os.path.dirname(os.path.abspath(__file__))
         parent_dir = os.path.dirname(script_dir)
         models_dir = os.path.join(parent_dir, "../MachineLearning/models")
         
-        # Load the best model (RF + Rolling Features)
-        model_path = os.path.join(models_dir, "rf_rolling.pkl")
-        predictors_path = os.path.join(models_dir, "rolling_predictors.pkl")
+        # Build paths using the selected model
+        model_path = os.path.join(models_dir, model_info['file'])  
+        predictors_path = os.path.join(models_dir, f"{model_info['predictors_key']}.pkl")  
         metrics_path = os.path.join(models_dir, "all_metrics.pkl")
         
-        print(f"📂 Loading model from: {model_path}")
+        print(f"📂 Loading model: {model_info['name']}")
+        print(f"   File: {model_path}")
         
+        # Load model files
         _cached_model = joblib.load(model_path)
         _cached_predictors = joblib.load(predictors_path)
         _cached_metrics = joblib.load(metrics_path)
+        _cached_model_name = SELECTED_MODEL
         
-        # Get metrics for this model
-        metrics = _cached_metrics['rf_rolling']
-        acc = metrics['accuracy']
-        prec = metrics['precision']
+        # Get metrics for the selected model
+        if SELECTED_MODEL in _cached_metrics:
+            metrics = _cached_metrics[SELECTED_MODEL]
+            acc = metrics['accuracy']
+            prec = metrics['precision']
+        else:
+            acc = 0.0
+            prec = 0.0
+            print("⚠️  Metrics not found for this model")
         
         print(f"✅ Model loaded successfully!")
-        print(f"   Accuracy: {acc:.4f}, Precision: {prec:.4f}")
+        print(f"   Accuracy: {acc:.4f} ({acc*100:.2f}%)")
+        print(f"   Precision: {prec:.4f} ({prec*100:.2f}%)")
         
         return _cached_model, _cached_predictors, metrics
         
