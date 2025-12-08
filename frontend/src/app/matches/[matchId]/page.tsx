@@ -244,10 +244,12 @@ export default function MatchDetailPage() {
                 ) : (
                   <div className="w-24 h-24 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
                 )}
-              </div>
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white text-center mb-2">
-                {match.team_name}
-              </h2>
+              </div>  
+              <Link href={`/teams/${encodeURIComponent(match.team_name)}`}>
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white text-center mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  {match.team_name}
+                </h2>
+              </Link>
               {match.result && match.result !== "nan" && match.result !== "" ? (
                 <div className="text-4xl font-bold text-gray-900 dark:text-white">
                   {match.gf}
@@ -285,9 +287,11 @@ export default function MatchDetailPage() {
                   <div className="w-24 h-24 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
                 )}
               </div>
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white text-center mb-2">
-                {match.opponent}
-              </h2>
+              <Link href={`/teams/${encodeURIComponent(match.opponent)}`}>
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white text-center mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  {match.opponent}
+                </h2>
+              </Link>
               {match.result && match.result !== "nan" && match.result !== "" ? (
                 <div className="text-4xl font-bold text-gray-900 dark:text-white">
                   {match.ga}

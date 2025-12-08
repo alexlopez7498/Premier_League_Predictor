@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -335,11 +336,11 @@ export default function TeamsPage() {
                               <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
                             )}
                           </div>
-                          <div>
-                            <div className="text-sm font-semibold text-gray-900 dark:text-white">
+                          <Link href={`/teams/${encodeURIComponent(team.name)}`}>
+                            <div className="text-sm font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                               {team.name}
                             </div>
-                          </div>
+                          </Link>
                         </div>
                       </td>
                       <td className="px-4 py-4 whitespace-nowrap text-center text-sm text-gray-900 dark:text-white">

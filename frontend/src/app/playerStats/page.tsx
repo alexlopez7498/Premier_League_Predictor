@@ -294,8 +294,9 @@ export default function PlayerStatsPage() {
                 </p>
               </div>
               <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead className="bg-gray-100 dark:bg-gray-700">
+                <div className="max-h-[800px] overflow-y-auto rounded-b-xl">
+                  <table className="w-full">
+                    <thead className="bg-gray-100 dark:bg-gray-700 sticky top-0 z-10">
                     <tr>
                       <th 
                         className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600"
@@ -349,8 +350,8 @@ export default function PlayerStatsPage() {
                         xA
                       </th>
                     </tr>
-                  </thead>
-                  <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                    </thead>
+                    <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                     {filteredPlayers.length > 0 ? (
                       filteredPlayers.map((player) => (
                         <tr
@@ -425,8 +426,9 @@ export default function PlayerStatsPage() {
                         </td>
                       </tr>
                     )}
-                  </tbody>
-                </table>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </>
           )}

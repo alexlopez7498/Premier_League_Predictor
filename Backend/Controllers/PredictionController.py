@@ -95,10 +95,25 @@ def load_trained_model():
         
         model_config = MODEL_INFO[SELECTED_MODEL]
         
-        # Get path to saved models
+        # Get path to saved models - try multiple paths for Docker and local
         script_dir = os.path.dirname(os.path.abspath(__file__))
         parent_dir = os.path.dirname(script_dir)
-        models_dir = os.path.join(parent_dir, "../MachineLearning/models")
+        possible_models_dirs = [
+            "/app/MachineLearning/models",  # Docker path
+            os.path.join(parent_dir, "../MachineLearning/models"),  # Local relative path
+            os.path.join(script_dir, "../MachineLearning/models"),
+            "MachineLearning/models"
+        ]
+        
+        models_dir = None
+        for path in possible_models_dirs:
+            test_path = os.path.join(path, model_config["file"])
+            if os.path.exists(test_path):
+                models_dir = path
+                break
+        
+        if not models_dir:
+            raise FileNotFoundError(f"Model directory not found. Tried: {possible_models_dirs}")
         
         # Load model based on SELECTED_MODEL
         model_path = os.path.join(models_dir, model_config["file"])
@@ -176,7 +191,22 @@ async def readPredictionPerTeam(teamName:str, db:Session):
 def load2025Schedule():
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    schedule_path = os.path.join(script_dir, "../../WebScraper", "schedules_2025_2026.csv")
+    # Try multiple paths in case running in Docker or locally
+    possible_paths = [
+        "/app/WebScraper/schedules_2025_2026.csv",  # Docker path
+        os.path.join(script_dir, "../../WebScraper/schedules_2025_2026.csv"),  # Local relative path
+        os.path.join(script_dir, "../WebScraper/schedules_2025_2026.csv"),
+        "WebScraper/schedules_2025_2026.csv"
+    ]
+    
+    schedule_path = None
+    for path in possible_paths:
+        if os.path.exists(path):
+            schedule_path = path
+            break
+    
+    if not schedule_path:
+        raise FileNotFoundError(f"schedules_2025_2026.csv not found in expected locations. Tried: {possible_paths}")
 
     schedule_df = pd.read_csv(schedule_path)
 
@@ -211,8 +241,23 @@ async def predictMatchOutcome(match: MatchBase, db: Session):
 
         # Get path to 2020-2022 matches.csv
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        parent_dir = os.path.dirname(script_dir)
-        matches_path = os.path.join(parent_dir, "../MachineLearning", "matches.csv")
+        # Try multiple paths in case running in Docker or locally
+        possible_paths = [
+            os.path.join(script_dir, "../../MachineLearning/matches.csv"),
+            os.path.join(script_dir, "../MachineLearning/matches.csv"),
+            "/app/MachineLearning/matches.csv",
+            "MachineLearning/matches.csv"
+        ]
+        
+        matches_path = None
+        for path in possible_paths:
+            if os.path.exists(path):
+                matches_path = path
+                break
+        
+        if not matches_path:
+            return {"error": "matches.csv not found in expected locations"}
+        
         matches = pd.read_csv(matches_path, index_col=0)
 
         # Preprocess 2020-2022 data
