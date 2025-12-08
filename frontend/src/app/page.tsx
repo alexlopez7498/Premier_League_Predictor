@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getTeamLogoUrl } from "@/utils/teamLogos";
@@ -22,6 +23,7 @@ interface Match {
 export default function Home() {
 
   const [matches, setMatches] = useState<Match[]>([]);
+  const router = useRouter();
 
   const sortMatchesByTime = (matchesToSort: Match[]): Match[] => {
     return [...matchesToSort].sort((a, b) => {
@@ -121,10 +123,18 @@ export default function Home() {
                         </h3>
                         <div className="space-y-3">
                           {dayMatches.map((match, index) => (
-                            <Link
+                            <div
                               key={match.match_id || index}
-                              href={`/matches/${match.match_id}`}
-                              className="block"
+                              role="button"
+                              tabIndex={0}
+                              onClick={() => router.push(`/matches/${match.match_id}`)}
+                              onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                  e.preventDefault();
+                                  router.push(`/matches/${match.match_id}`);
+                                }
+                              }}
+                              className="block focus:outline-none"
                             >
                               <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg gap-4 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors cursor-pointer">
                                 <div className="flex items-center space-x-4 flex-1">
@@ -142,9 +152,16 @@ export default function Home() {
                                       <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
                                     )}
                                   </div>
-                                  <div className="text-right w-32 flex-shrink-0">
-                                    <p className="font-semibold text-gray-900 dark:text-white text-sm">{match.team_name}</p>
-                                  </div>
+                                  <Link
+                                    href={`/teams/${encodeURIComponent(match.team_name)}`}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                    }}
+                                  >
+                                    <div className="text-right w-32 flex-shrink-0">
+                                      <p className="font-semibold text-gray-900 dark:text-white text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{match.team_name}</p>
+                                    </div>
+                                  </Link>
                                 </div>
                                 <div className="text-center flex-1">
                                   <p className="text-xs text-gray-500 dark:text-gray-400">{match.time}</p>
@@ -163,9 +180,16 @@ export default function Home() {
                                   )}
                                 </div>
                                 <div className="flex items-center space-x-4 flex-1 justify-end">
-                                  <div className="text-left w-32 flex-shrink-0">
-                                    <p className="font-semibold text-gray-900 dark:text-white text-sm">{match.opponent}</p>
-                                  </div>
+                                  <Link
+                                    href={`/teams/${encodeURIComponent(match.opponent)}`}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                    }}
+                                  >
+                                    <div className="text-left w-32 flex-shrink-0">
+                                    <p className="font-semibold text-gray-900 dark:text-white text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{match.opponent}</p>
+                                    </div>
+                                  </Link>
                                   <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
                                     {getTeamLogoUrl(match.opponent) && (
                                       <Image 
@@ -182,7 +206,7 @@ export default function Home() {
                                   </div>
                                 </div>
                               </div>
-                            </Link>
+                            </div>
                           ))}
                         </div>
                       </div>
@@ -193,13 +217,6 @@ export default function Home() {
               <p className="text-center text-gray-500 dark:text-gray-400">No matches found for this week</p>
             )}
           </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors mb-4">
-            Start Predicting Now
-          </button>
         </div>
       </main>
 

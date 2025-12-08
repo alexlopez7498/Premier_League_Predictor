@@ -277,11 +277,13 @@ function MatchesContent() {
                                   <div className="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
                                 )}
                               </div>
-                              <div className="text-right w-32 flex-shrink-0">
-                                <p className="font-semibold text-gray-900 dark:text-white text-sm">
+                              <Link href={`/teams/${encodeURIComponent(match.team_name)}`}>
+                                <div className="text-right w-32 flex-shrink-0">
+                                <p className="font-semibold text-gray-900 dark:text-white text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                                   {match.team_name}
                                 </p>
-                              </div>
+                                </div>
+                              </Link>
                             </div>
                             <div className="text-center flex-1">
                               <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
@@ -307,11 +309,13 @@ function MatchesContent() {
                               )}
                             </div>
                             <div className="flex items-center space-x-4 flex-1 justify-end">
-                              <div className="text-left w-32 flex-shrink-0">
-                                <p className="font-semibold text-gray-900 dark:text-white text-sm">
-                                  {match.opponent}
-                                </p>
-                              </div>
+                              <Link href={`/teams/${encodeURIComponent(match.opponent)}`}>
+                                <div className="text-left w-32 flex-shrink-0">
+                                <p className="font-semibold text-gray-900 dark:text-white text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                    {match.opponent}
+                                  </p>
+                                </div>
+                              </Link>
                               <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
                                 {getTeamLogoUrl(match.opponent) ? (
                                   <Image 
