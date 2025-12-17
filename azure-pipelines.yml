@@ -23,9 +23,18 @@ steps:
     displayName: Install backend packages
 
 
-  - script: pytest tests/ -v
+  - script: pytest tests/ -v --junitxml=test-results.xml
     workingDirectory: '$(backendDir)'
     displayName: Run backend tests
+    continueOnError: true
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: '$(backendDir)/test-results.xml'
+      testRunTitle: 'Backend Unit Tests'
+      failTaskOnFailedTests: true
+    displayName: 'Publish test results'
 
   - task: ArchiveFiles@2
     inputs:
