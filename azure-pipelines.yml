@@ -4,7 +4,7 @@ trigger:
   - main
 
 pool:
-  name: 'Default'
+  vmImage: 'ubuntu-latest'
 
 variables:
   backendDir: 'Backend'
@@ -23,9 +23,9 @@ steps:
     displayName: Install backend packages
 
 
-  # - script: pytest
-  #   workingDirectory: '$(backendDir)'
-  #   displayName: Run backend tests
+  - script: pytest tests/ -v
+    workingDirectory: '$(backendDir)'
+    displayName: Run backend tests
 
   - task: ArchiveFiles@2
     inputs:

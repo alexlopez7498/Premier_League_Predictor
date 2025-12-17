@@ -87,14 +87,14 @@ async def createTeam(team: TeamBase, db: Session):
         goalsAgainst=team.goalsAgainst,
         goalDifference=team.goalDifference,
         points=team.points,
+        goalsPer90=team.goalsPer90,
         expectedGoals=team.expectedGoals,
         expectedGoalsAllowed=team.expectedGoalsAllowed,
         expectedGoalsDifference=team.expectedGoalsDifference,
-        expectedGoalsPerGame=team.goalsPer90,
         expectedGoalsDifferencePer90=team.expectedGoalsDifferencePer90,
         last5Wins=team.last5Wins,
-        attendence=team.attendance,
-        topScorer=team.topTeamScorer,
+        attendance=team.attendance,
+        topTeamScorer=team.topTeamScorer,
         goalkeeper=team.goalkeeper
     )
     db.add(dbTeam)

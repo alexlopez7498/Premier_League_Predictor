@@ -20,3 +20,7 @@ def getAllTeams(db: Session = Depends(get_db)):
 @router.post("/teams/import", tags=["teams"])
 async def importTeams(db: Session = Depends(get_db)):
     return await importLeagueTable("/WebScraper/table.csv", db)
+
+@router.post("/teams/", tags=["teams"])
+async def createTeamRoute(team: TeamBase, db: Session = Depends(get_db)):
+    return await createTeam(team, db)
