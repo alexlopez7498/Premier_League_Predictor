@@ -1,7 +1,17 @@
 """
 Pytest configuration and shared fixtures for backend tests.
 """
+import os
 import pytest
+
+# Set dummy environment variables BEFORE importing anything that uses database.py
+# This prevents database.py from trying to connect to a real database during tests
+os.environ.setdefault('DB_USER', 'test_user')
+os.environ.setdefault('DB_PASSWORD', 'test_password')
+os.environ.setdefault('DB_HOST', 'localhost')
+os.environ.setdefault('DB_PORT', '5432')
+os.environ.setdefault('DB_NAME', 'test_db')
+
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
