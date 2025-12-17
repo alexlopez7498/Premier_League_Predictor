@@ -1,0 +1,43 @@
+# azure-pipelines-fastapi.yml
+
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  backendDir: 'Backend'
+
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.11'
+
+  - script: python -m pip install --upgrade pip
+    workingDirectory: '$(backendDir)'
+    displayName: Upgrade pip
+
+  - script: pip install -r requirements.txt
+    workingDirectory: '$(backendDir)'
+    displayName: Install backend packages
+
+  # Optional: only if you actually have pytest tests in Backend/
+  - script: pytest
+    workingDirectory: '$(backendDir)'
+    displayName: Run backend tests
+
+  # Archive just the backend (you can change this to '.' if you want whole repo)
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: '$(backendDir)'
+      includeRootFolder: true
+      archiveType: 'zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/fastapi-backend.zip'
+      replaceExistingArchive: true
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
