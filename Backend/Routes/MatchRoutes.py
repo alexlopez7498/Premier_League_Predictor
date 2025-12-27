@@ -18,7 +18,7 @@ async def getAllMatches(db: Session = Depends(get_db)):
 
 @router.post("/import", tags=["matches"])
 async def importAllMatches(db: Session = Depends(get_db)):
-    return await importMatches("../WebScraper/schedules_2025_2026.csv", db)
+    return await importMatches("WebScraper/schedules_2025_2026.csv", db)
 
 #API call get request to get all players from a specific team
 @router.get("/team/{team_name}", tags=["matches"])

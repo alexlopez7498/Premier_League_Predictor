@@ -25,7 +25,7 @@ class Match(Base):
     oppFormation = Column(String, index=True)
     referee = Column(String, index=True)
 
-    team_name = Column(String, ForeignKey("team.name"))
+    team_name = Column(String, ForeignKey("team.name", ondelete="CASCADE"))
 
     team = relationship("Team", back_populates="matches")
 

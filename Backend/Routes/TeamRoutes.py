@@ -19,7 +19,7 @@ def getAllTeams(db: Session = Depends(get_db)):
 #API call post request to add a team to the database
 @router.post("/teams/import", tags=["teams"])
 async def importTeams(db: Session = Depends(get_db)):
-    return await importLeagueTable("/WebScraper/table.csv", db)
+    return await importLeagueTable("WebScraper/table.csv", db)
 
 @router.post("/teams/", tags=["teams"])
 async def createTeamRoute(team: TeamBase, db: Session = Depends(get_db)):

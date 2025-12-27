@@ -71,9 +71,10 @@ def run_all_scrapers():
     log_message("="*60)
     
     # Run both scrapers sequentially
-    run_data_scraping()
-    time.sleep(2)  # Small delay between scripts
     run_league_table_scraping()
+    time.sleep(2)  # Small delay between scripts
+    run_data_scraping()
+
     
     log_message("All scraping tasks completed")
     log_message("="*60)

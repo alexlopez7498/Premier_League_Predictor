@@ -7,6 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
+import requests
+import os
 
 # Setup Chrome options
 chrome_options = Options()
@@ -17,6 +19,9 @@ chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x
 
 # Initialize the driver
 driver = webdriver.Chrome(options=chrome_options)
+
+# API configuration - can be set via environment variable or defaults to localhost
+API_BASE_URL = os.getenv('API_BASE_URL', 'http://localhost:8000')
 
 all_teams = []
 all_schedules = []
@@ -133,12 +138,12 @@ try:
                 
                 schedule_data["Team"] = team_name
                 all_schedules.append(schedule_data)
-                print(f"  ✓ Successfully scraped schedule for {team_name}")
+                print(f" Successfully scraped schedule for {team_name}")
             else:
-                print(f"  ⚠ No schedule table found for {team_name}")
+                print(f" No schedule table found for {team_name}")
                 
         except Exception as e:
-            print(f"  ✗ Error scraping schedule for {team_name}: {e}")
+            print(f"Error scraping schedule for {team_name}: {e}")
         
         time.sleep(5)  # Be respectful to the server
     
@@ -155,6 +160,22 @@ try:
         stat_df.to_csv("WebScraper/stats.csv", index=False)
         print(f"\nSuccessfully saved stats for {len(all_teams)} teams to stats.csv")
         print(f"Total players: {len(stat_df)}")
+        
+        # Import players into database via API
+        try:
+            print("\nImporting players into database...")
+            response = requests.post(f"{API_BASE_URL}/players/import", timeout=300)
+            if response.status_code == 200:
+                print(f"✓ Successfully imported players: {response.json()}")
+            else:
+                print(f"API returned status {response.status_code}: {response.text}")
+        except requests.exceptions.ConnectionError:
+            print("Could not connect to API. Make sure the FastAPI server is running.")
+            print(f"Attempted URL: {API_BASE_URL}/players/import")
+        except requests.exceptions.Timeout:
+            print("API request timed out. The import may still be processing.")
+        except Exception as e:
+            print(f"Error calling import API: {e}")
     else:
         print("\nNo stats data was scraped")
     
@@ -163,6 +184,22 @@ try:
         schedule_df = pd.concat(all_schedules, ignore_index=True)
         schedule_df.to_csv("WebScraper/schedules_2025_2026.csv", index=False)
         print(f"Successfully saved schedules for {len(all_schedules)} teams to schedules_2025_2026.csv")
+        
+        # Import matches into database via API
+        try:
+            print("\nImporting matches into database...")
+            response = requests.post(f"{API_BASE_URL}/matches/import", timeout=300)
+            if response.status_code == 200:
+                print(f"✓ Successfully imported matches: {response.json()}")
+            else:
+                print(f"API returned status {response.status_code}: {response.text}")
+        except requests.exceptions.ConnectionError:
+            print("Could not connect to API. Make sure the FastAPI server is running.")
+            print(f"Attempted URL: {API_BASE_URL}/matches/import")
+        except requests.exceptions.Timeout:
+            print("API request timed out. The import may still be processing.")
+        except Exception as e:
+            print(f"Error calling import API: {e}")
     else:
         print("No schedule data was scraped")
 

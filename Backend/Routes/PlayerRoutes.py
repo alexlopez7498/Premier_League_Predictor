@@ -19,7 +19,7 @@ async def addPlayer(player: PlayerBase, db: Session = Depends(get_db)):
 #API call post request to import players from a CSV file
 @router.post("/players/import", tags=["players"])
 async def importAllPlayers(db: Session = Depends(get_db)):
-    return await importPlayers("../WebScraper/stats.csv", db)
+    return await importPlayers("WebScraper/stats.csv", db)
 
 #API call get request to get all players from a specific team
 @router.get("/players/{team_name}", tags=["players"])
