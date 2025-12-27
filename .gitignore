@@ -374,4 +374,10 @@ pyrightconfig.json
 pyvenv.cfg
 pip-selfcheck.json
 
+
+scheduler.log
+*.log
+data/
+output/
+logs/
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,venv,slickedit,dotenv,pydev,jetbrains+all

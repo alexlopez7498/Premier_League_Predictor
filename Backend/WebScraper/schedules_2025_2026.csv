@@ -11,11 +11,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-01,15:00 (08:00),Matchweek 10,Sat,Away,W,2,0,Burnley,2.3,0.4,54,21538,Bukayo Saka,4-3-3,5-4-1,Chris Kavanagh,Match Report,,Arsenal
 2025-11-08,17:30 (09:30),Matchweek 11,Sat,Away,D,2,2,Sunderland,1.9,0.4,64,46799,Bukayo Saka,4-2-3-1,5-4-1,Craig Pawson,Match Report,,Arsenal
 2025-11-23,16:30 (08:30),Matchweek 12,Sun,Home,W,4,1,Tottenham,1.9,0.1,57,60345,Bukayo Saka,4-2-3-1,3-4-3,Michael Oliver,Match Report,,Arsenal
-2025-11-30,16:30 (08:30),Matchweek 13,Sun,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Arsenal
-2025-12-03,19:30 (11:30),Matchweek 14,Wed,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Arsenal
-2025-12-06,12:30 (04:30),Matchweek 15,Sat,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Arsenal
-2025-12-13,20:00 (12:00),Matchweek 16,Sat,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Arsenal
-2025-12-20,20:00 (12:00),Matchweek 17,Sat,Away,,,,Everton,,,,,,,,,Head-to-Head,,Arsenal
+2025-11-30,16:30 (08:30),Matchweek 13,Sun,Away,D,1,1,Chelsea,1.0,0.8,61,39820,Bukayo Saka,4-3-3,4-2-3-1,Anthony Taylor,Match Report,,Arsenal
+2025-12-03,19:30 (11:30),Matchweek 14,Wed,Home,W,2,0,Brentford,1.8,0.3,62,60110,Martin Ødegaard,4-3-3,5-3-2,Tony Harrington,Match Report,,Arsenal
+2025-12-06,12:30 (04:30),Matchweek 15,Sat,Away,L,1,2,Aston Villa,1.9,2.1,53,42888,Martin Ødegaard,4-3-3,4-2-3-1,Peter Bankes,Match Report,,Arsenal
+2025-12-13,20:00 (12:00),Matchweek 16,Sat,Home,W,2,1,Wolves,1.1,0.3,69,60242,Bukayo Saka,4-3-3,3-5-2,Robert Jones,Match Report,,Arsenal
+2025-12-20,20:00 (12:00),Matchweek 17,Sat,Away,W,1,0,Everton,2.0,0.2,65,52513,Martin Ødegaard,4-3-3,4-2-3-1,Samuel Barrott,Match Report,,Arsenal
 2025-12-27,15:00 (07:00),Matchweek 18,Sat,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Arsenal
 2025-12-30,20:15 (12:15),Matchweek 19,Tue,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Arsenal
 2026-01-03,17:30 (09:30),Matchweek 20,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Arsenal
@@ -24,9 +24,9 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-25,16:30 (08:30),Matchweek 23,Sun,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Arsenal
 2026-01-31,15:00 (07:00),Matchweek 24,Sat,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Arsenal
 2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Arsenal
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Arsenal
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Arsenal
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Arsenal
+2026-02-12,20:00 (12:00),Matchweek 26,Thu,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Arsenal
+2026-02-22,16:30 (08:30),Matchweek 27,Sun,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Arsenal
+2026-03-01,16:30 (08:30),Matchweek 28,Sun,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Arsenal
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Arsenal
 2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Everton,,,,,,,,,Head-to-Head,,Arsenal
 2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Arsenal
@@ -37,44 +37,6 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Arsenal
 2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Arsenal
 2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Arsenal
-2025-08-17,14:00 (06:00),Matchweek 1,Sun,Home,D,0,0,Crystal Palace,1.6,0.6,71,39678,Reece James,4-2-3-1,3-4-3,Darren England,Match Report,,Chelsea
-2025-08-22,20:00 (12:00),Matchweek 2,Fri,Away,W,5,1,West Ham,2.7,0.7,58,62462,Enzo Fernández,4-2-3-1,3-4-1-2,Michael Oliver,Match Report,,Chelsea
-2025-08-30,12:30 (04:30),Matchweek 3,Sat,Home,W,2,0,Fulham,2.1,0.9,54,39745,Enzo Fernández,4-2-3-1,4-2-3-1,Robert Jones,Match Report,,Chelsea
-2025-09-13,20:00 (12:00),Matchweek 4,Sat,Away,D,2,2,Brentford,1.3,1.4,66,16795,Enzo Fernández,4-2-3-1,5-3-2,Stuart Attwell,Match Report,,Chelsea
-2025-09-20,17:30 (09:30),Matchweek 5,Sat,Away,L,1,2,Manchester Utd,0.4,1.8,58,74124,Reece James,4-2-3-1,3-4-3,Peter Bankes,Match Report,,Chelsea
-2025-09-27,15:00 (07:00),Matchweek 6,Sat,Home,L,1,3,Brighton,1.8,2.3,59,39597,Reece James,4-3-3,4-2-3-1,Simon Hooper,Match Report,,Chelsea
-2025-10-04,17:30 (09:30),Matchweek 7,Sat,Home,W,2,1,Liverpool,1.0,1.9,53,39538,Reece James,4-2-3-1,4-2-3-1,Anthony Taylor,Match Report,,Chelsea
-2025-10-18,12:30 (04:30),Matchweek 8,Sat,Away,W,3,0,Nott'ham Forest,1.7,2.2,50,30495,Reece James,4-2-3-1,5-3-2,Chris Kavanagh,Match Report,,Chelsea
-2025-10-25,15:00 (07:00),Matchweek 9,Sat,Home,L,1,2,Sunderland,0.9,1.2,68,39489,Reece James,4-2-3-1,5-4-1,Andy Madley,Match Report,,Chelsea
-2025-11-01,17:30 (10:30),Matchweek 10,Sat,Away,W,1,0,Tottenham,3.7,0.1,52,61202,Reece James,4-2-3-1,4-2-3-1,Jarred Gillett,Match Report,,Chelsea
-2025-11-08,20:00 (12:00),Matchweek 11,Sat,Home,W,3,0,Wolves,3.3,0.2,63,39467,Enzo Fernández,4-2-3-1,5-3-2,Andrew Kitchen,Match Report,,Chelsea
-2025-11-22,12:30 (04:30),Matchweek 12,Sat,Away,W,2,0,Burnley,1.7,0.4,55,21499,Reece James,4-2-3-1,4-3-3,Peter Bankes,Match Report,,Chelsea
-2025-11-30,16:30 (08:30),Matchweek 13,Sun,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Chelsea
-2025-12-03,20:15 (12:15),Matchweek 14,Wed,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Chelsea
-2025-12-06,15:00 (07:00),Matchweek 15,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Chelsea
-2025-12-13,15:00 (07:00),Matchweek 16,Sat,Home,,,,Everton,,,,,,,,,Head-to-Head,,Chelsea
-2025-12-20,12:30 (04:30),Matchweek 17,Sat,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Chelsea
-2025-12-27,17:30 (09:30),Matchweek 18,Sat,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Chelsea
-2025-12-30,19:30 (11:30),Matchweek 19,Tue,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Chelsea
-2026-01-04,17:30 (09:30),Matchweek 20,Sun,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Chelsea
-2026-01-07,19:30 (11:30),Matchweek 21,Wed,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Chelsea
-2026-01-17,15:00 (07:00),Matchweek 22,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Chelsea
-2026-01-25,14:00 (06:00),Matchweek 23,Sun,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Chelsea
-2026-01-31,17:30 (09:30),Matchweek 24,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Chelsea
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Chelsea
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Chelsea
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Chelsea
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Chelsea
-2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Chelsea
-2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Chelsea
-2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Everton,,,,,,,,,Head-to-Head,,Chelsea
-2026-04-11,15:00 (07:00),Matchweek 32,Sat,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Chelsea
-2026-04-18,15:00 (07:00),Matchweek 33,Sat,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Chelsea
-2026-04-25,15:00 (07:00),Matchweek 34,Sat,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Chelsea
-2026-05-02,15:00 (07:00),Matchweek 35,Sat,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Chelsea
-2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Chelsea
-2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Chelsea
-2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Chelsea
 2025-08-16,17:30 (09:30),Matchweek 1,Sat,Away,W,4,0,Wolves,2.4,0.6,58,31456,Bernardo Silva,4-3-3,3-4-3,Jarred Gillett,Match Report,,Manchester City
 2025-08-23,12:30 (04:30),Matchweek 2,Sat,Home,L,0,2,Tottenham,1.6,1.1,61,51785,Rúben Dias,4-1-4-1,4-3-3,Peter Bankes,Match Report,,Manchester City
 2025-08-31,14:00 (06:00),Matchweek 3,Sun,Away,L,1,2,Brighton,1.8,2.2,63,31485,Bernardo Silva,4-3-3,4-2-3-1,Darren England,Match Report,,Manchester City
@@ -87,11 +49,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-02,16:30 (08:30),Matchweek 10,Sun,Home,W,3,1,Bournemouth,2.2,0.6,49,52387,Bernardo Silva,4-3-2-1,4-2-3-1,Anthony Taylor,Match Report,,Manchester City
 2025-11-09,16:30 (08:30),Matchweek 11,Sun,Home,W,3,0,Liverpool,1.5,0.7,49,52432,Bernardo Silva,4-3-3,4-2-3-1,Chris Kavanagh,Match Report,,Manchester City
 2025-11-22,17:30 (09:30),Matchweek 12,Sat,Away,L,1,2,Newcastle Utd,2.5,2.3,67,52181,Bernardo Silva,4-3-2-1,4-5-1,Samuel Barrott,Match Report,,Manchester City
-2025-11-29,15:00 (07:00),Matchweek 13,Sat,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Manchester City
-2025-12-02,19:30 (11:30),Matchweek 14,Tue,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Manchester City
-2025-12-06,15:00 (07:00),Matchweek 15,Sat,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Manchester City
-2025-12-14,14:00 (06:00),Matchweek 16,Sun,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Manchester City
-2025-12-20,15:00 (07:00),Matchweek 17,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Manchester City
+2025-11-29,15:00 (07:00),Matchweek 13,Sat,Home,W,3,2,Leeds United,2.6,1.5,61,52483,Bernardo Silva,4-3-2-1,4-3-3,Peter Bankes,Match Report,,Manchester City
+2025-12-02,19:30 (11:30),Matchweek 14,Tue,Away,W,5,4,Fulham,2.3,0.9,43,26700,Bernardo Silva,4-3-3,4-2-3-1,Craig Pawson,Match Report,,Manchester City
+2025-12-06,15:00 (07:00),Matchweek 15,Sat,Home,W,3,0,Sunderland,2.4,0.7,64,52436,Bernardo Silva,4-3-2-1,5-4-1,Andy Madley,Match Report,,Manchester City
+2025-12-14,14:00 (06:00),Matchweek 16,Sun,Away,W,3,0,Crystal Palace,1.2,1.9,60,25166,Bernardo Silva,4-3-2-1,3-4-3,Darren England,Match Report,,Manchester City
+2025-12-20,15:00 (07:00),Matchweek 17,Sat,Home,W,3,0,West Ham,2.1,1.1,66,52454,Bernardo Silva,4-3-2-1,4-3-1-2,Paul Tierney,Match Report,,Manchester City
 2025-12-27,12:30 (04:30),Matchweek 18,Sat,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Manchester City
 2026-01-01,20:00 (12:00),Matchweek 19,Thu,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Manchester City
 2026-01-04,17:30 (09:30),Matchweek 20,Sun,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Manchester City
@@ -99,10 +61,10 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-17,12:30 (04:30),Matchweek 22,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Manchester City
 2026-01-24,15:00 (07:00),Matchweek 23,Sat,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Manchester City
 2026-02-01,16:30 (08:30),Matchweek 24,Sun,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Manchester City
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Manchester City
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Manchester City
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Manchester City
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Manchester City
+2026-02-08,16:30 (08:30),Matchweek 25,Sun,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Manchester City
+2026-02-11,19:30 (11:30),Matchweek 26,Wed,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Manchester City
+2026-02-21,12:30 (04:30),Matchweek 27,Sat,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Manchester City
+2026-02-28,17:30 (09:30),Matchweek 28,Sat,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Manchester City
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Manchester City
 2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Manchester City
 2026-03-21,15:00 (08:00),Matchweek 31,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Manchester City
@@ -125,11 +87,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-01,20:00 (13:00),Matchweek 10,Sat,Away,L,0,2,Liverpool,0.4,1.2,46,60407,John McGinn,4-2-3-1,4-2-3-1,Stuart Attwell,Match Report,,Aston Villa
 2025-11-09,14:00 (06:00),Matchweek 11,Sun,Home,W,4,0,Bournemouth,1.7,1.6,51,40792,John McGinn,4-4-2,4-2-3-1,John Brooks,Match Report,,Aston Villa
 2025-11-23,14:00 (06:00),Matchweek 12,Sun,Away,W,2,1,Leeds United,1.6,1.6,52,36819,John McGinn,4-4-2,4-3-3,Robert Jones,Match Report,,Aston Villa
-2025-11-30,14:05 (06:05),Matchweek 13,Sun,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Aston Villa
-2025-12-03,19:30 (11:30),Matchweek 14,Wed,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Aston Villa
-2025-12-06,12:30 (04:30),Matchweek 15,Sat,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Aston Villa
-2025-12-14,14:00 (06:00),Matchweek 16,Sun,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Aston Villa
-2025-12-21,16:30 (08:30),Matchweek 17,Sun,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Aston Villa
+2025-11-30,14:05 (06:05),Matchweek 13,Sun,Home,W,1,0,Wolves,0.9,0.4,52,42139,John McGinn,4-2-3-1,3-4-3,Chris Kavanagh,Match Report,,Aston Villa
+2025-12-03,19:30 (11:30),Matchweek 14,Wed,Away,W,4,3,Brighton,2.3,1.9,44,31247,John McGinn,4-2-3-1,4-2-3-1,Andy Madley,Match Report,,Aston Villa
+2025-12-06,12:30 (04:30),Matchweek 15,Sat,Home,W,2,1,Arsenal,2.1,1.9,47,42888,John McGinn,4-2-3-1,4-3-3,Peter Bankes,Match Report,,Aston Villa
+2025-12-14,14:00 (06:00),Matchweek 16,Sun,Away,W,3,2,West Ham,0.7,1.0,58,62447,John McGinn,4-2-3-1,4-3-1-2,Anthony Taylor,Match Report,,Aston Villa
+2025-12-21,16:30 (08:30),Matchweek 17,Sun,Home,W,2,1,Manchester Utd,1.2,1.3,42,43157,John McGinn,4-2-3-1,3-4-3,Michael Oliver,Match Report,,Aston Villa
 2025-12-27,17:30 (09:30),Matchweek 18,Sat,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Aston Villa
 2025-12-30,20:15 (12:15),Matchweek 19,Tue,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Aston Villa
 2026-01-03,12:30 (04:30),Matchweek 20,Sat,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Aston Villa
@@ -138,9 +100,9 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-25,14:00 (06:00),Matchweek 23,Sun,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Aston Villa
 2026-02-01,14:00 (06:00),Matchweek 24,Sun,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Aston Villa
 2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Aston Villa
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Aston Villa
+2026-02-11,19:30 (11:30),Matchweek 26,Wed,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Aston Villa
 2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Aston Villa
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Aston Villa
+2026-02-27,20:00 (12:00),Matchweek 28,Fri,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Aston Villa
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Aston Villa
 2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Aston Villa
 2026-03-21,15:00 (08:00),Matchweek 31,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Aston Villa
@@ -151,6 +113,158 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Aston Villa
 2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Aston Villa
 2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Aston Villa
+2025-08-17,14:00 (06:00),Matchweek 1,Sun,Home,D,0,0,Crystal Palace,1.6,0.6,71,39678,Reece James,4-2-3-1,3-4-3,Darren England,Match Report,,Chelsea
+2025-08-22,20:00 (12:00),Matchweek 2,Fri,Away,W,5,1,West Ham,2.7,0.7,58,62462,Enzo Fernández,4-2-3-1,3-4-1-2,Michael Oliver,Match Report,,Chelsea
+2025-08-30,12:30 (04:30),Matchweek 3,Sat,Home,W,2,0,Fulham,2.1,0.9,54,39745,Enzo Fernández,4-2-3-1,4-2-3-1,Robert Jones,Match Report,,Chelsea
+2025-09-13,20:00 (12:00),Matchweek 4,Sat,Away,D,2,2,Brentford,1.3,1.4,66,16795,Enzo Fernández,4-2-3-1,5-3-2,Stuart Attwell,Match Report,,Chelsea
+2025-09-20,17:30 (09:30),Matchweek 5,Sat,Away,L,1,2,Manchester Utd,0.4,1.8,58,74124,Reece James,4-2-3-1,3-4-3,Peter Bankes,Match Report,,Chelsea
+2025-09-27,15:00 (07:00),Matchweek 6,Sat,Home,L,1,3,Brighton,1.8,2.3,59,39597,Reece James,4-3-3,4-2-3-1,Simon Hooper,Match Report,,Chelsea
+2025-10-04,17:30 (09:30),Matchweek 7,Sat,Home,W,2,1,Liverpool,1.0,1.9,53,39538,Reece James,4-2-3-1,4-2-3-1,Anthony Taylor,Match Report,,Chelsea
+2025-10-18,12:30 (04:30),Matchweek 8,Sat,Away,W,3,0,Nott'ham Forest,1.7,2.2,50,30495,Reece James,4-2-3-1,5-3-2,Chris Kavanagh,Match Report,,Chelsea
+2025-10-25,15:00 (07:00),Matchweek 9,Sat,Home,L,1,2,Sunderland,0.9,1.2,68,39489,Reece James,4-2-3-1,5-4-1,Andy Madley,Match Report,,Chelsea
+2025-11-01,17:30 (10:30),Matchweek 10,Sat,Away,W,1,0,Tottenham,3.7,0.1,52,61202,Reece James,4-2-3-1,4-2-3-1,Jarred Gillett,Match Report,,Chelsea
+2025-11-08,20:00 (12:00),Matchweek 11,Sat,Home,W,3,0,Wolves,3.3,0.2,63,39467,Enzo Fernández,4-2-3-1,5-3-2,Andrew Kitchen,Match Report,,Chelsea
+2025-11-22,12:30 (04:30),Matchweek 12,Sat,Away,W,2,0,Burnley,1.7,0.4,55,21499,Reece James,4-2-3-1,4-3-3,Peter Bankes,Match Report,,Chelsea
+2025-11-30,16:30 (08:30),Matchweek 13,Sun,Home,D,1,1,Arsenal,0.8,1.0,39,39820,Reece James,4-2-3-1,4-3-3,Anthony Taylor,Match Report,,Chelsea
+2025-12-03,20:15 (12:15),Matchweek 14,Wed,Away,L,1,3,Leeds United,0.9,2.3,71,36767,Enzo Fernández,4-2-3-1,3-5-2,Darren England,Match Report,,Chelsea
+2025-12-06,15:00 (07:00),Matchweek 15,Sat,Away,D,0,0,Bournemouth,0.9,1.5,60,11240,Reece James,4-2-3-1,4-2-3-1,Michael Oliver,Match Report,,Chelsea
+2025-12-13,15:00 (07:00),Matchweek 16,Sat,Home,W,2,0,Everton,2.2,1.0,57,39552,Reece James,4-2-3-1,4-2-3-1,Thomas Bramall,Match Report,,Chelsea
+2025-12-20,12:30 (04:30),Matchweek 17,Sat,Away,D,2,2,Newcastle Utd,1.2,2.3,53,52226,Reece James,4-2-3-1,4-3-3,Andy Madley,Match Report,,Chelsea
+2025-12-27,17:30 (09:30),Matchweek 18,Sat,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Chelsea
+2025-12-30,19:30 (11:30),Matchweek 19,Tue,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Chelsea
+2026-01-04,17:30 (09:30),Matchweek 20,Sun,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Chelsea
+2026-01-07,19:30 (11:30),Matchweek 21,Wed,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Chelsea
+2026-01-17,15:00 (07:00),Matchweek 22,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Chelsea
+2026-01-25,14:00 (06:00),Matchweek 23,Sun,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Chelsea
+2026-01-31,17:30 (09:30),Matchweek 24,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Chelsea
+2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Chelsea
+2026-02-10,19:30 (11:30),Matchweek 26,Tue,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Chelsea
+2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Chelsea
+2026-03-01,16:30 (08:30),Matchweek 28,Sun,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Chelsea
+2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Chelsea
+2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Chelsea
+2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Everton,,,,,,,,,Head-to-Head,,Chelsea
+2026-04-11,15:00 (07:00),Matchweek 32,Sat,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Chelsea
+2026-04-18,15:00 (07:00),Matchweek 33,Sat,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Chelsea
+2026-04-25,15:00 (07:00),Matchweek 34,Sat,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Chelsea
+2026-05-02,15:00 (07:00),Matchweek 35,Sat,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Chelsea
+2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Chelsea
+2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Chelsea
+2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Chelsea
+2025-08-17,16:30 (08:30),Matchweek 1,Sun,Home,L,0,1,Arsenal,1.5,1.3,61,73475,Bruno Fernandes,3-4-3,4-3-3,Simon Hooper,Match Report,,Manchester Utd
+2025-08-24,16:30 (08:30),Matchweek 2,Sun,Away,D,1,1,Fulham,1.6,1.7,47,27512,Bruno Fernandes,3-4-3,4-2-3-1,Chris Kavanagh,Match Report,,Manchester Utd
+2025-08-30,15:00 (07:00),Matchweek 3,Sat,Home,W,3,2,Burnley,3.6,1.2,62,74257,Bruno Fernandes,3-4-3,4-2-3-1,Samuel Barrott,Match Report,,Manchester Utd
+2025-09-14,16:30 (08:30),Matchweek 4,Sun,Away,L,0,3,Manchester City,1.2,2.7,54,52534,Bruno Fernandes,3-4-3,4-1-4-1,Anthony Taylor,Match Report,,Manchester Utd
+2025-09-20,17:30 (09:30),Matchweek 5,Sat,Home,W,2,1,Chelsea,1.8,0.4,42,74124,Bruno Fernandes,3-4-3,4-2-3-1,Peter Bankes,Match Report,,Manchester Utd
+2025-09-27,12:30 (04:30),Matchweek 6,Sat,Away,L,1,3,Brentford,2.1,1.9,55,17193,Bruno Fernandes,3-4-3,4-2-3-1,Craig Pawson,Match Report,,Manchester Utd
+2025-10-04,15:00 (07:00),Matchweek 7,Sat,Home,W,2,0,Sunderland,1.8,0.7,50,74004,Bruno Fernandes,3-4-3,4-2-3-1,Stuart Attwell,Match Report,,Manchester Utd
+2025-10-19,16:30 (08:30),Matchweek 8,Sun,Away,W,2,1,Liverpool,1.3,2.6,36,60337,Bruno Fernandes,3-4-3,4-2-3-1,Michael Oliver,Match Report,,Manchester Utd
+2025-10-25,17:30 (09:30),Matchweek 9,Sat,Home,W,4,2,Brighton,1.3,1.1,44,74124,Bruno Fernandes,3-4-3,4-2-3-1,Anthony Taylor,Match Report,,Manchester Utd
+2025-11-01,15:00 (08:00),Matchweek 10,Sat,Away,D,2,2,Nott'ham Forest,1.2,1.9,58,30778,Bruno Fernandes,3-4-3,4-2-3-1,Darren England,Match Report,,Manchester Utd
+2025-11-08,12:30 (04:30),Matchweek 11,Sat,Away,D,2,2,Tottenham,0.8,0.9,46,61210,Bruno Fernandes,3-4-3,4-2-3-1,Samuel Barrott,Match Report,,Manchester Utd
+2025-11-24,20:00 (12:00),Matchweek 12,Mon,Home,L,0,1,Everton,1.7,0.2,69,74158,Bruno Fernandes,3-4-3,4-2-3-1,Tony Harrington,Match Report,,Manchester Utd
+2025-11-30,12:00 (04:00),Matchweek 13,Sun,Away,W,2,1,Crystal Palace,1.2,1.8,56,25189,Bruno Fernandes,3-4-3,3-4-3,Robert Jones,Match Report,,Manchester Utd
+2025-12-04,20:00 (12:00),Matchweek 14,Thu,Home,D,1,1,West Ham,1.8,0.8,65,73938,Bruno Fernandes,3-4-3,4-2-3-1,Andrew Kitchen,Match Report,,Manchester Utd
+2025-12-08,20:00 (12:00),Matchweek 15,Mon,Away,W,4,1,Wolves,4.0,0.6,63,30338,Bruno Fernandes,3-4-3,3-4-3,Michael Salisbury,Match Report,,Manchester Utd
+2025-12-15,20:00 (12:00),Matchweek 16,Mon,Home,D,4,4,Bournemouth,3.4,1.9,56,73951,Bruno Fernandes,3-4-3,4-2-3-1,Simon Hooper,Match Report,,Manchester Utd
+2025-12-21,16:30 (08:30),Matchweek 17,Sun,Away,L,1,2,Aston Villa,1.3,1.2,58,43157,Bruno Fernandes,3-4-3,4-2-3-1,Michael Oliver,Match Report,,Manchester Utd
+2025-12-26,20:00 (12:00),Matchweek 18,Fri,Home,W,1,0,Newcastle Utd,1.2,1.2,34,,Lisandro Martínez,4-2-3-1,4-3-3,Anthony Taylor,Match Report,,Manchester Utd
+2025-12-30,20:15 (12:15),Matchweek 19,Tue,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-01-04,12:30 (04:30),Matchweek 20,Sun,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-01-07,20:15 (12:15),Matchweek 21,Wed,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-01-17,12:30 (04:30),Matchweek 22,Sat,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-01-25,16:30 (08:30),Matchweek 23,Sun,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-02-01,14:00 (06:00),Matchweek 24,Sun,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-02-07,12:30 (04:30),Matchweek 25,Sat,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-02-10,20:15 (12:15),Matchweek 26,Tue,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-02-23,20:00 (12:00),Matchweek 27,Mon,Away,,,,Everton,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-04-11,15:00 (07:00),Matchweek 32,Sat,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-04-18,15:00 (07:00),Matchweek 33,Sat,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-04-25,15:00 (07:00),Matchweek 34,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-05-02,15:00 (07:00),Matchweek 35,Sat,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Manchester Utd
+2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Manchester Utd
+2025-08-15,20:00 (12:00),Matchweek 1,Fri,Home,W,4,2,Bournemouth,2.2,1.7,61,60315,Virgil van Dijk,4-2-3-1,4-1-4-1,Anthony Taylor,Match Report,,Liverpool
+2025-08-25,20:00 (12:00),Matchweek 2,Mon,Away,W,3,2,Newcastle Utd,0.7,1.0,62,52230,Virgil van Dijk,4-2-3-1,4-3-3,Simon Hooper,Match Report,,Liverpool
+2025-08-31,16:30 (08:30),Matchweek 3,Sun,Home,W,1,0,Arsenal,0.5,0.5,53,60455,Virgil van Dijk,4-2-3-1,4-3-3,Chris Kavanagh,Match Report,,Liverpool
+2025-09-14,14:00 (06:00),Matchweek 4,Sun,Away,W,1,0,Burnley,2.6,0.1,80,21678,Virgil van Dijk,4-2-3-1,5-4-1,Michael Oliver,Match Report,,Liverpool
+2025-09-20,12:30 (04:30),Matchweek 5,Sat,Home,W,2,1,Everton,0.9,0.7,57,60342,Virgil van Dijk,4-2-3-1,4-2-3-1,Darren England,Match Report,,Liverpool
+2025-09-27,15:00 (07:00),Matchweek 6,Sat,Away,L,1,2,Crystal Palace,2.1,2.9,71,25118,Virgil van Dijk,4-2-3-1,3-4-3,Chris Kavanagh,Match Report,,Liverpool
+2025-10-04,17:30 (09:30),Matchweek 7,Sat,Away,L,1,2,Chelsea,1.9,1.0,47,39538,Virgil van Dijk,4-2-3-1,4-2-3-1,Anthony Taylor,Match Report,,Liverpool
+2025-10-19,16:30 (08:30),Matchweek 8,Sun,Home,L,1,2,Manchester Utd,2.6,1.3,64,60337,Virgil van Dijk,4-2-3-1,3-4-3,Michael Oliver,Match Report,,Liverpool
+2025-10-25,20:00 (12:00),Matchweek 9,Sat,Away,L,2,3,Brentford,2.2,2.7,65,17214,Virgil van Dijk,4-2-3-1,4-2-3-1,Simon Hooper,Match Report,,Liverpool
+2025-11-01,20:00 (13:00),Matchweek 10,Sat,Home,W,2,0,Aston Villa,1.2,0.4,54,60407,Virgil van Dijk,4-2-3-1,4-2-3-1,Stuart Attwell,Match Report,,Liverpool
+2025-11-09,16:30 (08:30),Matchweek 11,Sun,Away,L,0,3,Manchester City,0.7,1.5,51,52432,Virgil van Dijk,4-2-3-1,4-3-3,Chris Kavanagh,Match Report,,Liverpool
+2025-11-22,15:00 (07:00),Matchweek 12,Sat,Home,L,0,3,Nott'ham Forest,1.9,1.6,74,60419,Virgil van Dijk,4-3-3,4-2-3-1,Andy Madley,Match Report,,Liverpool
+2025-11-30,14:05 (06:05),Matchweek 13,Sun,Away,W,2,0,West Ham,1.2,0.3,56,62469,Virgil van Dijk,4-2-3-1,4-2-3-1,Darren England,Match Report,,Liverpool
+2025-12-03,20:15 (12:15),Matchweek 14,Wed,Home,D,1,1,Sunderland,1.4,0.4,67,60146,Virgil van Dijk,4-2-3-1,4-4-2,Stuart Attwell,Match Report,,Liverpool
+2025-12-06,17:30 (09:30),Matchweek 15,Sat,Away,D,3,3,Leeds United,1.9,1.6,55,36842,Virgil van Dijk,4-2-3-1,3-5-2,Anthony Taylor,Match Report,,Liverpool
+2025-12-13,15:00 (07:00),Matchweek 16,Sat,Home,W,2,0,Brighton,1.8,1.9,49,60429,Virgil van Dijk,4-2-3-1,4-2-3-1,Craig Pawson,Match Report,,Liverpool
+2025-12-20,17:30 (09:30),Matchweek 17,Sat,Away,W,2,1,Tottenham,0.7,1.0,65,61138,Virgil van Dijk,4-2-3-1,4-2-2-2,John Brooks,Match Report,,Liverpool
+2025-12-27,15:00 (07:00),Matchweek 18,Sat,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Liverpool
+2026-01-01,17:30 (09:30),Matchweek 19,Thu,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Liverpool
+2026-01-04,15:00 (07:00),Matchweek 20,Sun,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Liverpool
+2026-01-08,20:00 (12:00),Matchweek 21,Thu,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Liverpool
+2026-01-17,15:00 (07:00),Matchweek 22,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Liverpool
+2026-01-24,17:30 (09:30),Matchweek 23,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Liverpool
+2026-01-31,20:00 (12:00),Matchweek 24,Sat,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Liverpool
+2026-02-08,16:30 (08:30),Matchweek 25,Sun,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Liverpool
+2026-02-11,20:15 (12:15),Matchweek 26,Wed,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Liverpool
+2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Liverpool
+2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Liverpool
+2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Liverpool
+2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Liverpool
+2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Liverpool
+2026-04-11,15:00 (07:00),Matchweek 32,Sat,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Liverpool
+2026-04-18,15:00 (07:00),Matchweek 33,Sat,Away,,,,Everton,,,,,,,,,Head-to-Head,,Liverpool
+2026-04-25,15:00 (07:00),Matchweek 34,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Liverpool
+2026-05-02,15:00 (07:00),Matchweek 35,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Liverpool
+2026-05-09,15:00 (07:00),Matchweek 36,Sat,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Liverpool
+2026-05-17,15:00 (07:00),Matchweek 37,Sun,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Liverpool
+2026-05-24,16:00 (08:00),Matchweek 38,Sun,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Liverpool
+2025-08-16,15:00 (07:00),Matchweek 1,Sat,Home,W,3,0,West Ham,0.7,0.6,38,46233,Granit Xhaka,4-3-3,3-4-1-2,Robert Jones,Match Report,,Sunderland
+2025-08-23,15:00 (07:00),Matchweek 2,Sat,Away,L,0,2,Burnley,0.8,1.0,58,21285,Granit Xhaka,4-3-3,4-2-3-1,Michael Salisbury,Match Report,,Sunderland
+2025-08-30,15:00 (07:00),Matchweek 3,Sat,Home,W,2,1,Brentford,1.5,1.2,54,46267,Granit Xhaka,4-3-3,4-2-3-1,Anthony Taylor,Match Report,,Sunderland
+2025-09-13,15:00 (07:00),Matchweek 4,Sat,Away,D,0,0,Crystal Palace,0.4,1.8,44,25154,Granit Xhaka,4-3-3,3-4-3,Thomas Bramall,Match Report,,Sunderland
+2025-09-21,14:00 (06:00),Matchweek 5,Sun,Home,D,1,1,Aston Villa,1.0,0.8,29,46261,Granit Xhaka,4-3-3,4-2-3-1,Samuel Barrott,Match Report,,Sunderland
+2025-09-27,17:30 (09:30),Matchweek 6,Sat,Away,W,1,0,Nott'ham Forest,1.6,1.6,35,30226,Granit Xhaka,4-2-3-1,4-2-3-1,Tony Harrington,Match Report,,Sunderland
+2025-10-04,15:00 (07:00),Matchweek 7,Sat,Away,L,0,2,Manchester Utd,0.7,1.8,50,74004,Granit Xhaka,4-2-3-1,3-4-3,Stuart Attwell,Match Report,,Sunderland
+2025-10-18,15:00 (07:00),Matchweek 8,Sat,Home,W,2,0,Wolves,0.6,0.8,41,46578,Granit Xhaka,4-2-3-1,4-3-3,Robert Jones,Match Report,,Sunderland
+2025-10-25,15:00 (07:00),Matchweek 9,Sat,Away,W,2,1,Chelsea,1.2,0.9,32,39489,Granit Xhaka,5-4-1,4-2-3-1,Andy Madley,Match Report,,Sunderland
+2025-11-03,20:00 (12:00),Matchweek 10,Mon,Home,D,1,1,Everton,1.2,0.9,60,41476,Granit Xhaka,3-4-3,4-2-3-1,Thomas Bramall,Match Report,,Sunderland
+2025-11-08,17:30 (09:30),Matchweek 11,Sat,Home,D,2,2,Arsenal,0.4,1.9,36,46799,Granit Xhaka,5-4-1,4-2-3-1,Craig Pawson,Match Report,,Sunderland
+2025-11-22,15:00 (07:00),Matchweek 12,Sat,Away,L,0,1,Fulham,0.2,2.1,43,27560,Granit Xhaka,5-4-1,4-2-3-1,Darren England,Match Report,,Sunderland
+2025-11-29,15:00 (07:00),Matchweek 13,Sat,Home,W,3,2,Bournemouth,1.5,1.7,42,46973,Granit Xhaka,4-2-3-1,4-2-3-1,Tim Robinson,Match Report,,Sunderland
+2025-12-03,20:15 (12:15),Matchweek 14,Wed,Away,D,1,1,Liverpool,0.4,1.4,33,60146,Granit Xhaka,4-4-2,4-2-3-1,Stuart Attwell,Match Report,,Sunderland
+2025-12-06,15:00 (07:00),Matchweek 15,Sat,Away,L,0,3,Manchester City,0.7,2.4,36,52436,Granit Xhaka,5-4-1,4-3-2-1,Andy Madley,Match Report,,Sunderland
+2025-12-14,14:00 (06:00),Matchweek 16,Sun,Home,W,1,0,Newcastle Utd,0.3,0.2,47,47158,Granit Xhaka,4-2-3-1,4-3-3,Peter Bankes,Match Report,,Sunderland
+2025-12-20,15:00 (07:00),Matchweek 17,Sat,Away,D,0,0,Brighton,1.4,1.1,43,31426,Granit Xhaka,4-2-3-1,4-2-3-1,Darren England,Match Report,,Sunderland
+2025-12-28,14:00 (06:00),Matchweek 18,Sun,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Sunderland
+2026-01-01,20:00 (12:00),Matchweek 19,Thu,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Sunderland
+2026-01-04,15:00 (07:00),Matchweek 20,Sun,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Sunderland
+2026-01-07,19:30 (11:30),Matchweek 21,Wed,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Sunderland
+2026-01-17,15:00 (07:00),Matchweek 22,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Sunderland
+2026-01-24,12:30 (04:30),Matchweek 23,Sat,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Sunderland
+2026-02-02,20:00 (12:00),Matchweek 24,Mon,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Sunderland
+2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Sunderland
+2026-02-11,20:15 (12:15),Matchweek 26,Wed,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Sunderland
+2026-02-22,14:00 (06:00),Matchweek 27,Sun,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Sunderland
+2026-02-28,12:30 (04:30),Matchweek 28,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Sunderland
+2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Sunderland
+2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Sunderland
+2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Sunderland
+2026-04-11,15:00 (07:00),Matchweek 32,Sat,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Sunderland
+2026-04-18,15:00 (07:00),Matchweek 33,Sat,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Sunderland
+2026-04-25,15:00 (07:00),Matchweek 34,Sat,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Sunderland
+2026-05-02,15:00 (07:00),Matchweek 35,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Sunderland
+2026-05-09,15:00 (07:00),Matchweek 36,Sat,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Sunderland
+2026-05-17,15:00 (07:00),Matchweek 37,Sun,Away,,,,Everton,,,,,,,,,Head-to-Head,,Sunderland
+2026-05-24,16:00 (08:00),Matchweek 38,Sun,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Sunderland
 2025-08-17,14:00 (06:00),Matchweek 1,Sun,Away,D,0,0,Chelsea,0.6,1.6,29,39678,Marc Guéhi,3-4-3,4-2-3-1,Darren England,Match Report,,Crystal Palace
 2025-08-24,14:00 (06:00),Matchweek 2,Sun,Home,D,1,1,Nott'ham Forest,1.1,0.9,42,24876,Marc Guéhi,3-4-3,4-2-3-1,Anthony Taylor,Match Report,,Crystal Palace
 2025-08-31,19:00 (11:00),Matchweek 3,Sun,Away,W,3,0,Aston Villa,2.6,1.1,41,41036,Marc Guéhi,3-4-3,4-2-3-1,Stuart Attwell,Match Report,,Crystal Palace
@@ -163,11 +277,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-01,15:00 (08:00),Matchweek 10,Sat,Home,W,2,0,Brentford,0.7,0.5,37,25083,Marc Guéhi,3-4-3,4-2-3-1,Peter Bankes,Match Report,,Crystal Palace
 2025-11-09,14:00 (06:00),Matchweek 11,Sun,Home,D,0,0,Brighton,0.7,0.4,43,24326,Dean Henderson,3-4-3,4-2-3-1,Tim Robinson,Match Report,,Crystal Palace
 2025-11-22,15:00 (07:00),Matchweek 12,Sat,Away,W,2,0,Wolves,1.3,1.8,52,29976,Marc Guéhi,3-4-3,5-3-2,Anthony Taylor,Match Report,,Crystal Palace
-2025-11-30,12:00 (04:00),Matchweek 13,Sun,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Crystal Palace
-2025-12-03,19:30 (11:30),Matchweek 14,Wed,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Crystal Palace
-2025-12-07,16:30 (08:30),Matchweek 15,Sun,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Crystal Palace
-2025-12-14,14:00 (06:00),Matchweek 16,Sun,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Crystal Palace
-2025-12-20,20:00 (12:00),Matchweek 17,Sat,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Crystal Palace
+2025-11-30,12:00 (04:00),Matchweek 13,Sun,Home,L,1,2,Manchester Utd,1.8,1.2,44,25189,Marc Guéhi,3-4-3,3-4-3,Robert Jones,Match Report,,Crystal Palace
+2025-12-03,19:30 (11:30),Matchweek 14,Wed,Away,W,1,0,Burnley,0.7,0.9,42,19365,Marc Guéhi,3-4-3,4-4-2,Thomas Kirk,Match Report,,Crystal Palace
+2025-12-07,16:30 (08:30),Matchweek 15,Sun,Away,W,2,1,Fulham,1.6,0.8,37,27283,Marc Guéhi,3-4-3,4-2-3-1,Samuel Barrott,Match Report,,Crystal Palace
+2025-12-14,14:00 (06:00),Matchweek 16,Sun,Home,L,0,3,Manchester City,1.9,1.2,40,25166,Marc Guéhi,3-4-3,4-3-2-1,Darren England,Match Report,,Crystal Palace
+2025-12-20,20:00 (12:00),Matchweek 17,Sat,Away,L,1,4,Leeds United,1.6,2.6,46,36334,Marc Guéhi,3-4-3,3-5-2,Thomas Bramall,Match Report,,Crystal Palace
 2025-12-28,16:30 (08:30),Matchweek 18,Sun,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Crystal Palace
 2026-01-01,17:30 (09:30),Matchweek 19,Thu,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Crystal Palace
 2026-01-04,15:00 (07:00),Matchweek 20,Sun,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Crystal Palace
@@ -175,8 +289,8 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-17,15:00 (07:00),Matchweek 22,Sat,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Crystal Palace
 2026-01-25,14:00 (06:00),Matchweek 23,Sun,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Crystal Palace
 2026-02-01,14:00 (06:00),Matchweek 24,Sun,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Crystal Palace
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Crystal Palace
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Crystal Palace
+2026-02-08,14:00 (06:00),Matchweek 25,Sun,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Crystal Palace
+2026-02-11,19:30 (11:30),Matchweek 26,Wed,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Crystal Palace
 2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Crystal Palace
 2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Crystal Palace
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Crystal Palace
@@ -201,11 +315,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-01,15:00 (08:00),Matchweek 10,Sat,Home,W,3,0,Leeds United,3.0,0.5,50,31512,Lewis Dunk,4-2-3-1,4-1-4-1,Michael Oliver,Match Report,,Brighton
 2025-11-09,14:00 (06:00),Matchweek 11,Sun,Away,D,0,0,Crystal Palace,0.4,0.7,57,24326,Lewis Dunk,4-2-3-1,3-4-3,Tim Robinson,Match Report,,Brighton
 2025-11-22,15:00 (07:00),Matchweek 12,Sat,Home,W,2,1,Brentford,1.2,2.0,64,31458,Danny Welbeck,4-2-3-1,4-2-3-1,Chris Kavanagh,Match Report,,Brighton
-2025-11-30,14:05 (06:05),Matchweek 13,Sun,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Brighton
-2025-12-03,19:30 (11:30),Matchweek 14,Wed,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Brighton
-2025-12-07,14:00 (06:00),Matchweek 15,Sun,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Brighton
-2025-12-13,15:00 (07:00),Matchweek 16,Sat,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Brighton
-2025-12-20,15:00 (07:00),Matchweek 17,Sat,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Brighton
+2025-11-30,14:05 (06:05),Matchweek 13,Sun,Away,W,2,0,Nott'ham Forest,1.9,0.9,48,30522,Lewis Dunk,4-2-3-1,4-2-3-1,Michael Oliver,Match Report,,Brighton
+2025-12-03,19:30 (11:30),Matchweek 14,Wed,Home,L,3,4,Aston Villa,1.9,2.3,56,31247,Lewis Dunk,4-2-3-1,4-2-3-1,Andy Madley,Match Report,,Brighton
+2025-12-07,14:00 (06:00),Matchweek 15,Sun,Home,D,1,1,West Ham,1.8,1.2,68,31293,Lewis Dunk,4-2-3-1,3-4-1-2,Simon Hooper,Match Report,,Brighton
+2025-12-13,15:00 (07:00),Matchweek 16,Sat,Away,L,0,2,Liverpool,1.9,1.8,51,60429,Lewis Dunk,4-2-3-1,4-2-3-1,Craig Pawson,Match Report,,Brighton
+2025-12-20,15:00 (07:00),Matchweek 17,Sat,Home,D,0,0,Sunderland,1.1,1.4,57,31426,Georginio Rutter,4-2-3-1,4-2-3-1,Darren England,Match Report,,Brighton
 2025-12-27,15:00 (07:00),Matchweek 18,Sat,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Brighton
 2025-12-30,19:30 (11:30),Matchweek 19,Tue,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Brighton
 2026-01-03,15:00 (07:00),Matchweek 20,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Brighton
@@ -213,8 +327,8 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-19,20:00 (12:00),Matchweek 22,Mon,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Brighton
 2026-01-24,15:00 (07:00),Matchweek 23,Sat,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Brighton
 2026-01-31,15:00 (07:00),Matchweek 24,Sat,Home,,,,Everton,,,,,,,,,Head-to-Head,,Brighton
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Brighton
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Brighton
+2026-02-08,14:00 (06:00),Matchweek 25,Sun,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Brighton
+2026-02-11,19:30 (11:30),Matchweek 26,Wed,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Brighton
 2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Brighton
 2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Brighton
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Brighton
@@ -227,158 +341,6 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-05-09,15:00 (07:00),Matchweek 36,Sat,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Brighton
 2026-05-17,15:00 (07:00),Matchweek 37,Sun,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Brighton
 2026-05-24,16:00 (08:00),Matchweek 38,Sun,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Brighton
-2025-08-16,15:00 (07:00),Matchweek 1,Sat,Home,W,3,0,West Ham,0.7,0.6,38,46233,Granit Xhaka,4-3-3,3-4-1-2,Robert Jones,Match Report,,Sunderland
-2025-08-23,15:00 (07:00),Matchweek 2,Sat,Away,L,0,2,Burnley,0.8,1.0,58,21285,Granit Xhaka,4-3-3,4-2-3-1,Michael Salisbury,Match Report,,Sunderland
-2025-08-30,15:00 (07:00),Matchweek 3,Sat,Home,W,2,1,Brentford,1.5,1.2,54,46267,Granit Xhaka,4-3-3,4-2-3-1,Anthony Taylor,Match Report,,Sunderland
-2025-09-13,15:00 (07:00),Matchweek 4,Sat,Away,D,0,0,Crystal Palace,0.4,1.8,44,25154,Granit Xhaka,4-3-3,3-4-3,Thomas Bramall,Match Report,,Sunderland
-2025-09-21,14:00 (06:00),Matchweek 5,Sun,Home,D,1,1,Aston Villa,1.0,0.8,29,46261,Granit Xhaka,4-3-3,4-2-3-1,Samuel Barrott,Match Report,,Sunderland
-2025-09-27,17:30 (09:30),Matchweek 6,Sat,Away,W,1,0,Nott'ham Forest,1.6,1.6,35,30226,Granit Xhaka,4-2-3-1,4-2-3-1,Tony Harrington,Match Report,,Sunderland
-2025-10-04,15:00 (07:00),Matchweek 7,Sat,Away,L,0,2,Manchester Utd,0.7,1.8,50,74004,Granit Xhaka,4-2-3-1,3-4-3,Stuart Attwell,Match Report,,Sunderland
-2025-10-18,15:00 (07:00),Matchweek 8,Sat,Home,W,2,0,Wolves,0.6,0.8,41,46578,Granit Xhaka,4-2-3-1,4-3-3,Robert Jones,Match Report,,Sunderland
-2025-10-25,15:00 (07:00),Matchweek 9,Sat,Away,W,2,1,Chelsea,1.2,0.9,32,39489,Granit Xhaka,5-4-1,4-2-3-1,Andy Madley,Match Report,,Sunderland
-2025-11-03,20:00 (12:00),Matchweek 10,Mon,Home,D,1,1,Everton,1.2,0.9,60,41476,Granit Xhaka,3-4-3,4-2-3-1,Thomas Bramall,Match Report,,Sunderland
-2025-11-08,17:30 (09:30),Matchweek 11,Sat,Home,D,2,2,Arsenal,0.4,1.9,36,46799,Granit Xhaka,5-4-1,4-2-3-1,Craig Pawson,Match Report,,Sunderland
-2025-11-22,15:00 (07:00),Matchweek 12,Sat,Away,L,0,1,Fulham,0.2,2.1,43,27560,Granit Xhaka,5-4-1,4-2-3-1,Darren England,Match Report,,Sunderland
-2025-11-29,15:00 (07:00),Matchweek 13,Sat,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Sunderland
-2025-12-03,20:15 (12:15),Matchweek 14,Wed,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Sunderland
-2025-12-06,15:00 (07:00),Matchweek 15,Sat,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Sunderland
-2025-12-14,14:00 (06:00),Matchweek 16,Sun,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Sunderland
-2025-12-20,15:00 (07:00),Matchweek 17,Sat,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Sunderland
-2025-12-28,14:00 (06:00),Matchweek 18,Sun,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Sunderland
-2026-01-01,20:00 (12:00),Matchweek 19,Thu,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Sunderland
-2026-01-04,15:00 (07:00),Matchweek 20,Sun,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Sunderland
-2026-01-07,19:30 (11:30),Matchweek 21,Wed,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Sunderland
-2026-01-17,15:00 (07:00),Matchweek 22,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Sunderland
-2026-01-24,12:30 (04:30),Matchweek 23,Sat,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Sunderland
-2026-02-02,20:00 (12:00),Matchweek 24,Mon,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Sunderland
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Sunderland
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Sunderland
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Sunderland
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Sunderland
-2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Sunderland
-2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Sunderland
-2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Sunderland
-2026-04-11,15:00 (07:00),Matchweek 32,Sat,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Sunderland
-2026-04-18,15:00 (07:00),Matchweek 33,Sat,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Sunderland
-2026-04-25,15:00 (07:00),Matchweek 34,Sat,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Sunderland
-2026-05-02,15:00 (07:00),Matchweek 35,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Sunderland
-2026-05-09,15:00 (07:00),Matchweek 36,Sat,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Sunderland
-2026-05-17,15:00 (07:00),Matchweek 37,Sun,Away,,,,Everton,,,,,,,,,Head-to-Head,,Sunderland
-2026-05-24,16:00 (08:00),Matchweek 38,Sun,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Sunderland
-2025-08-15,20:00 (12:00),Matchweek 1,Fri,Away,L,2,4,Liverpool,1.7,2.2,39,60315,Adam Smith,4-1-4-1,4-2-3-1,Anthony Taylor,Match Report,,Bournemouth
-2025-08-23,15:00 (07:00),Matchweek 2,Sat,Home,W,1,0,Wolves,1.3,0.5,59,11070,Adam Smith,4-1-4-1,3-4-3,Thomas Bramall,Match Report,,Bournemouth
-2025-08-30,15:00 (07:00),Matchweek 3,Sat,Away,W,1,0,Tottenham,1.5,0.2,39,61250,Adam Smith,4-2-3-1,4-3-3,Simon Hooper,Match Report,,Bournemouth
-2025-09-13,15:00 (07:00),Matchweek 4,Sat,Home,W,2,1,Brighton,1.4,0.6,51,11167,David Brooks,4-2-3-1,4-2-3-1,Peter Bankes,Match Report,,Bournemouth
-2025-09-21,14:00 (06:00),Matchweek 5,Sun,Home,D,0,0,Newcastle Utd,0.5,0.2,55,11212,David Brooks,4-2-3-1,3-4-3,Robert Jones,Match Report,,Bournemouth
-2025-09-27,15:00 (07:00),Matchweek 6,Sat,Away,D,2,2,Leeds United,0.7,1.8,59,36574,Ryan Christie,4-2-3-1,4-3-3,Michael Oliver,Match Report,,Bournemouth
-2025-10-03,20:00 (12:00),Matchweek 7,Fri,Home,W,3,1,Fulham,1.2,0.9,54,11165,David Brooks,4-2-3-1,3-4-3,Simon Hooper,Match Report,,Bournemouth
-2025-10-18,15:00 (07:00),Matchweek 8,Sat,Away,D,3,3,Crystal Palace,2.0,4.4,48,25125,Marcus Tavernier,4-2-3-1,3-4-3,Jarred Gillett,Match Report,,Bournemouth
-2025-10-26,14:00 (07:00),Matchweek 9,Sun,Home,W,2,0,Nott'ham Forest,0.6,0.4,52,11204,Marcus Tavernier,4-2-3-1,4-2-3-1,Samuel Barrott,Match Report,,Bournemouth
-2025-11-02,16:30 (08:30),Matchweek 10,Sun,Away,L,1,3,Manchester City,0.6,2.2,51,52387,David Brooks,4-2-3-1,4-3-2-1,Anthony Taylor,Match Report,,Bournemouth
-2025-11-09,14:00 (06:00),Matchweek 11,Sun,Away,L,0,4,Aston Villa,1.6,1.7,49,40792,Adam Smith,4-2-3-1,4-4-2,John Brooks,Match Report,,Bournemouth
-2025-11-22,15:00 (07:00),Matchweek 12,Sat,Home,D,2,2,West Ham,3.9,0.6,76,11216,Lewis Cook,4-2-3-1,3-4-3,Thomas Bramall,Match Report,,Bournemouth
-2025-11-29,15:00 (07:00),Matchweek 13,Sat,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Bournemouth
-2025-12-02,19:30 (11:30),Matchweek 14,Tue,Home,,,,Everton,,,,,,,,,Head-to-Head,,Bournemouth
-2025-12-06,15:00 (07:00),Matchweek 15,Sat,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Bournemouth
-2025-12-15,20:00 (12:00),Matchweek 16,Mon,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Bournemouth
-2025-12-20,15:00 (07:00),Matchweek 17,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Bournemouth
-2025-12-27,15:00 (07:00),Matchweek 18,Sat,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Bournemouth
-2025-12-30,19:30 (11:30),Matchweek 19,Tue,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Bournemouth
-2026-01-03,17:30 (09:30),Matchweek 20,Sat,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Bournemouth
-2026-01-07,19:30 (11:30),Matchweek 21,Wed,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Bournemouth
-2026-01-19,20:00 (12:00),Matchweek 22,Mon,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Bournemouth
-2026-01-24,17:30 (09:30),Matchweek 23,Sat,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Bournemouth
-2026-01-31,15:00 (07:00),Matchweek 24,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Bournemouth
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Bournemouth
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Away,,,,Everton,,,,,,,,,Head-to-Head,,Bournemouth
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Bournemouth
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Bournemouth
-2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Bournemouth
-2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Bournemouth
-2026-03-21,15:00 (08:00),Matchweek 31,Sat,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Bournemouth
-2026-04-11,15:00 (07:00),Matchweek 32,Sat,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Bournemouth
-2026-04-18,15:00 (07:00),Matchweek 33,Sat,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Bournemouth
-2026-04-25,15:00 (07:00),Matchweek 34,Sat,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Bournemouth
-2026-05-02,15:00 (07:00),Matchweek 35,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Bournemouth
-2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Bournemouth
-2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Bournemouth
-2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Bournemouth
-2025-08-16,15:00 (07:00),Matchweek 1,Sat,Home,W,3,0,Burnley,2.3,0.9,66,61077,Cristian Romero,4-3-3,5-4-1,Michael Oliver,Match Report,,Tottenham
-2025-08-23,12:30 (04:30),Matchweek 2,Sat,Away,W,2,0,Manchester City,1.1,1.6,39,51785,Cristian Romero,4-3-3,4-1-4-1,Peter Bankes,Match Report,,Tottenham
-2025-08-30,15:00 (07:00),Matchweek 3,Sat,Home,L,0,1,Bournemouth,0.2,1.5,61,61250,Cristian Romero,4-3-3,4-2-3-1,Simon Hooper,Match Report,,Tottenham
-2025-09-13,17:30 (09:30),Matchweek 4,Sat,Away,W,3,0,West Ham,1.3,0.6,64,62459,Cristian Romero,4-3-3,4-2-3-1,Jarred Gillett,Match Report,,Tottenham
-2025-09-20,15:00 (07:00),Matchweek 5,Sat,Away,D,2,2,Brighton,1.2,1.3,64,31488,Cristian Romero,4-3-3,4-2-3-1,Chris Kavanagh,Match Report,,Tottenham
-2025-09-27,20:00 (12:00),Matchweek 6,Sat,Home,D,1,1,Wolves,0.8,1.1,51,60537,Cristian Romero,4-2-3-1,4-3-3,Michael Salisbury,Match Report,,Tottenham
-2025-10-04,12:30 (04:30),Matchweek 7,Sat,Away,W,2,1,Leeds United,0.6,1.7,44,36703,Cristian Romero,4-2-3-1,4-3-3,Thomas Bramall,Match Report,,Tottenham
-2025-10-19,14:00 (06:00),Matchweek 8,Sun,Home,L,1,2,Aston Villa,0.9,0.3,53,61291,Micky van de Ven,4-2-3-1,4-2-3-1,Simon Hooper,Match Report,,Tottenham
-2025-10-26,16:30 (09:30),Matchweek 9,Sun,Away,W,3,0,Everton,1.7,1.7,47,51781,Micky van de Ven,4-2-3-1,4-2-3-1,Craig Pawson,Match Report,,Tottenham
-2025-11-01,17:30 (10:30),Matchweek 10,Sat,Home,L,0,1,Chelsea,0.1,3.7,48,61202,Micky van de Ven,4-2-3-1,4-2-3-1,Jarred Gillett,Match Report,,Tottenham
-2025-11-08,12:30 (04:30),Matchweek 11,Sat,Home,D,2,2,Manchester Utd,0.9,0.8,54,61210,Cristian Romero,4-2-3-1,3-4-3,Samuel Barrott,Match Report,,Tottenham
-2025-11-23,16:30 (08:30),Matchweek 12,Sun,Away,L,1,4,Arsenal,0.1,1.9,43,60345,Cristian Romero,3-4-3,4-2-3-1,Michael Oliver,Match Report,,Tottenham
-2025-11-29,20:00 (12:00),Matchweek 13,Sat,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Tottenham
-2025-12-02,20:15 (12:15),Matchweek 14,Tue,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Tottenham
-2025-12-06,15:00 (07:00),Matchweek 15,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Tottenham
-2025-12-14,14:00 (06:00),Matchweek 16,Sun,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Tottenham
-2025-12-20,17:30 (09:30),Matchweek 17,Sat,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Tottenham
-2025-12-28,16:30 (08:30),Matchweek 18,Sun,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Tottenham
-2026-01-01,20:00 (12:00),Matchweek 19,Thu,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Tottenham
-2026-01-04,15:00 (07:00),Matchweek 20,Sun,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Tottenham
-2026-01-07,19:30 (11:30),Matchweek 21,Wed,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Tottenham
-2026-01-17,15:00 (07:00),Matchweek 22,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Tottenham
-2026-01-24,15:00 (07:00),Matchweek 23,Sat,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Tottenham
-2026-02-01,16:30 (08:30),Matchweek 24,Sun,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Tottenham
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Tottenham
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Tottenham
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Tottenham
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Tottenham
-2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Tottenham
-2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Tottenham
-2026-03-21,15:00 (08:00),Matchweek 31,Sat,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Tottenham
-2026-04-11,15:00 (07:00),Matchweek 32,Sat,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Tottenham
-2026-04-18,15:00 (07:00),Matchweek 33,Sat,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Tottenham
-2026-04-25,15:00 (07:00),Matchweek 34,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Tottenham
-2026-05-02,15:00 (07:00),Matchweek 35,Sat,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Tottenham
-2026-05-09,15:00 (07:00),Matchweek 36,Sat,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Tottenham
-2026-05-17,15:00 (07:00),Matchweek 37,Sun,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Tottenham
-2026-05-24,16:00 (08:00),Matchweek 38,Sun,Home,,,,Everton,,,,,,,,,Head-to-Head,,Tottenham
-2025-08-17,16:30 (08:30),Matchweek 1,Sun,Home,L,0,1,Arsenal,1.5,1.3,61,73475,Bruno Fernandes,3-4-3,4-3-3,Simon Hooper,Match Report,,Manchester Utd
-2025-08-24,16:30 (08:30),Matchweek 2,Sun,Away,D,1,1,Fulham,1.6,1.7,47,27512,Bruno Fernandes,3-4-3,4-2-3-1,Chris Kavanagh,Match Report,,Manchester Utd
-2025-08-30,15:00 (07:00),Matchweek 3,Sat,Home,W,3,2,Burnley,3.6,1.2,62,74257,Bruno Fernandes,3-4-3,4-2-3-1,Samuel Barrott,Match Report,,Manchester Utd
-2025-09-14,16:30 (08:30),Matchweek 4,Sun,Away,L,0,3,Manchester City,1.2,2.7,54,52534,Bruno Fernandes,3-4-3,4-1-4-1,Anthony Taylor,Match Report,,Manchester Utd
-2025-09-20,17:30 (09:30),Matchweek 5,Sat,Home,W,2,1,Chelsea,1.8,0.4,42,74124,Bruno Fernandes,3-4-3,4-2-3-1,Peter Bankes,Match Report,,Manchester Utd
-2025-09-27,12:30 (04:30),Matchweek 6,Sat,Away,L,1,3,Brentford,2.1,1.9,55,17193,Bruno Fernandes,3-4-3,4-2-3-1,Craig Pawson,Match Report,,Manchester Utd
-2025-10-04,15:00 (07:00),Matchweek 7,Sat,Home,W,2,0,Sunderland,1.8,0.7,50,74004,Bruno Fernandes,3-4-3,4-2-3-1,Stuart Attwell,Match Report,,Manchester Utd
-2025-10-19,16:30 (08:30),Matchweek 8,Sun,Away,W,2,1,Liverpool,1.3,2.6,36,60337,Bruno Fernandes,3-4-3,4-2-3-1,Michael Oliver,Match Report,,Manchester Utd
-2025-10-25,17:30 (09:30),Matchweek 9,Sat,Home,W,4,2,Brighton,1.3,1.1,44,74124,Bruno Fernandes,3-4-3,4-2-3-1,Anthony Taylor,Match Report,,Manchester Utd
-2025-11-01,15:00 (08:00),Matchweek 10,Sat,Away,D,2,2,Nott'ham Forest,1.2,1.9,58,30778,Bruno Fernandes,3-4-3,4-2-3-1,Darren England,Match Report,,Manchester Utd
-2025-11-08,12:30 (04:30),Matchweek 11,Sat,Away,D,2,2,Tottenham,0.8,0.9,46,61210,Bruno Fernandes,3-4-3,4-2-3-1,Samuel Barrott,Match Report,,Manchester Utd
-2025-11-24,20:00 (12:00),Matchweek 12,Mon,Home,L,0,1,Everton,1.7,0.2,69,74158,Bruno Fernandes,3-4-3,4-2-3-1,Tony Harrington,Match Report,,Manchester Utd
-2025-11-30,12:00 (04:00),Matchweek 13,Sun,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Manchester Utd
-2025-12-04,20:00 (12:00),Matchweek 14,Thu,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Manchester Utd
-2025-12-08,20:00 (12:00),Matchweek 15,Mon,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Manchester Utd
-2025-12-15,20:00 (12:00),Matchweek 16,Mon,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Manchester Utd
-2025-12-21,16:30 (08:30),Matchweek 17,Sun,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Manchester Utd
-2025-12-26,20:00 (12:00),Matchweek 18,Fri,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Manchester Utd
-2025-12-30,20:15 (12:15),Matchweek 19,Tue,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-01-04,12:30 (04:30),Matchweek 20,Sun,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-01-07,20:15 (12:15),Matchweek 21,Wed,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-01-17,12:30 (04:30),Matchweek 22,Sat,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-01-25,16:30 (08:30),Matchweek 23,Sun,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-02-01,14:00 (06:00),Matchweek 24,Sun,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Everton,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-04-11,15:00 (07:00),Matchweek 32,Sat,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-04-18,15:00 (07:00),Matchweek 33,Sat,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-04-25,15:00 (07:00),Matchweek 34,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-05-02,15:00 (07:00),Matchweek 35,Sat,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Manchester Utd
-2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Manchester Utd
 2025-08-18,20:00 (12:00),Matchweek 1,Mon,Away,L,0,1,Leeds United,0.8,2.0,46,36820,James Tarkowski,4-2-3-1,4-3-3,Chris Kavanagh,Match Report,,Everton
 2025-08-24,14:00 (06:00),Matchweek 2,Sun,Home,W,2,0,Brighton,1.6,2.4,42,51759,James Tarkowski,4-2-3-1,4-2-3-1,Stuart Attwell,Match Report,,Everton
 2025-08-30,15:00 (07:00),Matchweek 3,Sat,Away,W,3,2,Wolves,1.9,1.1,42,30271,James Tarkowski,4-2-3-1,3-4-3,Michael Oliver,Match Report,,Everton
@@ -391,11 +353,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-03,20:00 (12:00),Matchweek 10,Mon,Away,D,1,1,Sunderland,0.9,1.2,40,41476,James Tarkowski,4-2-3-1,3-4-3,Thomas Bramall,Match Report,,Everton
 2025-11-08,15:00 (07:00),Matchweek 11,Sat,Home,W,2,0,Fulham,1.4,0.4,51,52491,James Tarkowski,4-2-3-1,4-2-3-1,Andy Madley,Match Report,,Everton
 2025-11-24,20:00 (12:00),Matchweek 12,Mon,Away,W,1,0,Manchester Utd,0.2,1.7,31,74158,Séamus Coleman,4-2-3-1,3-4-3,Tony Harrington,Match Report,,Everton
-2025-11-29,17:30 (09:30),Matchweek 13,Sat,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Everton
-2025-12-02,19:30 (11:30),Matchweek 14,Tue,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Everton
-2025-12-06,15:00 (07:00),Matchweek 15,Sat,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Everton
-2025-12-13,15:00 (07:00),Matchweek 16,Sat,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Everton
-2025-12-20,20:00 (12:00),Matchweek 17,Sat,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Everton
+2025-11-29,17:30 (09:30),Matchweek 13,Sat,Home,L,1,4,Newcastle Utd,1.0,1.8,49,52489,James Tarkowski,4-2-3-1,4-3-3,Craig Pawson,Match Report,,Everton
+2025-12-02,19:30 (11:30),Matchweek 14,Tue,Away,W,1,0,Bournemouth,1.4,0.5,46,11161,James Tarkowski,4-2-3-1,4-2-3-1,Michael Salisbury,Match Report,,Everton
+2025-12-06,15:00 (07:00),Matchweek 15,Sat,Home,W,3,0,Nott'ham Forest,1.1,0.5,42,52501,James Tarkowski,4-2-3-1,4-2-3-1,Chris Kavanagh,Match Report,,Everton
+2025-12-13,15:00 (07:00),Matchweek 16,Sat,Away,L,0,2,Chelsea,1.0,2.2,43,39552,James Tarkowski,4-2-3-1,4-2-3-1,Thomas Bramall,Match Report,,Everton
+2025-12-20,20:00 (12:00),Matchweek 17,Sat,Home,L,0,1,Arsenal,0.2,2.0,35,52513,James Tarkowski,4-2-3-1,4-3-3,Samuel Barrott,Match Report,,Everton
 2025-12-27,15:00 (07:00),Matchweek 18,Sat,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Everton
 2025-12-30,19:30 (11:30),Matchweek 19,Tue,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Everton
 2026-01-04,15:00 (07:00),Matchweek 20,Sun,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Everton
@@ -404,8 +366,8 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-26,20:00 (12:00),Matchweek 23,Mon,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Everton
 2026-01-31,15:00 (07:00),Matchweek 24,Sat,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Everton
 2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Everton
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Everton
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Everton
+2026-02-10,19:30 (11:30),Matchweek 26,Tue,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Everton
+2026-02-23,20:00 (12:00),Matchweek 27,Mon,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Everton
 2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Everton
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Everton
 2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Everton
@@ -417,82 +379,6 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Everton
 2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Everton
 2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Everton
-2025-08-15,20:00 (12:00),Matchweek 1,Fri,Home,W,4,2,Bournemouth,2.2,1.7,61,60315,Virgil van Dijk,4-2-3-1,4-1-4-1,Anthony Taylor,Match Report,,Liverpool
-2025-08-25,20:00 (12:00),Matchweek 2,Mon,Away,W,3,2,Newcastle Utd,0.7,1.0,62,52230,Virgil van Dijk,4-2-3-1,4-3-3,Simon Hooper,Match Report,,Liverpool
-2025-08-31,16:30 (08:30),Matchweek 3,Sun,Home,W,1,0,Arsenal,0.5,0.5,53,60455,Virgil van Dijk,4-2-3-1,4-3-3,Chris Kavanagh,Match Report,,Liverpool
-2025-09-14,14:00 (06:00),Matchweek 4,Sun,Away,W,1,0,Burnley,2.6,0.1,80,21678,Virgil van Dijk,4-2-3-1,5-4-1,Michael Oliver,Match Report,,Liverpool
-2025-09-20,12:30 (04:30),Matchweek 5,Sat,Home,W,2,1,Everton,0.9,0.7,57,60342,Virgil van Dijk,4-2-3-1,4-2-3-1,Darren England,Match Report,,Liverpool
-2025-09-27,15:00 (07:00),Matchweek 6,Sat,Away,L,1,2,Crystal Palace,2.1,2.9,71,25118,Virgil van Dijk,4-2-3-1,3-4-3,Chris Kavanagh,Match Report,,Liverpool
-2025-10-04,17:30 (09:30),Matchweek 7,Sat,Away,L,1,2,Chelsea,1.9,1.0,47,39538,Virgil van Dijk,4-2-3-1,4-2-3-1,Anthony Taylor,Match Report,,Liverpool
-2025-10-19,16:30 (08:30),Matchweek 8,Sun,Home,L,1,2,Manchester Utd,2.6,1.3,64,60337,Virgil van Dijk,4-2-3-1,3-4-3,Michael Oliver,Match Report,,Liverpool
-2025-10-25,20:00 (12:00),Matchweek 9,Sat,Away,L,2,3,Brentford,2.2,2.7,65,17214,Virgil van Dijk,4-2-3-1,4-2-3-1,Simon Hooper,Match Report,,Liverpool
-2025-11-01,20:00 (13:00),Matchweek 10,Sat,Home,W,2,0,Aston Villa,1.2,0.4,54,60407,Virgil van Dijk,4-2-3-1,4-2-3-1,Stuart Attwell,Match Report,,Liverpool
-2025-11-09,16:30 (08:30),Matchweek 11,Sun,Away,L,0,3,Manchester City,0.7,1.5,51,52432,Virgil van Dijk,4-2-3-1,4-3-3,Chris Kavanagh,Match Report,,Liverpool
-2025-11-22,15:00 (07:00),Matchweek 12,Sat,Home,L,0,3,Nott'ham Forest,1.9,1.6,74,60419,Virgil van Dijk,4-3-3,4-2-3-1,Andy Madley,Match Report,,Liverpool
-2025-11-30,14:05 (06:05),Matchweek 13,Sun,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Liverpool
-2025-12-03,20:15 (12:15),Matchweek 14,Wed,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Liverpool
-2025-12-06,17:30 (09:30),Matchweek 15,Sat,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Liverpool
-2025-12-13,15:00 (07:00),Matchweek 16,Sat,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Liverpool
-2025-12-20,17:30 (09:30),Matchweek 17,Sat,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Liverpool
-2025-12-27,15:00 (07:00),Matchweek 18,Sat,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Liverpool
-2026-01-01,17:30 (09:30),Matchweek 19,Thu,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Liverpool
-2026-01-04,15:00 (07:00),Matchweek 20,Sun,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Liverpool
-2026-01-08,20:00 (12:00),Matchweek 21,Thu,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Liverpool
-2026-01-17,15:00 (07:00),Matchweek 22,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Liverpool
-2026-01-24,17:30 (09:30),Matchweek 23,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Liverpool
-2026-01-31,20:00 (12:00),Matchweek 24,Sat,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Liverpool
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Liverpool
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Liverpool
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Liverpool
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Liverpool
-2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Liverpool
-2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Liverpool
-2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Liverpool
-2026-04-11,15:00 (07:00),Matchweek 32,Sat,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Liverpool
-2026-04-18,15:00 (07:00),Matchweek 33,Sat,Away,,,,Everton,,,,,,,,,Head-to-Head,,Liverpool
-2026-04-25,15:00 (07:00),Matchweek 34,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Liverpool
-2026-05-02,15:00 (07:00),Matchweek 35,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Liverpool
-2026-05-09,15:00 (07:00),Matchweek 36,Sat,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Liverpool
-2026-05-17,15:00 (07:00),Matchweek 37,Sun,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Liverpool
-2026-05-24,16:00 (08:00),Matchweek 38,Sun,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Liverpool
-2025-08-17,14:00 (06:00),Matchweek 1,Sun,Away,L,1,3,Nott'ham Forest,1.4,1.8,46,29949,Nathan Collins,4-2-3-1,4-2-3-1,Peter Bankes,Match Report,,Brentford
-2025-08-23,15:00 (07:00),Matchweek 2,Sat,Home,W,1,0,Aston Villa,1.2,1.2,24,16838,Nathan Collins,4-2-3-1,4-2-3-1,Tony Harrington,Match Report,,Brentford
-2025-08-30,15:00 (07:00),Matchweek 3,Sat,Away,L,1,2,Sunderland,1.2,1.5,46,46267,Nathan Collins,4-2-3-1,4-3-3,Anthony Taylor,Match Report,,Brentford
-2025-09-13,20:00 (12:00),Matchweek 4,Sat,Home,D,2,2,Chelsea,1.4,1.3,34,16795,Nathan Collins,5-3-2,4-2-3-1,Stuart Attwell,Match Report,,Brentford
-2025-09-20,20:00 (12:00),Matchweek 5,Sat,Away,L,1,3,Fulham,0.6,1.0,48,26113,Nathan Collins,5-3-2,4-2-3-1,Michael Oliver,Match Report,,Brentford
-2025-09-27,12:30 (04:30),Matchweek 6,Sat,Home,W,3,1,Manchester Utd,1.9,2.1,45,17193,Nathan Collins,4-2-3-1,3-4-3,Craig Pawson,Match Report,,Brentford
-2025-10-05,16:30 (08:30),Matchweek 7,Sun,Home,L,0,1,Manchester City,0.7,0.8,31,17028,Nathan Collins,5-3-2,4-1-4-1,Darren England,Match Report,,Brentford
-2025-10-20,20:00 (12:00),Matchweek 8,Mon,Away,W,2,0,West Ham,2.3,0.4,56,62452,Nathan Collins,4-2-3-1,4-2-3-1,Andy Madley,Match Report,,Brentford
-2025-10-25,20:00 (12:00),Matchweek 9,Sat,Home,W,3,2,Liverpool,2.7,2.2,35,17214,Nathan Collins,4-2-3-1,4-2-3-1,Simon Hooper,Match Report,,Brentford
-2025-11-01,15:00 (08:00),Matchweek 10,Sat,Away,L,0,2,Crystal Palace,0.5,0.7,63,25083,Nathan Collins,4-2-3-1,3-4-3,Peter Bankes,Match Report,,Brentford
-2025-11-09,14:00 (06:00),Matchweek 11,Sun,Home,W,3,1,Newcastle Utd,2.3,0.4,50,17207,Nathan Collins,4-2-3-1,4-3-3,Stuart Attwell,Match Report,,Brentford
-2025-11-22,15:00 (07:00),Matchweek 12,Sat,Away,L,1,2,Brighton,2.0,1.2,36,31458,Nathan Collins,4-2-3-1,4-2-3-1,Chris Kavanagh,Match Report,,Brentford
-2025-11-29,15:00 (07:00),Matchweek 13,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Brentford
-2025-12-03,19:30 (11:30),Matchweek 14,Wed,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Brentford
-2025-12-06,15:00 (07:00),Matchweek 15,Sat,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Brentford
-2025-12-14,16:30 (08:30),Matchweek 16,Sun,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Brentford
-2025-12-20,15:00 (07:00),Matchweek 17,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Brentford
-2025-12-27,15:00 (07:00),Matchweek 18,Sat,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Brentford
-2026-01-01,20:00 (12:00),Matchweek 19,Thu,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Brentford
-2026-01-04,15:00 (07:00),Matchweek 20,Sun,Away,,,,Everton,,,,,,,,,Head-to-Head,,Brentford
-2026-01-07,19:30 (11:30),Matchweek 21,Wed,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Brentford
-2026-01-17,15:00 (07:00),Matchweek 22,Sat,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Brentford
-2026-01-25,14:00 (06:00),Matchweek 23,Sun,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Brentford
-2026-02-01,14:00 (06:00),Matchweek 24,Sun,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Brentford
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Brentford
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Brentford
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Brentford
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Brentford
-2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Brentford
-2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Brentford
-2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Brentford
-2026-04-11,15:00 (07:00),Matchweek 32,Sat,Home,,,,Everton,,,,,,,,,Head-to-Head,,Brentford
-2026-04-18,15:00 (07:00),Matchweek 33,Sat,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Brentford
-2026-04-25,15:00 (07:00),Matchweek 34,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Brentford
-2026-05-02,15:00 (07:00),Matchweek 35,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Brentford
-2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Brentford
-2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Brentford
-2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Brentford
 2025-08-16,12:30 (04:30),Matchweek 1,Sat,Away,D,0,0,Aston Villa,1.4,0.2,59,42526,Bruno Guimarães,4-3-3,4-2-3-1,Craig Pawson,Match Report,,Newcastle Utd
 2025-08-25,20:00 (12:00),Matchweek 2,Mon,Home,L,2,3,Liverpool,1.0,0.7,38,52230,Bruno Guimarães,4-3-3,4-2-3-1,Simon Hooper,Match Report,,Newcastle Utd
 2025-08-30,17:30 (09:30),Matchweek 3,Sat,Away,D,0,0,Leeds United,0.5,0.7,57,36727,Bruno Guimarães,5-3-2,4-3-3,Peter Bankes,Match Report,,Newcastle Utd
@@ -505,21 +391,21 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-02,14:00 (06:00),Matchweek 10,Sun,Away,L,1,3,West Ham,0.5,1.7,62,62441,Bruno Guimarães,4-3-3,4-3-3,Robert Jones,Match Report,,Newcastle Utd
 2025-11-09,14:00 (06:00),Matchweek 11,Sun,Away,L,1,3,Brentford,0.4,2.3,50,17207,Bruno Guimarães,4-3-3,4-2-3-1,Stuart Attwell,Match Report,,Newcastle Utd
 2025-11-22,17:30 (09:30),Matchweek 12,Sat,Home,W,2,1,Manchester City,2.3,2.5,33,52181,Bruno Guimarães,4-5-1,4-3-2-1,Samuel Barrott,Match Report,,Newcastle Utd
-2025-11-29,17:30 (09:30),Matchweek 13,Sat,Away,,,,Everton,,,,,,,,,Head-to-Head,,Newcastle Utd
-2025-12-02,20:15 (12:15),Matchweek 14,Tue,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Newcastle Utd
-2025-12-06,15:00 (07:00),Matchweek 15,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Newcastle Utd
-2025-12-14,14:00 (06:00),Matchweek 16,Sun,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Newcastle Utd
-2025-12-20,12:30 (04:30),Matchweek 17,Sat,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Newcastle Utd
-2025-12-26,20:00 (12:00),Matchweek 18,Fri,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Newcastle Utd
+2025-11-29,17:30 (09:30),Matchweek 13,Sat,Away,W,4,1,Everton,1.8,1.0,51,52489,Bruno Guimarães,4-3-3,4-2-3-1,Craig Pawson,Match Report,,Newcastle Utd
+2025-12-02,20:15 (12:15),Matchweek 14,Tue,Home,D,2,2,Tottenham,2.0,0.7,53,52007,Dan Burn,4-3-3,4-2-3-1,Thomas Bramall,Match Report,,Newcastle Utd
+2025-12-06,15:00 (07:00),Matchweek 15,Sat,Home,W,2,1,Burnley,1.8,1.6,69,52041,Bruno Guimarães,4-3-3,4-3-3,Stuart Attwell,Match Report,,Newcastle Utd
+2025-12-14,14:00 (06:00),Matchweek 16,Sun,Away,L,0,1,Sunderland,0.2,0.3,53,47158,Bruno Guimarães,4-3-3,4-2-3-1,Peter Bankes,Match Report,,Newcastle Utd
+2025-12-20,12:30 (04:30),Matchweek 17,Sat,Home,D,2,2,Chelsea,2.3,1.2,47,52226,Bruno Guimarães,4-3-3,4-2-3-1,Andy Madley,Match Report,,Newcastle Utd
+2025-12-26,20:00 (12:00),Matchweek 18,Fri,Away,L,0,1,Manchester Utd,1.2,1.2,66,,Bruno Guimarães,4-3-3,4-2-3-1,Anthony Taylor,Match Report,,Newcastle Utd
 2025-12-30,19:30 (11:30),Matchweek 19,Tue,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Newcastle Utd
 2026-01-04,15:00 (07:00),Matchweek 20,Sun,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Newcastle Utd
 2026-01-07,20:15 (12:15),Matchweek 21,Wed,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Newcastle Utd
 2026-01-18,14:00 (06:00),Matchweek 22,Sun,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Newcastle Utd
 2026-01-25,14:00 (06:00),Matchweek 23,Sun,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Newcastle Utd
 2026-01-31,20:00 (12:00),Matchweek 24,Sat,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Newcastle Utd
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Newcastle Utd
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Newcastle Utd
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Newcastle Utd
+2026-02-07,17:30 (09:30),Matchweek 25,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Newcastle Utd
+2026-02-10,19:30 (11:30),Matchweek 26,Tue,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Newcastle Utd
+2026-02-21,12:30 (04:30),Matchweek 27,Sat,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Newcastle Utd
 2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,Everton,,,,,,,,,Head-to-Head,,Newcastle Utd
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Newcastle Utd
 2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Newcastle Utd
@@ -531,6 +417,44 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Newcastle Utd
 2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Newcastle Utd
 2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Newcastle Utd
+2025-08-17,14:00 (06:00),Matchweek 1,Sun,Away,L,1,3,Nott'ham Forest,1.4,1.8,46,29949,Nathan Collins,4-2-3-1,4-2-3-1,Peter Bankes,Match Report,,Brentford
+2025-08-23,15:00 (07:00),Matchweek 2,Sat,Home,W,1,0,Aston Villa,1.2,1.2,24,16838,Nathan Collins,4-2-3-1,4-2-3-1,Tony Harrington,Match Report,,Brentford
+2025-08-30,15:00 (07:00),Matchweek 3,Sat,Away,L,1,2,Sunderland,1.2,1.5,46,46267,Nathan Collins,4-2-3-1,4-3-3,Anthony Taylor,Match Report,,Brentford
+2025-09-13,20:00 (12:00),Matchweek 4,Sat,Home,D,2,2,Chelsea,1.4,1.3,34,16795,Nathan Collins,5-3-2,4-2-3-1,Stuart Attwell,Match Report,,Brentford
+2025-09-20,20:00 (12:00),Matchweek 5,Sat,Away,L,1,3,Fulham,0.6,1.0,48,26113,Nathan Collins,5-3-2,4-2-3-1,Michael Oliver,Match Report,,Brentford
+2025-09-27,12:30 (04:30),Matchweek 6,Sat,Home,W,3,1,Manchester Utd,1.9,2.1,45,17193,Nathan Collins,4-2-3-1,3-4-3,Craig Pawson,Match Report,,Brentford
+2025-10-05,16:30 (08:30),Matchweek 7,Sun,Home,L,0,1,Manchester City,0.7,0.8,31,17028,Nathan Collins,5-3-2,4-1-4-1,Darren England,Match Report,,Brentford
+2025-10-20,20:00 (12:00),Matchweek 8,Mon,Away,W,2,0,West Ham,2.3,0.4,56,62452,Nathan Collins,4-2-3-1,4-2-3-1,Andy Madley,Match Report,,Brentford
+2025-10-25,20:00 (12:00),Matchweek 9,Sat,Home,W,3,2,Liverpool,2.7,2.2,35,17214,Nathan Collins,4-2-3-1,4-2-3-1,Simon Hooper,Match Report,,Brentford
+2025-11-01,15:00 (08:00),Matchweek 10,Sat,Away,L,0,2,Crystal Palace,0.5,0.7,63,25083,Nathan Collins,4-2-3-1,3-4-3,Peter Bankes,Match Report,,Brentford
+2025-11-09,14:00 (06:00),Matchweek 11,Sun,Home,W,3,1,Newcastle Utd,2.3,0.4,50,17207,Nathan Collins,4-2-3-1,4-3-3,Stuart Attwell,Match Report,,Brentford
+2025-11-22,15:00 (07:00),Matchweek 12,Sat,Away,L,1,2,Brighton,2.0,1.2,36,31458,Nathan Collins,4-2-3-1,4-2-3-1,Chris Kavanagh,Match Report,,Brentford
+2025-11-29,15:00 (07:00),Matchweek 13,Sat,Home,W,3,1,Burnley,3.0,0.9,52,17176,Nathan Collins,4-2-3-1,4-2-3-1,Samuel Barrott,Match Report,,Brentford
+2025-12-03,19:30 (11:30),Matchweek 14,Wed,Away,L,0,2,Arsenal,0.3,1.8,38,60110,Mathias Jensen,5-3-2,4-3-3,Tony Harrington,Match Report,,Brentford
+2025-12-06,15:00 (07:00),Matchweek 15,Sat,Away,L,0,2,Tottenham,0.2,2.2,47,60759,Nathan Collins,4-2-3-1,4-2-3-1,Robert Jones,Match Report,,Brentford
+2025-12-14,16:30 (08:30),Matchweek 16,Sun,Home,D,1,1,Leeds United,0.6,1.5,57,17159,Nathan Collins,4-2-3-1,3-5-2,John Brooks,Match Report,,Brentford
+2025-12-20,15:00 (07:00),Matchweek 17,Sat,Away,W,2,0,Wolves,1.3,1.3,56,27662,Nathan Collins,4-3-3,3-5-2,Matt Donohue,Match Report,,Brentford
+2025-12-27,15:00 (07:00),Matchweek 18,Sat,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Brentford
+2026-01-01,20:00 (12:00),Matchweek 19,Thu,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Brentford
+2026-01-04,15:00 (07:00),Matchweek 20,Sun,Away,,,,Everton,,,,,,,,,Head-to-Head,,Brentford
+2026-01-07,19:30 (11:30),Matchweek 21,Wed,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Brentford
+2026-01-17,15:00 (07:00),Matchweek 22,Sat,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Brentford
+2026-01-25,14:00 (06:00),Matchweek 23,Sun,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Brentford
+2026-02-01,14:00 (06:00),Matchweek 24,Sun,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Brentford
+2026-02-07,17:30 (09:30),Matchweek 25,Sat,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Brentford
+2026-02-12,20:00 (12:00),Matchweek 26,Thu,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Brentford
+2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Brentford
+2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Brentford
+2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Brentford
+2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Brentford
+2026-03-21,15:00 (08:00),Matchweek 31,Sat,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Brentford
+2026-04-11,15:00 (07:00),Matchweek 32,Sat,Home,,,,Everton,,,,,,,,,Head-to-Head,,Brentford
+2026-04-18,15:00 (07:00),Matchweek 33,Sat,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Brentford
+2026-04-25,15:00 (07:00),Matchweek 34,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Brentford
+2026-05-02,15:00 (07:00),Matchweek 35,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Brentford
+2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Brentford
+2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Brentford
+2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Brentford
 2025-08-16,15:00 (07:00),Matchweek 1,Sat,Away,D,1,1,Brighton,0.7,1.5,51,31478,Bernd Leno,4-2-3-1,4-2-3-1,Samuel Barrott,Match Report,,Fulham
 2025-08-24,16:30 (08:30),Matchweek 2,Sun,Home,D,1,1,Manchester Utd,1.7,1.6,53,27512,Bernd Leno,4-2-3-1,3-4-3,Chris Kavanagh,Match Report,,Fulham
 2025-08-30,12:30 (04:30),Matchweek 3,Sat,Away,L,0,2,Chelsea,0.9,2.1,46,39745,Bernd Leno,4-2-3-1,4-2-3-1,Robert Jones,Match Report,,Fulham
@@ -543,11 +467,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-01,15:00 (08:00),Matchweek 10,Sat,Home,W,3,0,Wolves,1.3,0.2,64,26413,Joachim Andersen,4-2-3-1,5-3-2,John Brooks,Match Report,,Fulham
 2025-11-08,15:00 (07:00),Matchweek 11,Sat,Away,L,0,2,Everton,0.4,1.4,49,52491,Joachim Andersen,4-2-3-1,4-2-3-1,Andy Madley,Match Report,,Fulham
 2025-11-22,15:00 (07:00),Matchweek 12,Sat,Home,W,1,0,Sunderland,2.1,0.2,57,27560,Joachim Andersen,4-2-3-1,5-4-1,Darren England,Match Report,,Fulham
-2025-11-29,20:00 (12:00),Matchweek 13,Sat,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Fulham
-2025-12-02,19:30 (11:30),Matchweek 14,Tue,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Fulham
-2025-12-07,16:30 (08:30),Matchweek 15,Sun,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Fulham
-2025-12-13,17:30 (09:30),Matchweek 16,Sat,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Fulham
-2025-12-22,20:00 (12:00),Matchweek 17,Mon,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Fulham
+2025-11-29,20:00 (12:00),Matchweek 13,Sat,Away,W,2,1,Tottenham,0.4,0.9,38,60546,Joachim Andersen,4-2-3-1,4-2-2-2,Stuart Attwell,Match Report,,Fulham
+2025-12-02,19:30 (11:30),Matchweek 14,Tue,Home,L,4,5,Manchester City,0.9,2.3,57,26700,Joachim Andersen,4-2-3-1,4-3-3,Craig Pawson,Match Report,,Fulham
+2025-12-07,16:30 (08:30),Matchweek 15,Sun,Home,L,1,2,Crystal Palace,0.8,1.6,63,27283,Joachim Andersen,4-2-3-1,3-4-3,Samuel Barrott,Match Report,,Fulham
+2025-12-13,17:30 (09:30),Matchweek 16,Sat,Away,W,3,2,Burnley,2.0,2.4,47,19739,Joachim Andersen,4-2-3-1,4-3-3,Michael Oliver,Match Report,,Fulham
+2025-12-22,20:00 (12:00),Matchweek 17,Mon,Home,W,1,0,Nott'ham Forest,1.5,0.7,49,26647,Joachim Andersen,4-2-3-1,4-2-3-1,Anthony Taylor,Match Report,,Fulham
 2025-12-27,15:00 (07:00),Matchweek 18,Sat,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Fulham
 2026-01-01,17:30 (09:30),Matchweek 19,Thu,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Fulham
 2026-01-04,15:00 (07:00),Matchweek 20,Sun,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Fulham
@@ -556,9 +480,9 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-24,15:00 (07:00),Matchweek 23,Sat,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Fulham
 2026-02-01,14:00 (06:00),Matchweek 24,Sun,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Fulham
 2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,Everton,,,,,,,,,Head-to-Head,,Fulham
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Fulham
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Fulham
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Fulham
+2026-02-11,19:30 (11:30),Matchweek 26,Wed,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Fulham
+2026-02-22,14:00 (06:00),Matchweek 27,Sun,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Fulham
+2026-03-01,14:00 (06:00),Matchweek 28,Sun,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Fulham
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Fulham
 2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Fulham
 2026-03-21,15:00 (08:00),Matchweek 31,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Fulham
@@ -569,6 +493,120 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-05-09,15:00 (07:00),Matchweek 36,Sat,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Fulham
 2026-05-17,15:00 (07:00),Matchweek 37,Sun,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Fulham
 2026-05-24,16:00 (08:00),Matchweek 38,Sun,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Fulham
+2025-08-16,15:00 (07:00),Matchweek 1,Sat,Home,W,3,0,Burnley,2.3,0.9,66,61077,Cristian Romero,4-3-3,5-4-1,Michael Oliver,Match Report,,Tottenham
+2025-08-23,12:30 (04:30),Matchweek 2,Sat,Away,W,2,0,Manchester City,1.1,1.6,39,51785,Cristian Romero,4-3-3,4-1-4-1,Peter Bankes,Match Report,,Tottenham
+2025-08-30,15:00 (07:00),Matchweek 3,Sat,Home,L,0,1,Bournemouth,0.2,1.5,61,61250,Cristian Romero,4-3-3,4-2-3-1,Simon Hooper,Match Report,,Tottenham
+2025-09-13,17:30 (09:30),Matchweek 4,Sat,Away,W,3,0,West Ham,1.3,0.6,64,62459,Cristian Romero,4-3-3,4-2-3-1,Jarred Gillett,Match Report,,Tottenham
+2025-09-20,15:00 (07:00),Matchweek 5,Sat,Away,D,2,2,Brighton,1.2,1.3,64,31488,Cristian Romero,4-3-3,4-2-3-1,Chris Kavanagh,Match Report,,Tottenham
+2025-09-27,20:00 (12:00),Matchweek 6,Sat,Home,D,1,1,Wolves,0.8,1.1,51,60537,Cristian Romero,4-2-3-1,4-3-3,Michael Salisbury,Match Report,,Tottenham
+2025-10-04,12:30 (04:30),Matchweek 7,Sat,Away,W,2,1,Leeds United,0.6,1.7,44,36703,Cristian Romero,4-2-3-1,4-3-3,Thomas Bramall,Match Report,,Tottenham
+2025-10-19,14:00 (06:00),Matchweek 8,Sun,Home,L,1,2,Aston Villa,0.9,0.3,53,61291,Micky van de Ven,4-2-3-1,4-2-3-1,Simon Hooper,Match Report,,Tottenham
+2025-10-26,16:30 (09:30),Matchweek 9,Sun,Away,W,3,0,Everton,1.7,1.7,47,51781,Micky van de Ven,4-2-3-1,4-2-3-1,Craig Pawson,Match Report,,Tottenham
+2025-11-01,17:30 (10:30),Matchweek 10,Sat,Home,L,0,1,Chelsea,0.1,3.7,48,61202,Micky van de Ven,4-2-3-1,4-2-3-1,Jarred Gillett,Match Report,,Tottenham
+2025-11-08,12:30 (04:30),Matchweek 11,Sat,Home,D,2,2,Manchester Utd,0.9,0.8,54,61210,Cristian Romero,4-2-3-1,3-4-3,Samuel Barrott,Match Report,,Tottenham
+2025-11-23,16:30 (08:30),Matchweek 12,Sun,Away,L,1,4,Arsenal,0.1,1.9,43,60345,Cristian Romero,3-4-3,4-2-3-1,Michael Oliver,Match Report,,Tottenham
+2025-11-29,20:00 (12:00),Matchweek 13,Sat,Home,L,1,2,Fulham,0.9,0.4,62,60546,Micky van de Ven,4-2-2-2,4-2-3-1,Stuart Attwell,Match Report,,Tottenham
+2025-12-02,20:15 (12:15),Matchweek 14,Tue,Away,D,2,2,Newcastle Utd,0.7,2.0,47,52007,Cristian Romero,4-2-3-1,4-3-3,Thomas Bramall,Match Report,,Tottenham
+2025-12-06,15:00 (07:00),Matchweek 15,Sat,Home,W,2,0,Brentford,2.2,0.2,53,60759,Cristian Romero,4-2-3-1,4-2-3-1,Robert Jones,Match Report,,Tottenham
+2025-12-14,14:00 (06:00),Matchweek 16,Sun,Away,L,0,3,Nott'ham Forest,0.3,2.3,52,30579,Cristian Romero,4-2-3-1,4-2-3-1,Samuel Barrott,Match Report,,Tottenham
+2025-12-20,17:30 (09:30),Matchweek 17,Sat,Home,L,1,2,Liverpool,1.0,0.7,35,61138,Cristian Romero,4-2-2-2,4-2-3-1,John Brooks,Match Report,,Tottenham
+2025-12-28,16:30 (08:30),Matchweek 18,Sun,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Tottenham
+2026-01-01,20:00 (12:00),Matchweek 19,Thu,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Tottenham
+2026-01-04,15:00 (07:00),Matchweek 20,Sun,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Tottenham
+2026-01-07,19:30 (11:30),Matchweek 21,Wed,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Tottenham
+2026-01-17,15:00 (07:00),Matchweek 22,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Tottenham
+2026-01-24,15:00 (07:00),Matchweek 23,Sat,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Tottenham
+2026-02-01,16:30 (08:30),Matchweek 24,Sun,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Tottenham
+2026-02-07,12:30 (04:30),Matchweek 25,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Tottenham
+2026-02-10,19:30 (11:30),Matchweek 26,Tue,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Tottenham
+2026-02-22,16:30 (08:30),Matchweek 27,Sun,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Tottenham
+2026-03-01,14:00 (06:00),Matchweek 28,Sun,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Tottenham
+2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Tottenham
+2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Tottenham
+2026-03-21,15:00 (08:00),Matchweek 31,Sat,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Tottenham
+2026-04-11,15:00 (07:00),Matchweek 32,Sat,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Tottenham
+2026-04-18,15:00 (07:00),Matchweek 33,Sat,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Tottenham
+2026-04-25,15:00 (07:00),Matchweek 34,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Tottenham
+2026-05-02,15:00 (07:00),Matchweek 35,Sat,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Tottenham
+2026-05-09,15:00 (07:00),Matchweek 36,Sat,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Tottenham
+2026-05-17,15:00 (07:00),Matchweek 37,Sun,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Tottenham
+2026-05-24,16:00 (08:00),Matchweek 38,Sun,Home,,,,Everton,,,,,,,,,Head-to-Head,,Tottenham
+2025-08-15,20:00 (12:00),Matchweek 1,Fri,Away,L,2,4,Liverpool,1.7,2.2,39,60315,Adam Smith,4-1-4-1,4-2-3-1,Anthony Taylor,Match Report,,Bournemouth
+2025-08-23,15:00 (07:00),Matchweek 2,Sat,Home,W,1,0,Wolves,1.3,0.5,59,11070,Adam Smith,4-1-4-1,3-4-3,Thomas Bramall,Match Report,,Bournemouth
+2025-08-30,15:00 (07:00),Matchweek 3,Sat,Away,W,1,0,Tottenham,1.5,0.2,39,61250,Adam Smith,4-2-3-1,4-3-3,Simon Hooper,Match Report,,Bournemouth
+2025-09-13,15:00 (07:00),Matchweek 4,Sat,Home,W,2,1,Brighton,1.4,0.6,51,11167,David Brooks,4-2-3-1,4-2-3-1,Peter Bankes,Match Report,,Bournemouth
+2025-09-21,14:00 (06:00),Matchweek 5,Sun,Home,D,0,0,Newcastle Utd,0.5,0.2,55,11212,David Brooks,4-2-3-1,3-4-3,Robert Jones,Match Report,,Bournemouth
+2025-09-27,15:00 (07:00),Matchweek 6,Sat,Away,D,2,2,Leeds United,0.7,1.8,59,36574,Ryan Christie,4-2-3-1,4-3-3,Michael Oliver,Match Report,,Bournemouth
+2025-10-03,20:00 (12:00),Matchweek 7,Fri,Home,W,3,1,Fulham,1.2,0.9,54,11165,David Brooks,4-2-3-1,3-4-3,Simon Hooper,Match Report,,Bournemouth
+2025-10-18,15:00 (07:00),Matchweek 8,Sat,Away,D,3,3,Crystal Palace,2.0,4.4,48,25125,Marcus Tavernier,4-2-3-1,3-4-3,Jarred Gillett,Match Report,,Bournemouth
+2025-10-26,14:00 (07:00),Matchweek 9,Sun,Home,W,2,0,Nott'ham Forest,0.6,0.4,52,11204,Marcus Tavernier,4-2-3-1,4-2-3-1,Samuel Barrott,Match Report,,Bournemouth
+2025-11-02,16:30 (08:30),Matchweek 10,Sun,Away,L,1,3,Manchester City,0.6,2.2,51,52387,David Brooks,4-2-3-1,4-3-2-1,Anthony Taylor,Match Report,,Bournemouth
+2025-11-09,14:00 (06:00),Matchweek 11,Sun,Away,L,0,4,Aston Villa,1.6,1.7,49,40792,Adam Smith,4-2-3-1,4-4-2,John Brooks,Match Report,,Bournemouth
+2025-11-22,15:00 (07:00),Matchweek 12,Sat,Home,D,2,2,West Ham,3.9,0.6,76,11216,Lewis Cook,4-2-3-1,3-4-3,Thomas Bramall,Match Report,,Bournemouth
+2025-11-29,15:00 (07:00),Matchweek 13,Sat,Away,L,2,3,Sunderland,1.7,1.5,58,46973,Adam Smith,4-2-3-1,4-2-3-1,Tim Robinson,Match Report,,Bournemouth
+2025-12-02,19:30 (11:30),Matchweek 14,Tue,Home,L,0,1,Everton,0.5,1.4,54,11161,Antoine Semenyo,4-2-3-1,4-2-3-1,Michael Salisbury,Match Report,,Bournemouth
+2025-12-06,15:00 (07:00),Matchweek 15,Sat,Home,D,0,0,Chelsea,1.5,0.9,40,11240,Adam Smith,4-2-3-1,4-2-3-1,Michael Oliver,Match Report,,Bournemouth
+2025-12-15,20:00 (12:00),Matchweek 16,Mon,Away,D,4,4,Manchester Utd,1.9,3.4,44,73951,Adam Smith,4-2-3-1,3-4-3,Simon Hooper,Match Report,,Bournemouth
+2025-12-20,15:00 (07:00),Matchweek 17,Sat,Home,D,1,1,Burnley,1.4,0.4,65,10762,Lewis Cook,4-2-3-1,4-4-2,Chris Kavanagh,Match Report,,Bournemouth
+2025-12-27,15:00 (07:00),Matchweek 18,Sat,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Bournemouth
+2025-12-30,19:30 (11:30),Matchweek 19,Tue,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Bournemouth
+2026-01-03,17:30 (09:30),Matchweek 20,Sat,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Bournemouth
+2026-01-07,19:30 (11:30),Matchweek 21,Wed,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Bournemouth
+2026-01-19,20:00 (12:00),Matchweek 22,Mon,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Bournemouth
+2026-01-24,17:30 (09:30),Matchweek 23,Sat,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Bournemouth
+2026-01-31,15:00 (07:00),Matchweek 24,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Bournemouth
+2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Bournemouth
+2026-02-10,19:30 (11:30),Matchweek 26,Tue,Away,,,,Everton,,,,,,,,,Head-to-Head,,Bournemouth
+2026-02-21,17:30 (09:30),Matchweek 27,Sat,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Bournemouth
+2026-02-28,12:30 (04:30),Matchweek 28,Sat,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Bournemouth
+2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Bournemouth
+2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Burnley,,,,,,,,,Head-to-Head,,Bournemouth
+2026-03-21,15:00 (08:00),Matchweek 31,Sat,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Bournemouth
+2026-04-11,15:00 (07:00),Matchweek 32,Sat,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Bournemouth
+2026-04-18,15:00 (07:00),Matchweek 33,Sat,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Bournemouth
+2026-04-25,15:00 (07:00),Matchweek 34,Sat,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,Bournemouth
+2026-05-02,15:00 (07:00),Matchweek 35,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Bournemouth
+2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Bournemouth
+2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Bournemouth
+2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Bournemouth
+2025-08-18,20:00 (12:00),Matchweek 1,Mon,Home,W,1,0,Everton,2.0,0.8,54,36820,Ethan Ampadu,4-3-3,4-2-3-1,Chris Kavanagh,Match Report,,Leeds United
+2025-08-23,17:30 (09:30),Matchweek 2,Sat,Away,L,0,5,Arsenal,0.2,2.7,33,60110,Pascal Struijk,4-3-3,4-3-3,Jarred Gillett,Match Report,,Leeds United
+2025-08-30,17:30 (09:30),Matchweek 3,Sat,Home,D,0,0,Newcastle Utd,0.7,0.5,43,36727,Pascal Struijk,4-3-3,5-3-2,Peter Bankes,Match Report,,Leeds United
+2025-09-13,15:00 (07:00),Matchweek 4,Sat,Away,L,0,1,Fulham,0.8,0.9,46,27327,Ethan Ampadu,4-3-3,4-2-3-1,Craig Pawson,Match Report,,Leeds United
+2025-09-20,15:00 (07:00),Matchweek 5,Sat,Away,W,3,1,Wolves,0.5,1.8,44,30807,Ethan Ampadu,4-3-3,3-4-3,Anthony Taylor,Match Report,,Leeds United
+2025-09-27,15:00 (07:00),Matchweek 6,Sat,Home,D,2,2,Bournemouth,1.8,0.7,41,36574,Ethan Ampadu,4-3-3,4-2-3-1,Michael Oliver,Match Report,,Leeds United
+2025-10-04,12:30 (04:30),Matchweek 7,Sat,Home,L,1,2,Tottenham,1.7,0.6,56,36703,Ethan Ampadu,4-3-3,4-2-3-1,Thomas Bramall,Match Report,,Leeds United
+2025-10-18,15:00 (07:00),Matchweek 8,Sat,Away,L,0,2,Burnley,2.4,0.5,68,21646,Ethan Ampadu,4-3-3,4-2-3-1,Tim Robinson,Match Report,,Leeds United
+2025-10-24,20:00 (12:00),Matchweek 9,Fri,Home,W,2,1,West Ham,1.5,0.6,41,36788,Ethan Ampadu,4-3-3,3-4-3,Stuart Attwell,Match Report,,Leeds United
+2025-11-01,15:00 (08:00),Matchweek 10,Sat,Away,L,0,3,Brighton,0.5,3.0,50,31512,Ethan Ampadu,4-1-4-1,4-2-3-1,Michael Oliver,Match Report,,Leeds United
+2025-11-09,14:00 (06:00),Matchweek 11,Sun,Away,L,1,3,Nott'ham Forest,0.7,2.5,54,30708,Ethan Ampadu,4-3-3,4-2-3-1,Jarred Gillett,Match Report,,Leeds United
+2025-11-23,14:00 (06:00),Matchweek 12,Sun,Home,L,1,2,Aston Villa,1.6,1.6,48,36819,Ethan Ampadu,4-3-3,4-4-2,Robert Jones,Match Report,,Leeds United
+2025-11-29,15:00 (07:00),Matchweek 13,Sat,Away,L,2,3,Manchester City,1.5,2.6,39,52483,Ethan Ampadu,4-3-3,4-3-2-1,Peter Bankes,Match Report,,Leeds United
+2025-12-03,20:15 (12:15),Matchweek 14,Wed,Home,W,3,1,Chelsea,2.3,0.9,29,36767,Ethan Ampadu,3-5-2,4-2-3-1,Darren England,Match Report,,Leeds United
+2025-12-06,17:30 (09:30),Matchweek 15,Sat,Home,D,3,3,Liverpool,1.6,1.9,45,36842,Ethan Ampadu,3-5-2,4-2-3-1,Anthony Taylor,Match Report,,Leeds United
+2025-12-14,16:30 (08:30),Matchweek 16,Sun,Away,D,1,1,Brentford,1.5,0.6,43,17159,Ethan Ampadu,3-5-2,4-2-3-1,John Brooks,Match Report,,Leeds United
+2025-12-20,20:00 (12:00),Matchweek 17,Sat,Home,W,4,1,Crystal Palace,2.6,1.6,54,36334,Ethan Ampadu,3-5-2,3-4-3,Thomas Bramall,Match Report,,Leeds United
+2025-12-28,14:00 (06:00),Matchweek 18,Sun,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Leeds United
+2026-01-01,17:30 (09:30),Matchweek 19,Thu,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Leeds United
+2026-01-04,12:30 (04:30),Matchweek 20,Sun,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Leeds United
+2026-01-07,20:15 (12:15),Matchweek 21,Wed,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Leeds United
+2026-01-17,15:00 (07:00),Matchweek 22,Sat,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Leeds United
+2026-01-26,20:00 (12:00),Matchweek 23,Mon,Away,,,,Everton,,,,,,,,,Head-to-Head,,Leeds United
+2026-01-31,15:00 (07:00),Matchweek 24,Sat,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Leeds United
+2026-02-06,20:00 (12:00),Matchweek 25,Fri,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Leeds United
+2026-02-10,19:30 (11:30),Matchweek 26,Tue,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Leeds United
+2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Leeds United
+2026-02-28,17:30 (09:30),Matchweek 28,Sat,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Leeds United
+2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Leeds United
+2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Leeds United
+2026-03-21,15:00 (08:00),Matchweek 31,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Leeds United
+2026-04-11,15:00 (07:00),Matchweek 32,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Leeds United
+2026-04-18,15:00 (07:00),Matchweek 33,Sat,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Leeds United
+2026-04-25,15:00 (07:00),Matchweek 34,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Leeds United
+2026-05-02,15:00 (07:00),Matchweek 35,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Leeds United
+2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Leeds United
+2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Leeds United
+2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Leeds United
 2025-08-17,14:00 (06:00),Matchweek 1,Sun,Home,W,3,1,Brentford,1.8,1.4,54,29949,Morgan Gibbs-White,4-2-3-1,4-2-3-1,Peter Bankes,Match Report,,Nott'ham Forest
 2025-08-24,14:00 (06:00),Matchweek 2,Sun,Away,D,1,1,Crystal Palace,0.9,1.1,58,24876,Morgan Gibbs-White,4-2-3-1,3-4-3,Anthony Taylor,Match Report,,Nott'ham Forest
 2025-08-31,14:00 (06:00),Matchweek 3,Sun,Home,L,0,3,West Ham,0.7,2.4,58,30215,Morgan Gibbs-White,4-2-3-1,4-2-3-1,Craig Pawson,Match Report,,Nott'ham Forest
@@ -581,11 +619,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-01,15:00 (08:00),Matchweek 10,Sat,Home,D,2,2,Manchester Utd,1.9,1.2,42,30778,Morgan Gibbs-White,4-2-3-1,3-4-3,Darren England,Match Report,,Nott'ham Forest
 2025-11-09,14:00 (06:00),Matchweek 11,Sun,Home,W,3,1,Leeds United,2.5,0.7,46,30708,Morgan Gibbs-White,4-2-3-1,4-3-3,Jarred Gillett,Match Report,,Nott'ham Forest
 2025-11-22,15:00 (07:00),Matchweek 12,Sat,Away,W,3,0,Liverpool,1.6,1.9,26,60419,Morgan Gibbs-White,4-2-3-1,4-3-3,Andy Madley,Match Report,,Nott'ham Forest
-2025-11-30,14:05 (06:05),Matchweek 13,Sun,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Nott'ham Forest
-2025-12-03,19:30 (11:30),Matchweek 14,Wed,Away,,,,Wolves,,,,,,,,,Head-to-Head,,Nott'ham Forest
-2025-12-06,15:00 (07:00),Matchweek 15,Sat,Away,,,,Everton,,,,,,,,,Head-to-Head,,Nott'ham Forest
-2025-12-14,14:00 (06:00),Matchweek 16,Sun,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Nott'ham Forest
-2025-12-22,20:00 (12:00),Matchweek 17,Mon,Away,,,,Fulham,,,,,,,,,Head-to-Head,,Nott'ham Forest
+2025-11-30,14:05 (06:05),Matchweek 13,Sun,Home,L,0,2,Brighton,0.9,1.9,52,30522,Morgan Gibbs-White,4-2-3-1,4-2-3-1,Michael Oliver,Match Report,,Nott'ham Forest
+2025-12-03,19:30 (11:30),Matchweek 14,Wed,Away,W,1,0,Wolves,0.7,0.9,50,28646,Morgan Gibbs-White,4-2-3-1,3-4-3,Tim Robinson,Match Report,,Nott'ham Forest
+2025-12-06,15:00 (07:00),Matchweek 15,Sat,Away,L,0,3,Everton,0.5,1.1,58,52501,Morgan Gibbs-White,4-2-3-1,4-2-3-1,Chris Kavanagh,Match Report,,Nott'ham Forest
+2025-12-14,14:00 (06:00),Matchweek 16,Sun,Home,W,3,0,Tottenham,2.3,0.3,48,30579,Morgan Gibbs-White,4-2-3-1,4-2-3-1,Samuel Barrott,Match Report,,Nott'ham Forest
+2025-12-22,20:00 (12:00),Matchweek 17,Mon,Away,L,0,1,Fulham,0.7,1.5,51,26647,Morgan Gibbs-White,4-2-3-1,4-2-3-1,Anthony Taylor,Match Report,,Nott'ham Forest
 2025-12-27,12:30 (04:30),Matchweek 18,Sat,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Nott'ham Forest
 2025-12-30,19:30 (11:30),Matchweek 19,Tue,Home,,,,Everton,,,,,,,,,Head-to-Head,,Nott'ham Forest
 2026-01-03,12:30 (04:30),Matchweek 20,Sat,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Nott'ham Forest
@@ -593,8 +631,8 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-17,17:30 (09:30),Matchweek 22,Sat,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Nott'ham Forest
 2026-01-25,14:00 (06:00),Matchweek 23,Sun,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Nott'ham Forest
 2026-02-01,14:00 (06:00),Matchweek 24,Sun,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Nott'ham Forest
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Nott'ham Forest
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Nott'ham Forest
+2026-02-06,20:00 (12:00),Matchweek 25,Fri,Away,,,,Leeds United,,,,,,,,,Head-to-Head,,Nott'ham Forest
+2026-02-11,19:30 (11:30),Matchweek 26,Wed,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Nott'ham Forest
 2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Nott'ham Forest
 2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Nott'ham Forest
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Nott'ham Forest
@@ -619,11 +657,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-02,14:00 (06:00),Matchweek 10,Sun,Home,W,3,1,Newcastle Utd,1.7,0.5,38,62441,Jarrod Bowen,4-3-3,4-3-3,Robert Jones,Match Report,,West Ham
 2025-11-08,15:00 (07:00),Matchweek 11,Sat,Home,W,3,2,Burnley,3.0,1.0,43,62449,Jarrod Bowen,4-3-3,4-2-3-1,Michael Salisbury,Match Report,,West Ham
 2025-11-22,15:00 (07:00),Matchweek 12,Sat,Away,D,2,2,Bournemouth,0.6,3.9,24,11216,Jarrod Bowen,3-4-3,4-2-3-1,Thomas Bramall,Match Report,,West Ham
-2025-11-30,14:05 (06:05),Matchweek 13,Sun,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,West Ham
-2025-12-04,20:00 (12:00),Matchweek 14,Thu,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,West Ham
-2025-12-07,14:00 (06:00),Matchweek 15,Sun,Away,,,,Brighton,,,,,,,,,Head-to-Head,,West Ham
-2025-12-14,14:00 (06:00),Matchweek 16,Sun,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,West Ham
-2025-12-20,15:00 (07:00),Matchweek 17,Sat,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,West Ham
+2025-11-30,14:05 (06:05),Matchweek 13,Sun,Home,L,0,2,Liverpool,0.3,1.2,44,62469,Jarrod Bowen,4-2-3-1,4-2-3-1,Darren England,Match Report,,West Ham
+2025-12-04,20:00 (12:00),Matchweek 14,Thu,Away,D,1,1,Manchester Utd,0.8,1.8,35,73938,Jarrod Bowen,4-2-3-1,3-4-3,Andrew Kitchen,Match Report,,West Ham
+2025-12-07,14:00 (06:00),Matchweek 15,Sun,Away,D,1,1,Brighton,1.2,1.8,32,31293,Jarrod Bowen,3-4-1-2,4-2-3-1,Simon Hooper,Match Report,,West Ham
+2025-12-14,14:00 (06:00),Matchweek 16,Sun,Home,L,2,3,Aston Villa,1.0,0.7,42,62447,Jarrod Bowen,4-3-1-2,4-2-3-1,Anthony Taylor,Match Report,,West Ham
+2025-12-20,15:00 (07:00),Matchweek 17,Sat,Away,L,0,3,Manchester City,1.1,2.1,34,52454,Jarrod Bowen,4-3-1-2,4-3-2-1,Paul Tierney,Match Report,,West Ham
 2025-12-27,15:00 (07:00),Matchweek 18,Sat,Home,,,,Fulham,,,,,,,,,Head-to-Head,,West Ham
 2025-12-30,19:30 (11:30),Matchweek 19,Tue,Home,,,,Brighton,,,,,,,,,Head-to-Head,,West Ham
 2026-01-03,15:00 (07:00),Matchweek 20,Sat,Away,,,,Wolves,,,,,,,,,Head-to-Head,,West Ham
@@ -632,8 +670,8 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-24,12:30 (04:30),Matchweek 23,Sat,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,West Ham
 2026-01-31,17:30 (09:30),Matchweek 24,Sat,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,West Ham
 2026-02-07,15:00 (07:00),Matchweek 25,Sat,Away,,,,Burnley,,,,,,,,,Head-to-Head,,West Ham
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,West Ham
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,West Ham
+2026-02-10,20:15 (12:15),Matchweek 26,Tue,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,West Ham
+2026-02-21,17:30 (09:30),Matchweek 27,Sat,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,West Ham
 2026-02-28,15:00 (07:00),Matchweek 28,Sat,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,West Ham
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Fulham,,,,,,,,,Head-to-Head,,West Ham
 2026-03-14,15:00 (08:00),Matchweek 30,Sat,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,West Ham
@@ -645,44 +683,6 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-05-09,15:00 (07:00),Matchweek 36,Sat,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,West Ham
 2026-05-17,15:00 (07:00),Matchweek 37,Sun,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,West Ham
 2026-05-24,16:00 (08:00),Matchweek 38,Sun,Home,,,,Leeds United,,,,,,,,,Head-to-Head,,West Ham
-2025-08-18,20:00 (12:00),Matchweek 1,Mon,Home,W,1,0,Everton,2.0,0.8,54,36820,Ethan Ampadu,4-3-3,4-2-3-1,Chris Kavanagh,Match Report,,Leeds United
-2025-08-23,17:30 (09:30),Matchweek 2,Sat,Away,L,0,5,Arsenal,0.2,2.7,33,60110,Pascal Struijk,4-3-3,4-3-3,Jarred Gillett,Match Report,,Leeds United
-2025-08-30,17:30 (09:30),Matchweek 3,Sat,Home,D,0,0,Newcastle Utd,0.7,0.5,43,36727,Pascal Struijk,4-3-3,5-3-2,Peter Bankes,Match Report,,Leeds United
-2025-09-13,15:00 (07:00),Matchweek 4,Sat,Away,L,0,1,Fulham,0.8,0.9,46,27327,Ethan Ampadu,4-3-3,4-2-3-1,Craig Pawson,Match Report,,Leeds United
-2025-09-20,15:00 (07:00),Matchweek 5,Sat,Away,W,3,1,Wolves,0.5,1.8,44,30807,Ethan Ampadu,4-3-3,3-4-3,Anthony Taylor,Match Report,,Leeds United
-2025-09-27,15:00 (07:00),Matchweek 6,Sat,Home,D,2,2,Bournemouth,1.8,0.7,41,36574,Ethan Ampadu,4-3-3,4-2-3-1,Michael Oliver,Match Report,,Leeds United
-2025-10-04,12:30 (04:30),Matchweek 7,Sat,Home,L,1,2,Tottenham,1.7,0.6,56,36703,Ethan Ampadu,4-3-3,4-2-3-1,Thomas Bramall,Match Report,,Leeds United
-2025-10-18,15:00 (07:00),Matchweek 8,Sat,Away,L,0,2,Burnley,2.4,0.5,68,21646,Ethan Ampadu,4-3-3,4-2-3-1,Tim Robinson,Match Report,,Leeds United
-2025-10-24,20:00 (12:00),Matchweek 9,Fri,Home,W,2,1,West Ham,1.5,0.6,41,36788,Ethan Ampadu,4-3-3,3-4-3,Stuart Attwell,Match Report,,Leeds United
-2025-11-01,15:00 (08:00),Matchweek 10,Sat,Away,L,0,3,Brighton,0.5,3.0,50,31512,Ethan Ampadu,4-1-4-1,4-2-3-1,Michael Oliver,Match Report,,Leeds United
-2025-11-09,14:00 (06:00),Matchweek 11,Sun,Away,L,1,3,Nott'ham Forest,0.7,2.5,54,30708,Ethan Ampadu,4-3-3,4-2-3-1,Jarred Gillett,Match Report,,Leeds United
-2025-11-23,14:00 (06:00),Matchweek 12,Sun,Home,L,1,2,Aston Villa,1.6,1.6,48,36819,Ethan Ampadu,4-3-3,4-4-2,Robert Jones,Match Report,,Leeds United
-2025-11-29,15:00 (07:00),Matchweek 13,Sat,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Leeds United
-2025-12-03,20:15 (12:15),Matchweek 14,Wed,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Leeds United
-2025-12-06,17:30 (09:30),Matchweek 15,Sat,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Leeds United
-2025-12-14,16:30 (08:30),Matchweek 16,Sun,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Leeds United
-2025-12-20,20:00 (12:00),Matchweek 17,Sat,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Leeds United
-2025-12-28,14:00 (06:00),Matchweek 18,Sun,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Leeds United
-2026-01-01,17:30 (09:30),Matchweek 19,Thu,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Leeds United
-2026-01-04,12:30 (04:30),Matchweek 20,Sun,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Leeds United
-2026-01-07,20:15 (12:15),Matchweek 21,Wed,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Leeds United
-2026-01-17,15:00 (07:00),Matchweek 22,Sat,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Leeds United
-2026-01-26,20:00 (12:00),Matchweek 23,Mon,Away,,,,Everton,,,,,,,,,Head-to-Head,,Leeds United
-2026-01-31,15:00 (07:00),Matchweek 24,Sat,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Leeds United
-2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Leeds United
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Leeds United
-2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Leeds United
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,Manchester City,,,,,,,,,Head-to-Head,,Leeds United
-2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Sunderland,,,,,,,,,Head-to-Head,,Leeds United
-2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Leeds United
-2026-03-21,15:00 (08:00),Matchweek 31,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Leeds United
-2026-04-11,15:00 (07:00),Matchweek 32,Sat,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Leeds United
-2026-04-18,15:00 (07:00),Matchweek 33,Sat,Home,,,,Wolves,,,,,,,,,Head-to-Head,,Leeds United
-2026-04-25,15:00 (07:00),Matchweek 34,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Leeds United
-2026-05-02,15:00 (07:00),Matchweek 35,Sat,Home,,,,Burnley,,,,,,,,,Head-to-Head,,Leeds United
-2026-05-09,15:00 (07:00),Matchweek 36,Sat,Away,,,,Tottenham,,,,,,,,,Head-to-Head,,Leeds United
-2026-05-17,15:00 (07:00),Matchweek 37,Sun,Home,,,,Brighton,,,,,,,,,Head-to-Head,,Leeds United
-2026-05-24,16:00 (08:00),Matchweek 38,Sun,Away,,,,West Ham,,,,,,,,,Head-to-Head,,Leeds United
 2025-08-16,15:00 (07:00),Matchweek 1,Sat,Away,L,0,3,Tottenham,0.9,2.3,34,61077,Josh Cullen,5-4-1,4-3-3,Michael Oliver,Match Report,,Burnley
 2025-08-23,15:00 (07:00),Matchweek 2,Sat,Home,W,2,0,Sunderland,1.0,0.8,42,21285,Josh Cullen,4-2-3-1,4-3-3,Michael Salisbury,Match Report,,Burnley
 2025-08-30,15:00 (07:00),Matchweek 3,Sat,Away,L,2,3,Manchester Utd,1.2,3.6,38,74257,Josh Cullen,4-2-3-1,3-4-3,Samuel Barrott,Match Report,,Burnley
@@ -695,11 +695,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-01,15:00 (08:00),Matchweek 10,Sat,Home,L,0,2,Arsenal,0.4,2.3,46,21538,Josh Cullen,5-4-1,4-3-3,Chris Kavanagh,Match Report,,Burnley
 2025-11-08,15:00 (07:00),Matchweek 11,Sat,Away,L,2,3,West Ham,1.0,3.0,57,62449,Josh Cullen,4-2-3-1,4-3-3,Michael Salisbury,Match Report,,Burnley
 2025-11-22,12:30 (04:30),Matchweek 12,Sat,Home,L,0,2,Chelsea,0.4,1.7,45,21499,Josh Cullen,4-3-3,4-2-3-1,Peter Bankes,Match Report,,Burnley
-2025-11-29,15:00 (07:00),Matchweek 13,Sat,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Burnley
-2025-12-03,19:30 (11:30),Matchweek 14,Wed,Home,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Burnley
-2025-12-06,15:00 (07:00),Matchweek 15,Sat,Away,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Burnley
-2025-12-13,17:30 (09:30),Matchweek 16,Sat,Home,,,,Fulham,,,,,,,,,Head-to-Head,,Burnley
-2025-12-20,15:00 (07:00),Matchweek 17,Sat,Away,,,,Bournemouth,,,,,,,,,Head-to-Head,,Burnley
+2025-11-29,15:00 (07:00),Matchweek 13,Sat,Away,L,1,3,Brentford,0.9,3.0,48,17176,Josh Cullen,4-2-3-1,4-2-3-1,Samuel Barrott,Match Report,,Burnley
+2025-12-03,19:30 (11:30),Matchweek 14,Wed,Home,L,0,1,Crystal Palace,0.9,0.7,58,19365,Josh Cullen,4-4-2,3-4-3,Thomas Kirk,Match Report,,Burnley
+2025-12-06,15:00 (07:00),Matchweek 15,Sat,Away,L,1,2,Newcastle Utd,1.6,1.8,31,52041,Josh Cullen,4-3-3,4-3-3,Stuart Attwell,Match Report,,Burnley
+2025-12-13,17:30 (09:30),Matchweek 16,Sat,Home,L,2,3,Fulham,2.4,2.0,53,19739,Josh Cullen,4-3-3,4-2-3-1,Michael Oliver,Match Report,,Burnley
+2025-12-20,15:00 (07:00),Matchweek 17,Sat,Away,D,1,1,Bournemouth,0.4,1.4,35,10762,Josh Cullen,4-4-2,4-2-3-1,Chris Kavanagh,Match Report,,Burnley
 2025-12-27,15:00 (07:00),Matchweek 18,Sat,Home,,,,Everton,,,,,,,,,Head-to-Head,,Burnley
 2025-12-30,19:30 (11:30),Matchweek 19,Tue,Home,,,,Newcastle Utd,,,,,,,,,Head-to-Head,,Burnley
 2026-01-03,15:00 (07:00),Matchweek 20,Sat,Away,,,,Brighton,,,,,,,,,Head-to-Head,,Burnley
@@ -708,7 +708,7 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-24,15:00 (07:00),Matchweek 23,Sat,Home,,,,Tottenham,,,,,,,,,Head-to-Head,,Burnley
 2026-02-02,20:00 (12:00),Matchweek 24,Mon,Away,,,,Sunderland,,,,,,,,,Head-to-Head,,Burnley
 2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Burnley
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Burnley
+2026-02-11,19:30 (11:30),Matchweek 26,Wed,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Burnley
 2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Chelsea,,,,,,,,,Head-to-Head,,Burnley
 2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Burnley
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Away,,,,Everton,,,,,,,,,Head-to-Head,,Burnley
@@ -733,11 +733,11 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2025-11-01,15:00 (08:00),Matchweek 10,Sat,Away,L,0,3,Fulham,0.2,1.3,36,26413,Toti Gomes,5-3-2,4-2-3-1,John Brooks,Match Report,,Wolves
 2025-11-08,20:00 (12:00),Matchweek 11,Sat,Away,L,0,3,Chelsea,0.2,3.3,37,39467,Toti Gomes,5-3-2,4-2-3-1,Andrew Kitchen,Match Report,,Wolves
 2025-11-22,15:00 (07:00),Matchweek 12,Sat,Home,L,0,2,Crystal Palace,1.8,1.3,48,29976,Toti Gomes,5-3-2,3-4-3,Anthony Taylor,Match Report,,Wolves
-2025-11-30,14:05 (06:05),Matchweek 13,Sun,Away,,,,Aston Villa,,,,,,,,,Head-to-Head,,Wolves
-2025-12-03,19:30 (11:30),Matchweek 14,Wed,Home,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Wolves
-2025-12-08,20:00 (12:00),Matchweek 15,Mon,Home,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Wolves
-2025-12-13,20:00 (12:00),Matchweek 16,Sat,Away,,,,Arsenal,,,,,,,,,Head-to-Head,,Wolves
-2025-12-20,15:00 (07:00),Matchweek 17,Sat,Home,,,,Brentford,,,,,,,,,Head-to-Head,,Wolves
+2025-11-30,14:05 (06:05),Matchweek 13,Sun,Away,L,0,1,Aston Villa,0.4,0.9,48,42139,Toti Gomes,3-4-3,4-2-3-1,Chris Kavanagh,Match Report,,Wolves
+2025-12-03,19:30 (11:30),Matchweek 14,Wed,Home,L,0,1,Nott'ham Forest,0.9,0.7,50,28646,Toti Gomes,3-4-3,4-2-3-1,Tim Robinson,Match Report,,Wolves
+2025-12-08,20:00 (12:00),Matchweek 15,Mon,Home,L,1,4,Manchester Utd,0.6,4.0,37,30338,Toti Gomes,3-4-3,3-4-3,Michael Salisbury,Match Report,,Wolves
+2025-12-13,20:00 (12:00),Matchweek 16,Sat,Away,L,1,2,Arsenal,0.3,1.1,31,60242,Toti Gomes,3-5-2,4-3-3,Robert Jones,Match Report,,Wolves
+2025-12-20,15:00 (07:00),Matchweek 17,Sat,Home,L,0,2,Brentford,1.3,1.3,44,27662,Matt Doherty,3-5-2,4-3-3,Matt Donohue,Match Report,,Wolves
 2025-12-27,15:00 (07:00),Matchweek 18,Sat,Away,,,,Liverpool,,,,,,,,,Head-to-Head,,Wolves
 2025-12-30,20:15 (12:15),Matchweek 19,Tue,Away,,,,Manchester Utd,,,,,,,,,Head-to-Head,,Wolves
 2026-01-03,15:00 (07:00),Matchweek 20,Sat,Home,,,,West Ham,,,,,,,,,Head-to-Head,,Wolves
@@ -746,9 +746,9 @@ Date,Time,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,F
 2026-01-24,15:00 (07:00),Matchweek 23,Sat,Away,,,,Manchester City,,,,,,,,,Head-to-Head,,Wolves
 2026-01-31,15:00 (07:00),Matchweek 24,Sat,Home,,,,Bournemouth,,,,,,,,,Head-to-Head,,Wolves
 2026-02-07,15:00 (07:00),Matchweek 25,Sat,Home,,,,Chelsea,,,,,,,,,Head-to-Head,,Wolves
-2026-02-11,20:00 (12:00),Matchweek 26,Wed,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Wolves
+2026-02-11,19:30 (11:30),Matchweek 26,Wed,Away,,,,Nott'ham Forest,,,,,,,,,Head-to-Head,,Wolves
 2026-02-21,15:00 (07:00),Matchweek 27,Sat,Away,,,,Crystal Palace,,,,,,,,,Head-to-Head,,Wolves
-2026-02-28,15:00 (07:00),Matchweek 28,Sat,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Wolves
+2026-02-27,20:00 (12:00),Matchweek 28,Fri,Home,,,,Aston Villa,,,,,,,,,Head-to-Head,,Wolves
 2026-03-04,20:00 (12:00),Matchweek 29,Wed,Home,,,,Liverpool,,,,,,,,,Head-to-Head,,Wolves
 2026-03-14,15:00 (08:00),Matchweek 30,Sat,Away,,,,Brentford,,,,,,,,,Head-to-Head,,Wolves
 2026-03-21,15:00 (08:00),Matchweek 31,Sat,Home,,,,Arsenal,,,,,,,,,Head-to-Head,,Wolves
