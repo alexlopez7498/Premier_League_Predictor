@@ -9,6 +9,7 @@ import os
 # just loads .env files
 load_dotenv()
 
+
 #gets .env variables for the database connection
 dbUser = os.getenv('DB_USER')
 dbPassword = os.getenv('DB_PASSWORD')
