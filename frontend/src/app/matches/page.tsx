@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams, useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getTeamLogoUrl } from "@/utils/teamLogos";
@@ -22,9 +23,12 @@ interface Match {
 }
 
 export default function MatchesPage() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const [matches, setMatches] = useState<Match[]>([]);
   const [currentWeek, setCurrentWeek] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
+
 
   // Extract week number from round string
   const extractWeekNumber = (round: string): number | null => {
@@ -91,6 +95,8 @@ export default function MatchesPage() {
           if (weekNumber) {
             setCurrentWeek(weekNumber);
             await fetchMatchesForWeek(weekNumber);
+            // Update URL to reflect current week
+            router.replace(`/matches?week=${weekNumber}`);
             return;
           }
         }
@@ -98,11 +104,13 @@ export default function MatchesPage() {
         const weekNumber = getCurrentWeekNumber();
         setCurrentWeek(weekNumber);
         await fetchMatchesForWeek(weekNumber);
+        router.replace(`/matches?week=${weekNumber}`);
       } else {
         // Fallback to calculating current week
         const weekNumber = getCurrentWeekNumber();
         setCurrentWeek(weekNumber);
         await fetchMatchesForWeek(weekNumber);
+        router.replace(`/matches?week=${weekNumber}`);
       }
     } catch (error) {
       console.error('Error fetching current week matches:', error);
@@ -110,18 +118,35 @@ export default function MatchesPage() {
       const weekNumber = getCurrentWeekNumber();
       setCurrentWeek(weekNumber);
       await fetchMatchesForWeek(weekNumber);
+      router.replace(`/matches?week=${weekNumber}`);
     }
   };
 
   useEffect(() => {
-    fetchCurrentWeekMatches();
-  }, []);
+    // Check if week is in URL params
+    const weekParam = searchParams.get('week');
+    if (weekParam) {
+      const weekNumber = parseInt(weekParam, 10);
+      if (weekNumber >= 1 && weekNumber <= 38) {
+        setCurrentWeek(weekNumber);
+        fetchMatchesForWeek(weekNumber);
+        return;
+      }
+    }
+    // Otherwise fetch current week (only if no week param exists)
+    if (!weekParam) {
+      fetchCurrentWeekMatches();
+    }
+  }, [searchParams]);
 
   const goToPreviousWeek = () => {
     if (currentWeek !== null && currentWeek > 1) {
       const newWeek = currentWeek - 1;
       setCurrentWeek(newWeek);
       fetchMatchesForWeek(newWeek);
+      
+      // Update URL with new week
+      router.push(`/matches?week=${newWeek}`);
     }
   };
 
@@ -130,6 +155,9 @@ export default function MatchesPage() {
       const newWeek = currentWeek + 1;
       setCurrentWeek(newWeek);
       fetchMatchesForWeek(newWeek);
+
+      // Update URL with new week
+      router.push(`/matches?week=${newWeek}`);
     }
   };
 
@@ -229,7 +257,7 @@ export default function MatchesPage() {
                         {dayMatches.map((match, index) => (
                           <Link
                             key={match.match_id || index}
-                            href={`/matches/${match.match_id}`}
+                            href={`/matches/${match.match_id}${currentWeek !== null ? `?week=${currentWeek}` : ''}`}
                             className="block"
                           >
                             <div 

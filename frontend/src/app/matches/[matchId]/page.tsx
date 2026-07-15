@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getTeamLogoUrl } from "@/utils/teamLogos";
@@ -46,7 +46,10 @@ interface PredictionResult {
 export default function MatchDetailPage() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const matchId = params?.matchId ? parseInt(params.matchId as string) : null;
+  const weekParam = searchParams.get('week');
+  const backToMatchesUrl = weekParam ? `/matches?week=${weekParam}` : '/matches';
   const [match, setMatch] = useState<Match | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -183,7 +186,7 @@ export default function MatchDetailPage() {
           <div className="text-center py-12">
             <p className="text-red-500 dark:text-red-400 text-lg mb-4">{error || "Match not found"}</p>
             <Link
-              href="/matches"
+              href={backToMatchesUrl}
               className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               ← Back to Matches
@@ -202,7 +205,7 @@ export default function MatchDetailPage() {
       <main className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
         <Link
-          href="/matches"
+          href={backToMatchesUrl}
           className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 mb-6"
         >
           <i className="fas fa-arrow-left mr-2"></i>
@@ -259,9 +262,6 @@ export default function MatchDetailPage() {
                   <div className="text-5xl font-bold text-gray-900 dark:text-white mb-2">
                     {match.gf} - {match.ga}
                   </div>
-                  <span className={`text-lg font-semibold ${getResultColor(match.result)}`}>
-                    {match.result}
-                  </span>
                 </>
               ) : (
                 <div className="text-3xl font-bold text-gray-500 dark:text-gray-400">
@@ -402,14 +402,6 @@ export default function MatchDetailPage() {
                   <span className="text-gray-600 dark:text-gray-400">{match.opponent}:</span>
                   <span className="ml-2 text-gray-900 dark:text-white font-semibold">
                     {match.oppFormation}
-                  </span>
-                </div>
-              )}
-              {match.captain && match.captain !== "nan" && (
-                <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <span className="text-gray-600 dark:text-gray-400">Captain:</span>
-                  <span className="ml-2 text-gray-900 dark:text-white font-semibold">
-                    {match.captain}
                   </span>
                 </div>
               )}

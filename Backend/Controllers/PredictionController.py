@@ -125,16 +125,27 @@ async def predictMatchOutcome(match: MatchBase, db: Session):
         completed_2025_rolling = completed_2025_rolling.droplevel('team')
         completed_2025_rolling.index = range(completed_2025_rolling.shape[0])
 
-        clean_time = match.time.split("(")[0].strip()
+        # Clean time string - remove parentheses and extra spaces
+        clean_time = match.time.split("(")[0].strip() if match.time else ""
+        # Extract just the time part (HH:MM format)
+        if " " in clean_time:
+            clean_time = clean_time.split(" ")[0]
+        
+        # Default to noon if time is missing or invalid
+        if not clean_time or ":" not in clean_time:
+            clean_time = "12:00"
 
         try:
             match_datetime = pd.to_datetime(f"{match.date} {clean_time}")
-        except Exception:
+        except Exception as e:
             raise HTTPException(
                 status_code=400,
-                detail=f"Invalid time format: '{match.time}'. Parsed as '{clean_time}'."
+                detail=f"Invalid time format: '{match.time}'. Parsed as '{clean_time}'. Error: {str(e)}"
          )
 
+        # Check if teams exist in the schedule data
+        available_teams = completed_2025['team'].unique().tolist()
+        
         # Get latest stats for home team
         home_data = completed_2025_rolling[
             (completed_2025_rolling['team'] == match.team_name) &
@@ -147,10 +158,52 @@ async def predictMatchOutcome(match: MatchBase, db: Session):
             (completed_2025_rolling['date'] < match_datetime)
         ]
         
+        # Better error messages
         if len(home_data) == 0:
-            raise HTTPException(status_code=404, detail=f"No data found for {match.team_name}")
+            # Check if team exists in schedule at all
+            if match.team_name not in available_teams:
+                raise HTTPException(
+                    status_code=404, 
+                    detail=f"Team '{match.team_name}' not found in schedule data. Available teams: {', '.join(sorted(available_teams)[:10])}..."
+                )
+            # Check if team has matches before this date
+            home_matches_before = completed_2025[
+                (completed_2025['team'] == match.team_name) &
+                (completed_2025['date'] < match_datetime)
+            ]
+            if len(home_matches_before) == 0:
+                raise HTTPException(
+                    status_code=404,
+                    detail=f"No completed matches found for {match.team_name} before {match.date}. Need at least 3 completed matches to calculate rolling averages."
+                )
+            else:
+                raise HTTPException(
+                    status_code=404,
+                    detail=f"Not enough completed matches for {match.team_name} before {match.date}. Found {len(home_matches_before)} match(es), but need at least 3 for rolling averages."
+                )
+        
         if len(away_data) == 0:
-            raise HTTPException(status_code=404, detail=f"No data found for {match.opponent}")
+            # Check if team exists in schedule at all
+            if match.opponent not in available_teams:
+                raise HTTPException(
+                    status_code=404,
+                    detail=f"Team '{match.opponent}' not found in schedule data. Available teams: {', '.join(sorted(available_teams)[:10])}..."
+                )
+            # Check if team has matches before this date
+            away_matches_before = completed_2025[
+                (completed_2025['team'] == match.opponent) &
+                (completed_2025['date'] < match_datetime)
+            ]
+            if len(away_matches_before) == 0:
+                raise HTTPException(
+                    status_code=404,
+                    detail=f"No completed matches found for {match.opponent} before {match.date}. Need at least 3 completed matches to calculate rolling averages."
+                )
+            else:
+                raise HTTPException(
+                    status_code=404,
+                    detail=f"Not enough completed matches for {match.opponent} before {match.date}. Found {len(away_matches_before)} match(es), but need at least 3 for rolling averages."
+                )
         
         home_latest = home_data.sort_values('date').iloc[-1]
         away_latest = away_data.sort_values('date').iloc[-1]
@@ -167,7 +220,10 @@ async def predictMatchOutcome(match: MatchBase, db: Session):
         home_opp_code = home_opp_code[0] if len(home_opp_code) > 0 else 10
 
         # Create prediction data for home team
-        match_hour = int(match.time.split(':')[0])
+        try:
+            match_hour = int(clean_time.split(':')[0])
+        except (ValueError, AttributeError):
+            match_hour = 12  # Default to noon if parsing fails
         match_day = match_datetime.dayofweek
         
         home_match = pd.DataFrame({

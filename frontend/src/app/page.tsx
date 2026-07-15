@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getTeamLogoUrl } from "@/utils/teamLogos";
 
 interface Match {
+  match_id: number;
   date: string;
   time: string;
   team_name: string;
@@ -119,50 +121,68 @@ export default function Home() {
                         </h3>
                         <div className="space-y-3">
                           {dayMatches.map((match, index) => (
-                            <div key={index} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg gap-4">
-                              <div className="flex items-center space-x-4 flex-1">
-                                <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
-                                  {getTeamLogoUrl(match.team_name) && (
-                                    <Image 
-                                      src={getTeamLogoUrl(match.team_name)} 
-                                      alt={match.team_name} 
-                                      width={40} 
-                                      height={40}
-                                      className="object-contain w-auto h-auto max-w-full max-h-full"
-                                    />
-                                  )}
-                                  {!getTeamLogoUrl(match.team_name) && (
-                                    <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                            <Link
+                              key={match.match_id || index}
+                              href={`/matches/${match.match_id}`}
+                              className="block"
+                            >
+                              <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg gap-4 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors cursor-pointer">
+                                <div className="flex items-center space-x-4 flex-1">
+                                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                                    {getTeamLogoUrl(match.team_name) && (
+                                      <Image 
+                                        src={getTeamLogoUrl(match.team_name)} 
+                                        alt={match.team_name} 
+                                        width={40} 
+                                        height={40}
+                                        className="object-contain w-auto h-auto max-w-full max-h-full"
+                                      />
+                                    )}
+                                    {!getTeamLogoUrl(match.team_name) && (
+                                      <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                                    )}
+                                  </div>
+                                  <div className="text-right w-32 flex-shrink-0">
+                                    <p className="font-semibold text-gray-900 dark:text-white text-sm">{match.team_name}</p>
+                                  </div>
+                                </div>
+                                <div className="text-center flex-1">
+                                  <p className="text-xs text-gray-500 dark:text-gray-400">{match.time}</p>
+                                  {match.result && match.result !== "nan" && match.result !== "" ? (
+                                    <div className="flex items-center justify-center space-x-2">
+                                      <span className="text-lg font-bold text-gray-900 dark:text-white">
+                                        {match.gf}
+                                      </span>
+                                      <span className="text-gray-500 dark:text-gray-400">-</span>
+                                      <span className="text-lg font-bold text-gray-900 dark:text-white">
+                                        {match.ga}
+                                      </span>
+                                    </div>
+                                  ) : (
+                                    <p className="font-medium text-gray-900 dark:text-white">VS</p>
                                   )}
                                 </div>
-                                <div className="text-right w-32 flex-shrink-0">
-                                  <p className="font-semibold text-gray-900 dark:text-white text-sm">{match.team_name}</p>
+                                <div className="flex items-center space-x-4 flex-1 justify-end">
+                                  <div className="text-left w-32 flex-shrink-0">
+                                    <p className="font-semibold text-gray-900 dark:text-white text-sm">{match.opponent}</p>
+                                  </div>
+                                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                                    {getTeamLogoUrl(match.opponent) && (
+                                      <Image 
+                                        src={getTeamLogoUrl(match.opponent)} 
+                                        alt={match.opponent} 
+                                        width={40} 
+                                        height={40}
+                                        className="object-contain w-auto h-auto max-w-full max-h-full"
+                                      />
+                                    )}
+                                    {!getTeamLogoUrl(match.opponent) && (
+                                      <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                                    )}
+                                  </div>
                                 </div>
                               </div>
-                              <div className="text-center flex-1">
-                                <p className="text-xs text-gray-500 dark:text-gray-400">{match.time}</p>
-                                <p className="font-medium text-gray-900 dark:text-white">VS</p>
-                              </div>
-                              <div className="flex items-center space-x-4 flex-1 justify-end">
-                                <div className="text-left w-32 flex-shrink-0">
-                                  <p className="font-semibold text-gray-900 dark:text-white text-sm">{match.opponent}</p>
-                                </div>
-                                <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
-                                  {getTeamLogoUrl(match.opponent) && (
-                                    <Image 
-                                      src={getTeamLogoUrl(match.opponent)} 
-                                      alt={match.opponent} 
-                                      width={40} 
-                                      height={40}
-                                      className="object-contain w-auto h-auto max-w-full max-h-full"
-                                    />
-                                  )}
-                                  {!getTeamLogoUrl(match.opponent) && (
-                                    <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
-                                  )}
-                                </div>
-                              </div>
-                            </div>
+                            </Link>
                           ))}
                         </div>
                       </div>
